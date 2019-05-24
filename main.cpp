@@ -1,9 +1,14 @@
+
+#include <vector>
 #include <iostream>
+
+#include <glm/glm.hpp>
+#include <glm/gtc/matrix_transform.hpp>
 
 //GLEW
 #define GLEW_STATIC
 #include <GL/glew.h>
-
+#include "Resources/objloader.hpp"
 //GLFW
 #include <GLFW/glfw3.h>
 #include <GL/freeglut.h>
@@ -17,6 +22,16 @@ int screenWidth, screenHeight;
 
 
 
+
+
+
+
+bool objectLoader(char* object){
+    std::vector<glm::vec3> vertices;
+    std::vector<glm::vec2> uvs;
+    std::vector<glm::vec3> normals;
+    return loadOBJ(object, vertices, uvs, normals);
+}
 
 
 const GLint WIDTH = 800, HEIGHT = 600;
