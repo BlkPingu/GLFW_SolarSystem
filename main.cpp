@@ -35,7 +35,6 @@ int main(){
     }
     
     glfwMakeContextCurrent(window);
-    //glewExperimental = GL_TRUE;
     
     if(GLEW_OK != glewInit()){
         std::cout << "Failed to initialize GLEW" <<std::endl;
