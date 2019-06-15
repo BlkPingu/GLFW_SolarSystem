@@ -31,7 +31,7 @@ using namespace glm;
 
 Obj3D::Obj3D(const char* fn){
 
-    bool res = loadOBJ("/Users/Tobias/Documents/Studium/10SoSe_19_AI/Computergrafik_Jung/Pflichtteil/CG/source/CGTutorial/resources/teapot.obj", vertices, uvs, normals);
+    bool res = loadOBJ(fn, vertices, uvs, normals);
     
     glGenVertexArrays(1, &vertexArrayID);
     glBindVertexArray(vertexArrayID);

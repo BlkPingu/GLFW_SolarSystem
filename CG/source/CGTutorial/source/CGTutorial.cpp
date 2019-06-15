@@ -9,13 +9,9 @@ using namespace glm;
 
 
 #include "shader.hpp"
-
 #include "objects.hpp"
-
 #include "objloader.hpp"
-
 #include "texture.hpp"
-
 #include "Obj3D.hpp"
 
 void error_callback(int error, const char* description)
