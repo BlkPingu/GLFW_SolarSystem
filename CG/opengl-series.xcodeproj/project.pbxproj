@@ -44,6 +44,7 @@
 		E29C2AC919FCA1C400A6FCD2 /* glew.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = glew.c; path = source/common/thirdparty/glew/src/glew.c; sourceTree = "<group>"; };
 		F6774A3D20B57B480088EEB3 /* Obj3D.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Obj3D.cpp; sourceTree = "<group>"; };
 		F6774A3E20B57B480088EEB3 /* Obj3D.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Obj3D.hpp; sourceTree = "<group>"; };
+		F6BA04E222B5440D00AADA1B /* Mesh.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Mesh.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +104,7 @@
 				B9F1A79C1CFED506001A5641 /* texture.hpp */,
 				F6774A3D20B57B480088EEB3 /* Obj3D.cpp */,
 				F6774A3E20B57B480088EEB3 /* Obj3D.hpp */,
+				F6BA04E222B5440D00AADA1B /* Mesh.h */,
 			);
 			path = source;
 			sourceTree = "<group>";

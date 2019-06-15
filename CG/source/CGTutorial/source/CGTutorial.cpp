@@ -14,6 +14,10 @@ using namespace glm;
 #include "texture.hpp"
 #include "Obj3D.hpp"
 
+
+// NEUE IMPORTS
+#include "Mesh.h"
+
 void error_callback(int error, const char* description)
 {
 	fputs(description, stderr);
