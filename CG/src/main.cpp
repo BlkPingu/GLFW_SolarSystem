@@ -1,4 +1,4 @@
-// std. Includes
+// Std. Includes
 #include <string>
 
 // GLEW
@@ -91,10 +91,10 @@ int main( )
     Shader shader( "res/shaders/modelLoading.vs", "res/shaders/modelLoading.frag" );
     
     // Load models
-    Model ourModel( "res/models/earth_2.5k_combined_png_optimised_export.obj" );
+    Model ourModel( "res/models/nanosuit.obj" );
     
     // Draw in wireframe
-    glPolygonMode( GL_FRONT_AND_BACK, GL_LINE );
+    //glPolygonMode( GL_FRONT_AND_BACK, GL_LINE );
     
     glm::mat4 projection = glm::perspective( camera.GetZoom( ), ( float )SCREEN_WIDTH/( float )SCREEN_HEIGHT, 0.1f, 100.0f );
     
@@ -111,7 +111,7 @@ int main( )
         DoMovement( );
         
         // Clear the colorbuffer
-        glClearColor( 0.5f, 0.5f, 0.5f, 0.5f );
+        glClearColor( 0.05f, 0.05f, 0.05f, 1.0f );
         glClear( GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT );
         
         shader.Use( );
@@ -122,12 +122,9 @@ int main( )
         
         // Draw the loaded model
         glm::mat4 model;
-        
-        model = glm::translate( model, glm::vec3( 1.0f, 1.0f, 1.0f ) ); // Translate it down a bit so it's at the center of the scene
-        
+        model = glm::translate( model, glm::vec3( 0.0f, -1.75f, 0.0f ) ); // Translate it down a bit so it's at the center of the scene
         model = glm::scale( model, glm::vec3( 0.2f, 0.2f, 0.2f ) );	// It's a bit too big for our scene, so scale it down
         glUniformMatrix4fv( glGetUniformLocation( shader.Program, "model" ), 1, GL_FALSE, glm::value_ptr( model ) );
-        
         ourModel.Draw( shader );
         
         // Swap the buffers
@@ -190,7 +187,7 @@ void MouseCallback( GLFWwindow *window, double xPos, double yPos )
     {
         lastX = xPos;
         lastY = yPos;
-       firstMouse = false;
+        firstMouse = false;
     }
     
     GLfloat xOffset = xPos - lastX;
