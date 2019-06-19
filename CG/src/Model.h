@@ -50,6 +50,7 @@ private:
     // Loads a model with supported ASSIMP extensions from file and stores the resulting meshes in the meshes vector.
     void loadModel( string path )
     {
+        cout << path << endl;
         // Read file via ASSIMP
         Assimp::Importer importer;
         const aiScene *scene = importer.ReadFile( path, aiProcess_Triangulate | aiProcess_FlipUVs );
@@ -161,6 +162,7 @@ private:
             textures.insert( textures.end( ), specularMaps.begin( ), specularMaps.end( ) );
         }
         
+        cout << vertices.data() << endl;
         // Return a mesh object created from the extracted mesh data
         return Mesh( vertices, indices, textures );
     }

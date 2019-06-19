@@ -21,8 +21,6 @@
 // Other Libs
 #include "SOIL2/SOIL2.h"
 
-#include "Texture.h"
-
 // Properties
 const GLuint WIDTH = 800, HEIGHT = 600;
 int SCREEN_WIDTH, SCREEN_HEIGHT;
@@ -90,140 +88,15 @@ int main( )
     glEnable( GL_DEPTH_TEST );
     
     // Setup and compile our shaders
-    Shader shader( "res/shaders/cube.vs", "res/shaders/cube.frag" );
-    Shader skyboxShader( "res/shaders/skybox.vs", "res/shaders/skybox.frag" );
-
+    Shader shader( "res/shaders/modelLoading.vs", "res/shaders/modelLoading.frag" );
     
-    GLfloat cubeVertices[] =
-    {
-        // Positions          // Texture Coords
-        -0.5f, -0.5f, -0.5f,  0.0f, 0.0f,
-        0.5f, -0.5f, -0.5f,  1.0f, 0.0f,
-        0.5f,  0.5f, -0.5f,  1.0f, 1.0f,
-        0.5f,  0.5f, -0.5f,  1.0f, 1.0f,
-        -0.5f,  0.5f, -0.5f,  0.0f, 1.0f,
-        -0.5f, -0.5f, -0.5f,  0.0f, 0.0f,
-        
-        -0.5f, -0.5f,  0.5f,  0.0f, 0.0f,
-        0.5f, -0.5f,  0.5f,  1.0f, 0.0f,
-        0.5f,  0.5f,  0.5f,  1.0f, 1.0f,
-        0.5f,  0.5f,  0.5f,  1.0f, 1.0f,
-        -0.5f,  0.5f,  0.5f,  0.0f, 1.0f,
-        -0.5f, -0.5f,  0.5f,  0.0f, 0.0f,
-        
-        -0.5f,  0.5f,  0.5f,  1.0f, 0.0f,
-        -0.5f,  0.5f, -0.5f,  1.0f, 1.0f,
-        -0.5f, -0.5f, -0.5f,  0.0f, 1.0f,
-        -0.5f, -0.5f, -0.5f,  0.0f, 1.0f,
-        -0.5f, -0.5f,  0.5f,  0.0f, 0.0f,
-        -0.5f,  0.5f,  0.5f,  1.0f, 0.0f,
-        
-        0.5f,  0.5f,  0.5f,  1.0f, 0.0f,
-        0.5f,  0.5f, -0.5f,  1.0f, 1.0f,
-        0.5f, -0.5f, -0.5f,  0.0f, 1.0f,
-        0.5f, -0.5f, -0.5f,  0.0f, 1.0f,
-        0.5f, -0.5f,  0.5f,  0.0f, 0.0f,
-        0.5f,  0.5f,  0.5f,  1.0f, 0.0f,
-        
-        -0.5f, -0.5f, -0.5f,  0.0f, 1.0f,
-        0.5f, -0.5f, -0.5f,  1.0f, 1.0f,
-        0.5f, -0.5f,  0.5f,  1.0f, 0.0f,
-        0.5f, -0.5f,  0.5f,  1.0f, 0.0f,
-        -0.5f, -0.5f,  0.5f,  0.0f, 0.0f,
-        -0.5f, -0.5f, -0.5f,  0.0f, 1.0f,
-        
-        -0.5f,  0.5f, -0.5f,  0.0f, 1.0f,
-        0.5f,  0.5f, -0.5f,  1.0f, 1.0f,
-        0.5f,  0.5f,  0.5f,  1.0f, 0.0f,
-        0.5f,  0.5f,  0.5f,  1.0f, 0.0f,
-        -0.5f,  0.5f,  0.5f,  0.0f, 0.0f,
-        -0.5f,  0.5f, -0.5f,  0.0f, 1.0f
-    };
+    // Load models
+    Model ourModel( "res/models/earth_2.5k_combined_png_optimised_export.obj" );
     
-    GLfloat skyboxVertices[] = {
-        // Positions
-        -1.0f,  1.0f, -1.0f,
-        -1.0f, -1.0f, -1.0f,
-        1.0f, -1.0f, -1.0f,
-        1.0f, -1.0f, -1.0f,
-        1.0f,  1.0f, -1.0f,
-        -1.0f,  1.0f, -1.0f,
-        
-        -1.0f, -1.0f,  1.0f,
-        -1.0f, -1.0f, -1.0f,
-        -1.0f,  1.0f, -1.0f,
-        -1.0f,  1.0f, -1.0f,
-        -1.0f,  1.0f,  1.0f,
-        -1.0f, -1.0f,  1.0f,
-        
-        1.0f, -1.0f, -1.0f,
-        1.0f, -1.0f,  1.0f,
-        1.0f,  1.0f,  1.0f,
-        1.0f,  1.0f,  1.0f,
-        1.0f,  1.0f, -1.0f,
-        1.0f, -1.0f, -1.0f,
-        
-        -1.0f, -1.0f,  1.0f,
-        -1.0f,  1.0f,  1.0f,
-        1.0f,  1.0f,  1.0f,
-        1.0f,  1.0f,  1.0f,
-        1.0f, -1.0f,  1.0f,
-        -1.0f, -1.0f,  1.0f,
-        
-        -1.0f,  1.0f, -1.0f,
-        1.0f,  1.0f, -1.0f,
-        1.0f,  1.0f,  1.0f,
-        1.0f,  1.0f,  1.0f,
-        -1.0f,  1.0f,  1.0f,
-        -1.0f,  1.0f, -1.0f,
-        
-        -1.0f, -1.0f, -1.0f,
-        -1.0f, -1.0f,  1.0f,
-        1.0f, -1.0f, -1.0f,
-        1.0f, -1.0f, -1.0f,
-        -1.0f, -1.0f,  1.0f,
-        1.0f, -1.0f,  1.0f
-    };
+    // Draw in wireframe
+    glPolygonMode( GL_FRONT_AND_BACK, GL_LINE );
     
-    // Setup cube VAO
-    GLuint cubeVAO, cubeVBO;
-    glGenVertexArrays( 1, &cubeVAO );
-    glGenBuffers( 1, &cubeVBO );
-    glBindVertexArray( cubeVAO );
-    glBindBuffer( GL_ARRAY_BUFFER, cubeVBO );
-    glBufferData( GL_ARRAY_BUFFER, sizeof( cubeVertices ), &cubeVertices, GL_STATIC_DRAW );
-    glEnableVertexAttribArray(0);
-    glVertexAttribPointer( 0, 3, GL_FLOAT, GL_FALSE, 5 * sizeof( GLfloat ), ( GLvoid * ) 0 );
-    glEnableVertexAttribArray( 1 );
-    glVertexAttribPointer( 1, 2, GL_FLOAT, GL_FALSE, 5 * sizeof( GLfloat ), ( GLvoid * )( 3 * sizeof( GLfloat ) ) );
-    glBindVertexArray(0);
-    
-    // Setup skybox VAO
-    GLuint skyboxVAO, skyboxVBO;
-    glGenVertexArrays( 1, &skyboxVAO );
-    glGenBuffers( 1, &skyboxVBO );
-    glBindVertexArray( skyboxVAO );
-    glBindBuffer( GL_ARRAY_BUFFER, skyboxVBO );
-    glBufferData( GL_ARRAY_BUFFER, sizeof( skyboxVertices ), &skyboxVertices, GL_STATIC_DRAW );
-    glEnableVertexAttribArray( 0 );
-    glVertexAttribPointer( 0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof( GLfloat ), ( GLvoid * ) 0 );
-    glBindVertexArray(0);
-    
-    // Load textures
-    GLuint cubeTexture = TextureLoading::LoadTexture( "res/images/container2.png" );
-    
-    // Cubemap (Skybox)
-    vector<const GLchar*> faces;
-    faces.push_back( "res/images/skybox/right.tga" );
-    faces.push_back( "res/images/skybox/left.tga" );
-    faces.push_back( "res/images/skybox/top.tga" );
-    faces.push_back( "res/images/skybox/bottom.tga" );
-    faces.push_back( "res/images/skybox/back.tga" );
-    faces.push_back( "res/images/skybox/front.tga" );
-    GLuint cubemapTexture = TextureLoading::LoadCubemap( faces );
-
-    
-    glm::mat4 projection = glm::perspective( camera.GetZoom( ), ( float )SCREEN_WIDTH/( float )SCREEN_HEIGHT, 0.1f, 1000.0f );
+    glm::mat4 projection = glm::perspective( camera.GetZoom( ), ( float )SCREEN_WIDTH/( float )SCREEN_HEIGHT, 0.1f, 100.0f );
     
     // Game loop
     while( !glfwWindowShouldClose( window ) )
@@ -238,55 +111,25 @@ int main( )
         DoMovement( );
         
         // Clear the colorbuffer
-        glClearColor( 0.05f, 0.05f, 0.05f, 1.0f );
+        glClearColor( 0.5f, 0.5f, 0.5f, 0.5f );
         glClear( GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT );
         
-        
-        glm::mat4 model;
-        glm::mat4 view = camera.GetViewMatrix();
-        
-        // Draw our first triangle
         shader.Use( );
         
-        // Bind Textures using texture units
-        glActiveTexture( GL_TEXTURE0 );
-        glBindTexture( GL_TEXTURE_2D, cubeTexture );
-        glUniform1i( glGetUniformLocation( shader.Program, "texture1" ), 0 );
-
-        // Get the uniform locations
-        GLint modelLoc = glGetUniformLocation( shader.Program, "model" );
-        GLint viewLoc = glGetUniformLocation( shader.Program, "view" );
-        GLint projLoc = glGetUniformLocation( shader.Program, "projection" );
+        glm::mat4 view = camera.GetViewMatrix( );
+        glUniformMatrix4fv( glGetUniformLocation( shader.Program, "projection" ), 1, GL_FALSE, glm::value_ptr( projection ) );
+        glUniformMatrix4fv( glGetUniformLocation( shader.Program, "view" ), 1, GL_FALSE, glm::value_ptr( view ) );
         
-        // Pass the matrices to the shader
-        glUniformMatrix4fv( viewLoc, 1, GL_FALSE, glm::value_ptr( view ) );
-        glUniformMatrix4fv( projLoc, 1, GL_FALSE, glm::value_ptr( projection ) );
+        // Draw the loaded model
+        glm::mat4 model;
         
-        glBindVertexArray( cubeVAO );
-       
-        // Calculate the model matrix for each object and pass it to shader before drawing
-        glUniformMatrix4fv( modelLoc, 1, GL_FALSE, glm::value_ptr( model ) );
-        glDrawArrays( GL_TRIANGLES, 0, 36 );
-        glBindVertexArray( 0 );
+        model = glm::translate( model, glm::vec3( 1.0f, 1.0f, 1.0f ) ); // Translate it down a bit so it's at the center of the scene
         
+        model = glm::scale( model, glm::vec3( 0.2f, 0.2f, 0.2f ) );	// It's a bit too big for our scene, so scale it down
+        glUniformMatrix4fv( glGetUniformLocation( shader.Program, "model" ), 1, GL_FALSE, glm::value_ptr( model ) );
         
-        // Draw skybox as last
-        glDepthFunc( GL_LEQUAL );  // Change depth function so depth test passes when values are equal to depth buffer's content
-        skyboxShader.Use( );
-        view = glm::mat4( glm::mat3( camera.GetViewMatrix( ) ) );	// Remove any translation component of the view matrix
+        ourModel.Draw( shader );
         
-        glUniformMatrix4fv( glGetUniformLocation( skyboxShader.Program, "view" ), 1, GL_FALSE, glm::value_ptr( view ) );
-        glUniformMatrix4fv( glGetUniformLocation( skyboxShader.Program, "projection" ), 1, GL_FALSE, glm::value_ptr( projection ) );
-        
-        // skybox cube
-        glBindVertexArray( skyboxVAO );
-        glBindTexture( GL_TEXTURE_CUBE_MAP, cubemapTexture );
-        glDrawArrays( GL_TRIANGLES, 0, 36 );
-        glBindVertexArray( 0 );
-        glDepthFunc( GL_LESS ); // Set depth function back to default
-
-        
-               
         // Swap the buffers
         glfwSwapBuffers( window );
     }
@@ -294,7 +137,6 @@ int main( )
     glfwTerminate( );
     return 0;
 }
-
 
 // Moves/alters the camera positions based on user input
 void DoMovement( )
@@ -348,7 +190,7 @@ void MouseCallback( GLFWwindow *window, double xPos, double yPos )
     {
         lastX = xPos;
         lastY = yPos;
-        firstMouse = false;
+       firstMouse = false;
     }
     
     GLfloat xOffset = xPos - lastX;
