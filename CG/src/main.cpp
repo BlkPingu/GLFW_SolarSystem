@@ -1,4 +1,4 @@
-// Std. Includes
+// std. Includes
 #include <string>
 
 // GLEW
