@@ -101,6 +101,8 @@ int main( )
     // Game loop
     while( !glfwWindowShouldClose( window ) )
     {
+        
+        cout << camera.GetPosition().b << endl;
         // Set frame time
         GLfloat currentFrame = glfwGetTime( );
         deltaTime = currentFrame - lastFrame;
@@ -121,7 +123,7 @@ int main( )
         glUniformMatrix4fv( glGetUniformLocation( shader.Program, "view" ), 1, GL_FALSE, glm::value_ptr( view ) );
         
         // Draw the loaded model
-        glm::mat4 model;
+        glm::mat4 model = glm::mat4(1.0f);
         model = glm::translate( model, glm::vec3( 0.0f, -1.75f, 0.0f ) ); // Translate it down a bit so it's at the center of the scene
         model = glm::scale( model, glm::vec3( 0.2f, 0.2f, 0.2f ) );	// It's a bit too big for our scene, so scale it down
         glUniformMatrix4fv( glGetUniformLocation( shader.Program, "model" ), 1, GL_FALSE, glm::value_ptr( model ) );
@@ -142,21 +144,27 @@ void DoMovement( )
     if ( keys[GLFW_KEY_W] || keys[GLFW_KEY_UP] )
     {
         camera.ProcessKeyboard( FORWARD, deltaTime );
+        cout << "fwd" << endl;
+
     }
     
     if ( keys[GLFW_KEY_S] || keys[GLFW_KEY_DOWN] )
     {
         camera.ProcessKeyboard( BACKWARD, deltaTime );
+        cout << "back" << endl;
+
     }
     
     if ( keys[GLFW_KEY_A] || keys[GLFW_KEY_LEFT] )
     {
         camera.ProcessKeyboard( LEFT, deltaTime );
+        cout << "left" << endl;
     }
     
     if ( keys[GLFW_KEY_D] || keys[GLFW_KEY_RIGHT] )
     {
         camera.ProcessKeyboard( RIGHT, deltaTime );
+        cout << "left" << endl;
     }
 }
 

@@ -37,6 +37,7 @@ public:
         for ( GLuint i = 0; i < this->meshes.size( ); i++ )
         {
             this->meshes[i].Draw( shader );
+            cout << "drawn" << endl;
         }
     }
     
