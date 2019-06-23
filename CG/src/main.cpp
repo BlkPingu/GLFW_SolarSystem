@@ -91,13 +91,20 @@ int main( )
     Shader shader( "res/shaders/modelLoading.vs", "res/shaders/modelLoading.frag" );
     
     // Load models
-    Model ourModel( "res/models/earth_2.5k_combined_png_optimised_export.obj" );
-    
-    // Draw in wireframe
-    //glPolygonMode( GL_FRONT_AND_BACK, GL_LINE );
-    
+    //Model ourModel( "res/models/nanosuit/nanosuit.obj");
+    Model earthModel( "res/models/planets/earth/earth.obj");
+    Model jupiterModel( "res/models/planets/jupiter/jupiter1.obj");
+    Model marsModel("res/models/planets/mars/Mars_normal-strong.obj");
+    Model mercuryModel( "res/models/planets/mercury/mercury.obj");
+    Model moonModel("res/models/planets/moon/moon1.obj");
+    Model neptuneModel("res/models/planets/neptune/neptune.obj");
+    Model saturnModel("res/models/planets/saturn/saturn3.obj");
+    Model sunModel("res/models/planets/Sun/sun2.obj");
+    Model uranusModel("res/models/planets/uranus/uranus.obj");
+    Model venusModel( "res/models/planets/venus/venus.obj");
+
     glm::mat4 projection = glm::perspective( camera.GetZoom( ), ( float )SCREEN_WIDTH/( float )SCREEN_HEIGHT, 0.1f, 100.0f );
-    
+
     // Game loop
     while( !glfwWindowShouldClose( window ) )
     {
@@ -125,7 +132,7 @@ int main( )
         // Draw the loaded model
         glm::mat4 model = glm::mat4(1.0f);
         model = glm::translate( model, glm::vec3( 0.0f, 0.0f, 0.0f ) ); // Translate it down a bit so it's at the center of the scene
-        model = glm::scale( model, glm::vec3( 0.2f, 0.2f, 0.2f ) );	// It's a bit too big for our scene, so scale it down
+        model = glm::scale( model, glm::vec3( 0.01f, 0.01f, 0.01f ) );	// It's a bit too big for our scene, so scale it down
         glUniformMatrix4fv( glGetUniformLocation( shader.Program, "model" ), 1, GL_FALSE, glm::value_ptr( model ) );
         ourModel.Draw( shader );
         
