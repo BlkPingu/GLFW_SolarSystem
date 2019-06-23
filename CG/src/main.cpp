@@ -49,13 +49,13 @@ GLfloat lastFrame = 0.0f;
 
 
 
-void DrawPlanet(Shader shader, Model planet, GLfloat orbitDistance, GLfloat planetaryScale, GLfloat rotationSpeed, GLfloat orbitSpeed){
+void DrawPlanet(Shader shader, Model planet, GLfloat orbitDistance, GLfloat planetaryScale, GLfloat rotationSpeed, GLfloat orbitSpeed, GLfloat orbitAngle ){
     
     //Drawing
     glm::mat4 model = glm::mat4(1.0f);
     
     //Orbit Calculations
-    angle = 0.0035f* (GLfloat)glfwGetTime() * orbitSpeed;
+    angle = orbitAngle * (GLfloat)glfwGetTime() * orbitSpeed;
     radius = orbitDistance;
     x = radius * sin(PI * 2 * angle / 360);
     y = radius * cos(PI * 2 * angle / 360);
@@ -175,8 +175,18 @@ int main( )
         glUniformMatrix4fv( glGetUniformLocation( shader.Program, "projection" ), 1, GL_FALSE, glm::value_ptr( projection ) );
         glUniformMatrix4fv( glGetUniformLocation( shader.Program, "view" ), 1, GL_FALSE, glm::value_ptr( view ) );
         
-        DrawPlanet(shader, sunModel, 0.0f, 0.01f, 16.0f, 1.0f);
-        DrawPlanet(shader, mercuryModel, 5.0f, 0.01f, 8.0f, 1000.0f);
+        DrawPlanet(shader, sunModel, 0.0f, 0.01f, 16.0f, 0.0f, );
+        DrawPlanet(shader, mercuryModel, 5.0f, 0.01f, 8.0f, 1000.0f, );
+        DrawPlanet(shader, venusModel, 5.0f, 0.01f, 8.0f, 1000.0f, );
+        DrawPlanet(shader, earthModel, 5.0f, 0.01f, 8.0f, 1000.0f, );
+        DrawPlanet(shader, marsModel, 5.0f, 0.01f, 8.0f, 1000.0f, );
+        DrawPlanet(shader, jupiterModel, 5.0f, 0.01f, 8.0f, 1000.0f, );
+        DrawPlanet(shader, uranusModel, 5.0f, 0.01f, 8.0f, 1000.0f, );
+        DrawPlanet(shader, saturnModel, 5.0f, 0.01f, 8.0f, 1000.0f, );
+        DrawPlanet(shader, neptuneModel, 5.0f, 0.01f, 8.0f, 1000.0f, );
+
+        
+
         
         
         //DrawPlanet(shader, neptuneModel, glm::vec3( 0.0f, -10.0f, 0.0f ), glm::vec3( 0.01f, 0.01f, 0.01f ), 8.0f);
