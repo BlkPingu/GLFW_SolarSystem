@@ -39,6 +39,18 @@ bool firstMouse = true;
 GLfloat deltaTime = 0.0f;
 GLfloat lastFrame = 0.0f;
 
+
+void DrawPlanet(Shader shader, Model planet, glm::vec3 vec, glm::vec3 scale, float rotationSpeed){
+    // Draw the loaded model
+    glm::mat4 model = glm::mat4(1.0f);
+    model = glm::translate( model, vec); // Translate it down a bit so it's at the center of the scene
+    model = glm::rotate(model, glm::radians((GLfloat)glfwGetTime() * rotationSpeed), glm::vec3(0.0f, 1.0f, 0.0f));
+    model = glm::scale( model, scale);    // It's a bit too big for our scene, so scale it down
+    glUniformMatrix4fv( glGetUniformLocation( shader.Program, "model" ), 1, GL_FALSE, glm::value_ptr( model ) );
+    planet.Draw( shader );
+}
+
+
 int main( )
 {
     // Init GLFW
@@ -104,6 +116,8 @@ int main( )
 
     Model planetModels[] = {earthModel, jupiterModel, marsModel,mercuryModel, moonModel, neptuneModel, saturnModel, sunModel, uranusModel, venusModel};
     
+    
+    
     glm::mat4 projection = glm::perspective( camera.GetZoom( ), ( float )SCREEN_WIDTH/( float )SCREEN_HEIGHT, 0.1f, 100.0f );
 
     // Game loop
@@ -130,12 +144,13 @@ int main( )
         glUniformMatrix4fv( glGetUniformLocation( shader.Program, "projection" ), 1, GL_FALSE, glm::value_ptr( projection ) );
         glUniformMatrix4fv( glGetUniformLocation( shader.Program, "view" ), 1, GL_FALSE, glm::value_ptr( view ) );
         
-        // Draw the loaded model
-        glm::mat4 model = glm::mat4(1.0f);
-        model = glm::translate( model, glm::vec3( 0.0f, 0.0f, 0.0f ) ); // Translate it down a bit so it's at the center of the scene
-        model = glm::scale( model, glm::vec3( 0.01f, 0.01f, 0.01f ) );	// It's a bit too big for our scene, so scale it down
-        glUniformMatrix4fv( glGetUniformLocation( shader.Program, "model" ), 1, GL_FALSE, glm::value_ptr( model ) );
-        sunModel.Draw( shader );
+        DrawPlanet(shader, sunModel, glm::vec3( 0.0f, 0.0f, 0.0f ), glm::vec3( 0.01f, 0.01f, 0.01f ), 16.0f);
+        DrawPlanet(shader, mercuryModel, glm::vec3( -5.0f, 0.0f , 0.0f ), glm::vec3( 0.01f, 0.01f, 0.01f ), 8.0f);
+        
+        
+        //DrawPlanet(shader, neptuneModel, glm::vec3( 0.0f, -10.0f, 0.0f ), glm::vec3( 0.01f, 0.01f, 0.01f ), 8.0f);
+
+
         
         // Swap the buffers
         glfwSwapBuffers( window );
@@ -144,6 +159,9 @@ int main( )
     glfwTerminate( );
     return 0;
 }
+
+
+
 
 // Moves/alters the camera positions based on user input
 void DoMovement( )
