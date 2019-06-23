@@ -25,6 +25,9 @@ class Model
 {
 public:
     /*  Functions   */
+    Model(void){
+        std::cout << "Warning! MODEL: Default Constructor used." << endl;
+    }
     // Constructor, expects a filepath to a 3D model.
     Model( const char *path )
     {

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F66360C122BFF81200B750DC /* Planet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F66360BF22BFF81200B750DC /* Planet.cpp */; };
 		F6D2DCBA22BA7FCC00A1A3B4 /* image_helper.c in Sources */ = {isa = PBXBuildFile; fileRef = F6D2DC7D22BA7FCB00A1A3B4 /* image_helper.c */; };
 		F6D2DCBB22BA7FCC00A1A3B4 /* image_DXT.c in Sources */ = {isa = PBXBuildFile; fileRef = F6D2DC8022BA7FCB00A1A3B4 /* image_DXT.c */; };
 		F6D2DCBC22BA7FCC00A1A3B4 /* SOIL2.c in Sources */ = {isa = PBXBuildFile; fileRef = F6D2DC8322BA7FCB00A1A3B4 /* SOIL2.c */; };
@@ -110,6 +111,8 @@
 		F66360BC22BFC0E500B750DC /* mars-sample-scene.lws */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "mars-sample-scene.lws"; sourceTree = "<group>"; };
 		F66360BD22BFC0E600B750DC /* MarsNormal.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = MarsNormal.jpg; sourceTree = "<group>"; };
 		F66360BE22BFC0E600B750DC /* Mars_normal-strong.lwo */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mars_normal-strong.lwo"; sourceTree = "<group>"; };
+		F66360BF22BFF81200B750DC /* Planet.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Planet.cpp; sourceTree = "<group>"; };
+		F66360C022BFF81200B750DC /* Planet.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Planet.hpp; sourceTree = "<group>"; };
 		F6D2DC7B22BA7FCB00A1A3B4 /* Mesh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mesh.h; sourceTree = "<group>"; };
 		F6D2DC7D22BA7FCB00A1A3B4 /* image_helper.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = image_helper.c; sourceTree = "<group>"; };
 		F6D2DC7E22BA7FCB00A1A3B4 /* stbi_pkm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stbi_pkm.h; sourceTree = "<group>"; };
@@ -475,6 +478,8 @@
 				F6D2DC9222BA7FCC00A1A3B4 /* res */,
 				F6D2DCB722BA7FCC00A1A3B4 /* Shader.h */,
 				F6D2DC7C22BA7FCB00A1A3B4 /* SOIL2 */,
+				F66360BF22BFF81200B750DC /* Planet.cpp */,
+				F66360C022BFF81200B750DC /* Planet.hpp */,
 			);
 			path = src;
 			sourceTree = SOURCE_ROOT;
@@ -532,6 +537,7 @@
 				F6D2DCBC22BA7FCC00A1A3B4 /* SOIL2.c in Sources */,
 				F6D2DCBB22BA7FCC00A1A3B4 /* image_DXT.c in Sources */,
 				F6D2DCBD22BA7FCC00A1A3B4 /* etc1_utils.c in Sources */,
+				F66360C122BFF81200B750DC /* Planet.cpp in Sources */,
 				F6D2DCBE22BA7FCC00A1A3B4 /* main.cpp in Sources */,
 				F6D2DCBA22BA7FCC00A1A3B4 /* image_helper.c in Sources */,
 			);

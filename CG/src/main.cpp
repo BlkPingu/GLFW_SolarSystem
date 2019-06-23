@@ -1,5 +1,6 @@
 // Std. Includes
 #include <string>
+#include <list>
 
 // GLEW
 #define GLEW_STATIC
@@ -46,41 +47,6 @@ bool firstMouse = true;
 GLfloat deltaTime = 0.0f;
 GLfloat lastFrame = 0.0f;
 
-
-
-
-void DrawPlanet(Shader shader, Model planet, GLfloat orbitDistance, GLfloat planetaryScale, GLfloat rotationSpeed, GLfloat orbitSpeed, GLfloat orbitAngle ){
-    
-    //Drawing
-    glm::mat4 model = glm::mat4(1.0f);
-    
-    //Orbit Calculations
-    angle = orbitAngle * (GLfloat)glfwGetTime() * orbitSpeed;
-    radius = orbitDistance;
-    x = radius * sin(PI * 2 * angle / 360);
-    y = radius * cos(PI * 2 * angle / 360);
-    
-    
-    cout << "angle " << angle << "\n"
-    << "radius" << radius << "\n"
-    << "x " << x << "\n"
-    << "y " << y << "\n"
-    << "time" <<  (GLfloat)glfwGetTime() << endl;
-    
-    //Relative Position
-    model = glm::translate( model, glm::vec3( x, 0.0f, y));
-
-    
-    //model = glm::translate( model, vec);
-    
-    //Rotation
-    model = glm::rotate(model, glm::radians((GLfloat)glfwGetTime() * rotationSpeed), glm::vec3(0.0f, 1.0f, 0.0f));
-    
-    //Scaling
-    model = glm::scale( model, glm::vec3( planetaryScale, planetaryScale, planetaryScale ));
-    glUniformMatrix4fv( glGetUniformLocation( shader.Program, "model" ), 1, GL_FALSE, glm::value_ptr( model ) );
-    planet.Draw( shader );
-}
 
 
 int main( )
@@ -146,8 +112,7 @@ int main( )
     Model uranusModel("res/models/planets/uranus/uranus.obj");
     Model venusModel( "res/models/planets/venus/venus.obj");
 
-    Model planetModels[] = {earthModel, jupiterModel, marsModel,mercuryModel, moonModel, neptuneModel, saturnModel, sunModel, uranusModel, venusModel};
-    
+    Model sunMoons[] = {earthModel, jupiterModel, marsModel,mercuryModel, moonModel, neptuneModel, saturnModel, sunModel, uranusModel, venusModel};
     
     //view distance 300
     glm::mat4 projection = glm::perspective( camera.GetZoom( ), ( float )SCREEN_WIDTH/( float )SCREEN_HEIGHT, 0.1f, 300.0f );
@@ -191,6 +156,7 @@ int main( )
         //radius = 90.0f
         //angle = 0.006f
         DrawPlanet(shader, earthModel, 90.0f, 0.01f, 8.0f, 1000.0f, 0.006f);
+        
         ////Mars
         //radius = 100.0f
         //angle = 0.005f
