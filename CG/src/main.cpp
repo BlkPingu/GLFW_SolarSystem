@@ -62,7 +62,6 @@ int main( )
     }
     
     glfwMakeContextCurrent( window );
-    
     glfwGetFramebufferSize( window, &SCREEN_WIDTH, &SCREEN_HEIGHT );
     
     // Set the required callback functions
@@ -103,6 +102,8 @@ int main( )
     Model uranusModel("res/models/planets/uranus/uranus.obj");
     Model venusModel( "res/models/planets/venus/venus.obj");
 
+    Model planetModels[] = {earthModel, jupiterModel, marsModel,mercuryModel, moonModel, neptuneModel, saturnModel, sunModel, uranusModel, venusModel};
+    
     glm::mat4 projection = glm::perspective( camera.GetZoom( ), ( float )SCREEN_WIDTH/( float )SCREEN_HEIGHT, 0.1f, 100.0f );
 
     // Game loop
@@ -134,7 +135,7 @@ int main( )
         model = glm::translate( model, glm::vec3( 0.0f, 0.0f, 0.0f ) ); // Translate it down a bit so it's at the center of the scene
         model = glm::scale( model, glm::vec3( 0.01f, 0.01f, 0.01f ) );	// It's a bit too big for our scene, so scale it down
         glUniformMatrix4fv( glGetUniformLocation( shader.Program, "model" ), 1, GL_FALSE, glm::value_ptr( model ) );
-        ourModel.Draw( shader );
+        sunModel.Draw( shader );
         
         // Swap the buffers
         glfwSwapBuffers( window );
@@ -148,58 +149,38 @@ int main( )
 void DoMovement( )
 {
     // Camera controls
-    if ( keys[GLFW_KEY_W] || keys[GLFW_KEY_UP] )
-    {
+    if ( keys[GLFW_KEY_W] || keys[GLFW_KEY_UP] ){
         camera.ProcessKeyboard( FORWARD, deltaTime );
-        cout << "fwd" << endl;
-
     }
-    
-    if ( keys[GLFW_KEY_S] || keys[GLFW_KEY_DOWN] )
-    {
+    if ( keys[GLFW_KEY_S] || keys[GLFW_KEY_DOWN] ){
         camera.ProcessKeyboard( BACKWARD, deltaTime );
-        cout << "back" << endl;
-
     }
-    
-    if ( keys[GLFW_KEY_A] || keys[GLFW_KEY_LEFT] )
-    {
+    if ( keys[GLFW_KEY_A] || keys[GLFW_KEY_LEFT] ){
         camera.ProcessKeyboard( LEFT, deltaTime );
-        cout << "left" << endl;
     }
-    
-    if ( keys[GLFW_KEY_D] || keys[GLFW_KEY_RIGHT] )
-    {
+    if ( keys[GLFW_KEY_D] || keys[GLFW_KEY_RIGHT] ){
         camera.ProcessKeyboard( RIGHT, deltaTime );
-        cout << "left" << endl;
     }
 }
 
 // Is called whenever a key is pressed/released via GLFW
-void KeyCallback( GLFWwindow *window, int key, int scancode, int action, int mode )
-{
-    if ( GLFW_KEY_ESCAPE == key && GLFW_PRESS == action )
-    {
+void KeyCallback( GLFWwindow *window, int key, int scancode, int action, int mode ){
+    if ( GLFW_KEY_ESCAPE == key && GLFW_PRESS == action ){
         glfwSetWindowShouldClose(window, GL_TRUE);
     }
     
-    if ( key >= 0 && key < 1024 )
-    {
-        if ( action == GLFW_PRESS )
-        {
+    if ( key >= 0 && key < 1024 ){
+        if ( action == GLFW_PRESS ){
             keys[key] = true;
         }
-        else if ( action == GLFW_RELEASE )
-        {
+        else if ( action == GLFW_RELEASE ){
             keys[key] = false;
         }
     }
 }
 
-void MouseCallback( GLFWwindow *window, double xPos, double yPos )
-{
-    if ( firstMouse )
-    {
+void MouseCallback( GLFWwindow *window, double xPos, double yPos ){
+    if ( firstMouse ){
         lastX = xPos;
         lastY = yPos;
         firstMouse = false;
