@@ -29,7 +29,7 @@ const double PI = 3.141592653589793238463;
 GLfloat angle, radius, x, y;
 
 // Properties
-const GLuint WIDTH = 800, HEIGHT = 600;
+const GLuint WIDTH = 1600, HEIGHT = 1200;
 int SCREEN_WIDTH, SCREEN_HEIGHT;
 
 // Function prototypes
@@ -38,7 +38,7 @@ void MouseCallback( GLFWwindow *window, double xPos, double yPos );
 void DoMovement( );
 
 // Camera
-Camera camera( glm::vec3( 0.0f, 10.0f, 0.0f ) );
+Camera camera( glm::vec3( 0.0f, 100.0f, 0.0f ) );
 bool keys[1024];
 GLfloat lastX = 400, lastY = 300;
 bool firstMouse = true;
@@ -149,8 +149,8 @@ int main( )
     Model planetModels[] = {earthModel, jupiterModel, marsModel,mercuryModel, moonModel, neptuneModel, saturnModel, sunModel, uranusModel, venusModel};
     
     
-    
-    glm::mat4 projection = glm::perspective( camera.GetZoom( ), ( float )SCREEN_WIDTH/( float )SCREEN_HEIGHT, 0.1f, 100.0f );
+    //view distance 300
+    glm::mat4 projection = glm::perspective( camera.GetZoom( ), ( float )SCREEN_WIDTH/( float )SCREEN_HEIGHT, 0.1f, 300.0f );
 
     // Game loop
     while( !glfwWindowShouldClose( window ) )
@@ -175,15 +175,42 @@ int main( )
         glUniformMatrix4fv( glGetUniformLocation( shader.Program, "projection" ), 1, GL_FALSE, glm::value_ptr( projection ) );
         glUniformMatrix4fv( glGetUniformLocation( shader.Program, "view" ), 1, GL_FALSE, glm::value_ptr( view ) );
         
-        DrawPlanet(shader, sunModel, 0.0f, 0.01f, 16.0f, 0.0f, );
-        DrawPlanet(shader, mercuryModel, 5.0f, 0.01f, 8.0f, 1000.0f, );
-        DrawPlanet(shader, venusModel, 5.0f, 0.01f, 8.0f, 1000.0f, );
-        DrawPlanet(shader, earthModel, 5.0f, 0.01f, 8.0f, 1000.0f, );
-        DrawPlanet(shader, marsModel, 5.0f, 0.01f, 8.0f, 1000.0f, );
-        DrawPlanet(shader, jupiterModel, 5.0f, 0.01f, 8.0f, 1000.0f, );
-        DrawPlanet(shader, uranusModel, 5.0f, 0.01f, 8.0f, 1000.0f, );
-        DrawPlanet(shader, saturnModel, 5.0f, 0.01f, 8.0f, 1000.0f, );
-        DrawPlanet(shader, neptuneModel, 5.0f, 0.01f, 8.0f, 1000.0f, );
+        ////Sun
+        //radius = 0.0f
+        //Angle 0.006f
+        DrawPlanet(shader, sunModel, 0.0f, 0.01f, 16.0f, 0.0f, 0.006f);
+        ////Mercury
+        //radius = 70.0f
+        //Angle 0.008f
+        DrawPlanet(shader, mercuryModel, 70.0f, 0.01f, 8.0f, 1000.0f, 0.008f);
+        ////Venus
+        //radius = 80.0f
+        //angle = 0.007f
+        DrawPlanet(shader, venusModel, 80.0f, 0.01f, 8.0f, 1000.0f, 0.007f);
+        ////earth
+        //radius = 90.0f
+        //angle = 0.006f
+        DrawPlanet(shader, earthModel, 90.0f, 0.01f, 8.0f, 1000.0f, 0.006f);
+        ////Mars
+        //radius = 100.0f
+        //angle = 0.005f
+        DrawPlanet(shader, marsModel, 100.0f, 0.01f, 8.0f, 1000.0f, 0.005f);
+        //// JUPITER
+        //radius = 120.0f
+        //angle = 0.0045f
+        DrawPlanet(shader, jupiterModel, 120.0f, 0.01f, 8.0f, 1000.0f, 0.0045f);
+        ////Uranus
+        //radius = 190.0f
+        //angle = 0.0035f
+        DrawPlanet(shader, uranusModel, 190.0f, 0.01f, 8.0f, 1000.0f, 0.0035f);
+        ////SATURN
+        //radius = 160.0f
+        //angle = 0.0040f
+        DrawPlanet(shader, saturnModel, 160.0f, 0.01f, 8.0f, 1000.0f, 0.004f);
+        //// NEPTUNE
+        //radius = 220.0f
+        //angle = 0.003f
+        DrawPlanet(shader, neptuneModel, 220.0f, 0.01f, 8.0f, 1000.0f, 0.003f);
 
         
 
