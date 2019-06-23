@@ -6,40 +6,32 @@
 //
 
 #include "Planet.hpp"
+#include "Model.hpp"
 
-class Planet {
-public:
-    void drawPlanet(glm::vec2 positions);
-    glm::vec2 calculatePos();
-    Planet(Shader shader, Model planetModel, GLfloat orbitDistance, GLfloat planetaryScale, GLfloat rotationSpeed, GLfloat orbitSpeed, GLfloat orbitAngle, std::list<Planet> listOfPlanets);
-
-    ~Planet();
-private:
-    double length;
-    Shader shader;
-    Model planetModel;
-    GLfloat orbitDistance;
-    GLfloat planetaryScale, rotationSpeed, orbitSpeed, orbitAngle;
-    std::list<Planet> listOfPlanets;
-};
 
 Planet::Planet(Shader shader, Model planetModel, GLfloat orbitDistance, GLfloat planetaryScale, GLfloat rotationSpeed, GLfloat orbitSpeed, GLfloat orbitAngle, std::list<Planet> listOfPlanetsmoons) {
     
-    cout << "Planet created" << endl;
+    std::cout << "Planet created" << std::endl;
+}
+
+Planet::~Planet(){
 }
 
 glm::vec2 Planet::calculatePos(){
+    const double PI = 3.141592653589793238463;
+    GLfloat angle, radius, x, y;
+
     //Orbit Calculations
     angle = orbitAngle * (GLfloat)glfwGetTime() * orbitSpeed;
     radius = orbitDistance;
     x = radius * sin(PI * 2 * angle / 360);
     y = radius * cos(PI * 2 * angle / 360);
     
-    cout << "angle " << angle << "\n"
+    std::cout << "angle " << angle << "\n"
     << "radius" << radius << "\n"
     << "x " << x << "\n"
     << "y " << y << "\n"
-    << "time" <<  (GLfloat)glfwGetTime() << endl;
+    << "time" <<  (GLfloat)glfwGetTime() << std::endl;
     
     return glm::vec2(x,y);
 }

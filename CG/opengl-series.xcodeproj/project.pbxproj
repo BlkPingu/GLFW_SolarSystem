@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F66360C122BFF81200B750DC /* Planet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F66360BF22BFF81200B750DC /* Planet.cpp */; };
+		F66360C422C0212500B750DC /* Model.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F66360C222C0212500B750DC /* Model.cpp */; };
 		F6D2DCBA22BA7FCC00A1A3B4 /* image_helper.c in Sources */ = {isa = PBXBuildFile; fileRef = F6D2DC7D22BA7FCB00A1A3B4 /* image_helper.c */; };
 		F6D2DCBB22BA7FCC00A1A3B4 /* image_DXT.c in Sources */ = {isa = PBXBuildFile; fileRef = F6D2DC8022BA7FCB00A1A3B4 /* image_DXT.c */; };
 		F6D2DCBC22BA7FCC00A1A3B4 /* SOIL2.c in Sources */ = {isa = PBXBuildFile; fileRef = F6D2DC8322BA7FCB00A1A3B4 /* SOIL2.c */; };
@@ -113,6 +114,8 @@
 		F66360BE22BFC0E600B750DC /* Mars_normal-strong.lwo */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mars_normal-strong.lwo"; sourceTree = "<group>"; };
 		F66360BF22BFF81200B750DC /* Planet.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Planet.cpp; sourceTree = "<group>"; };
 		F66360C022BFF81200B750DC /* Planet.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Planet.hpp; sourceTree = "<group>"; };
+		F66360C222C0212500B750DC /* Model.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Model.cpp; sourceTree = "<group>"; };
+		F66360C322C0212500B750DC /* Model.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Model.hpp; sourceTree = "<group>"; };
 		F6D2DC7B22BA7FCB00A1A3B4 /* Mesh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mesh.h; sourceTree = "<group>"; };
 		F6D2DC7D22BA7FCB00A1A3B4 /* image_helper.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = image_helper.c; sourceTree = "<group>"; };
 		F6D2DC7E22BA7FCB00A1A3B4 /* stbi_pkm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stbi_pkm.h; sourceTree = "<group>"; };
@@ -146,7 +149,6 @@
 		F6D2DCB322BA7FCC00A1A3B4 /* lamp.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = lamp.vs; sourceTree = "<group>"; };
 		F6D2DCB422BA7FCC00A1A3B4 /* modelLoading.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = modelLoading.frag; sourceTree = "<group>"; };
 		F6D2DCB522BA7FCC00A1A3B4 /* modelLoading.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = modelLoading.vs; sourceTree = "<group>"; };
-		F6D2DCB622BA7FCC00A1A3B4 /* Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Model.h; sourceTree = "<group>"; };
 		F6D2DCB722BA7FCC00A1A3B4 /* Shader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shader.h; sourceTree = "<group>"; };
 		F6D2DCB822BA7FCC00A1A3B4 /* Camera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Camera.h; sourceTree = "<group>"; };
 		F6D2DCB922BA7FCC00A1A3B4 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
@@ -474,7 +476,8 @@
 				F6D2DCB822BA7FCC00A1A3B4 /* Camera.h */,
 				F6D2DCB922BA7FCC00A1A3B4 /* main.cpp */,
 				F6D2DC7B22BA7FCB00A1A3B4 /* Mesh.h */,
-				F6D2DCB622BA7FCC00A1A3B4 /* Model.h */,
+				F66360C222C0212500B750DC /* Model.cpp */,
+				F66360C322C0212500B750DC /* Model.hpp */,
 				F6D2DC9222BA7FCC00A1A3B4 /* res */,
 				F6D2DCB722BA7FCC00A1A3B4 /* Shader.h */,
 				F6D2DC7C22BA7FCB00A1A3B4 /* SOIL2 */,
@@ -538,6 +541,7 @@
 				F6D2DCBB22BA7FCC00A1A3B4 /* image_DXT.c in Sources */,
 				F6D2DCBD22BA7FCC00A1A3B4 /* etc1_utils.c in Sources */,
 				F66360C122BFF81200B750DC /* Planet.cpp in Sources */,
+				F66360C422C0212500B750DC /* Model.cpp in Sources */,
 				F6D2DCBE22BA7FCC00A1A3B4 /* main.cpp in Sources */,
 				F6D2DCBA22BA7FCC00A1A3B4 /* image_helper.c in Sources */,
 			);

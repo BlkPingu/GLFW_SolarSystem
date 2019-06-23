@@ -13,7 +13,7 @@ class Shader
 public:
     GLuint Program;
     Shader(void){
-        std::cout << "Warning! SHADER: Default Constructor used." << endl;
+        std::cout << "Warning! SHADER: Default Constructor used." << std::endl;
     }
     // Constructor generates the shader on the fly
     Shader( const GLchar *vertexPath, const GLchar *fragmentPath )

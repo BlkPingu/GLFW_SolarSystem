@@ -1,3 +1,16 @@
+//
+//  Model.hpp
+//  CGTutorial
+//
+//  Created by Tobias Kolb on 23.06.19.
+//
+
+#ifndef Model_hpp
+#define Model_hpp
+
+#include <stdio.h>
+
+
 #pragma once
 
 #include <string>
@@ -19,21 +32,19 @@
 
 using namespace std;
 
-GLint TextureFromFile( const char *path, string directory );
 
-class Model
-{
+class Model{
 public:
     /*  Functions   */
-    Model(void){
-        std::cout << "Warning! MODEL: Default Constructor used." << endl;
-    }
     // Constructor, expects a filepath to a 3D model.
     Model( const char *path )
     {
         this->loadModel( path );
     }
-    
+    Model(void){
+        std::cout << "Warning! MODEL: Default Constructor used." << endl;
+    }
+
     // Draws the model, and thus all its meshes
     void Draw( Shader shader )
     {
@@ -42,12 +53,41 @@ public:
             this->meshes[i].Draw( shader );
         }
     }
+    GLint TextureFromFile( const char *path, string directory )
+    {
+        //Generate texture ID and load texture data
+        string filename = string( path );
+        filename = directory + '/' + filename;
+        GLuint textureID;
+        glGenTextures( 1, &textureID );
+        
+        int width, height;
+        
+        unsigned char *image = SOIL_load_image( filename.c_str( ), &width, &height, 0, SOIL_LOAD_RGB );
+        
+        // Assign texture to ID
+        glBindTexture( GL_TEXTURE_2D, textureID );
+        glTexImage2D( GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, image );
+        glGenerateMipmap( GL_TEXTURE_2D );
+        
+        // Parameters
+        glTexParameteri( GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT );
+        glTexParameteri( GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT );
+        glTexParameteri( GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR );
+        glTexParameteri( GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+        glBindTexture( GL_TEXTURE_2D, 0 );
+        SOIL_free_image_data( image );
+        
+        return textureID;
+    }
+
+    
     
 private:
     /*  Model Data  */
     vector<Mesh> meshes;
     string directory;
-    vector<Texture> textures_loaded;	// Stores all the textures loaded so far, optimization to make sure textures aren't loaded more than once.
+    vector<Texture> textures_loaded;    // Stores all the textures loaded so far, optimization to make sure textures aren't loaded more than once.
     
     /*  Functions   */
     // Loads a model with supported ASSIMP extensions from file and stores the resulting meshes in the meshes vector.
@@ -210,30 +250,5 @@ private:
     }
 };
 
-GLint TextureFromFile( const char *path, string directory )
-{
-    //Generate texture ID and load texture data
-    string filename = string( path );
-    filename = directory + '/' + filename;
-    GLuint textureID;
-    glGenTextures( 1, &textureID );
-    
-    int width, height;
-    
-    unsigned char *image = SOIL_load_image( filename.c_str( ), &width, &height, 0, SOIL_LOAD_RGB );
-    
-    // Assign texture to ID
-    glBindTexture( GL_TEXTURE_2D, textureID );
-    glTexImage2D( GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, image );
-    glGenerateMipmap( GL_TEXTURE_2D );
-    
-    // Parameters
-    glTexParameteri( GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT );
-    glTexParameteri( GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT );
-    glTexParameteri( GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR );
-    glTexParameteri( GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-    glBindTexture( GL_TEXTURE_2D, 0 );
-    SOIL_free_image_data( image );
-    
-    return textureID;
-}
+
+#endif /* Model_hpp */

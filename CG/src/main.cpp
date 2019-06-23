@@ -1,33 +1,9 @@
-// Std. Includes
-#include <string>
-#include <list>
-
-// GLEW
-#define GLEW_STATIC
-#include <GL/glew.h>
-
-// GLFW
-#include <GLFW/glfw3.h>
-
-// GL includes
-#include "Shader.h"
-#include "Camera.h"
-#include "Model.h"
-
-// GLM Mathemtics
-#include <glm/glm.hpp>
-#include <glm/gtc/matrix_transform.hpp>
-#include <glm/gtc/type_ptr.hpp>
-
-// Other Libs
-#include "SOIL2/SOIL2.h"
-#include <math.h>
 
 
-//Math
-const double PI = 3.141592653589793238463;
+//Objects
+#include "Planet.hpp"
+#include "Model.hpp"
 
-GLfloat angle, radius, x, y;
 
 // Properties
 const GLuint WIDTH = 1600, HEIGHT = 1200;
@@ -112,7 +88,7 @@ int main( )
     Model uranusModel("res/models/planets/uranus/uranus.obj");
     Model venusModel( "res/models/planets/venus/venus.obj");
 
-    Model sunMoons[] = {earthModel, jupiterModel, marsModel,mercuryModel, moonModel, neptuneModel, saturnModel, sunModel, uranusModel, venusModel};
+    //Model sunMoons[] = {earthModel, jupiterModel, marsModel,mercuryModel, moonModel, neptuneModel, saturnModel, sunModel, uranusModel, venusModel};
     
     //view distance 300
     glm::mat4 projection = glm::perspective( camera.GetZoom( ), ( float )SCREEN_WIDTH/( float )SCREEN_HEIGHT, 0.1f, 300.0f );
@@ -140,46 +116,69 @@ int main( )
         glUniformMatrix4fv( glGetUniformLocation( shader.Program, "projection" ), 1, GL_FALSE, glm::value_ptr( projection ) );
         glUniformMatrix4fv( glGetUniformLocation( shader.Program, "view" ), 1, GL_FALSE, glm::value_ptr( view ) );
         
-        ////Sun
-        //radius = 0.0f
-        //Angle 0.006f
-        DrawPlanet(shader, sunModel, 0.0f, 0.01f, 16.0f, 0.0f, 0.006f);
+        
+       /*
+       Shader shader,
+       Model planetModel,
+       GLfloat orbitDistance,
+       GLfloat planetaryScale,
+       GLfloat rotationSpeed,
+       GLfloat orbitSpeed,
+       GLfloat orbitAngle,
+       std::list<Planet> listOfPlanetsmoons
+       */
+        
+        
+        std::list<Planet> empthyList;
+        std::list<Planet> earthMoon;
+        std::list<Planet> planets;
+
+        
+        
+        
+        
+
         ////Mercury
         //radius = 70.0f
         //Angle 0.008f
-        DrawPlanet(shader, mercuryModel, 70.0f, 0.01f, 8.0f, 1000.0f, 0.008f);
+        Planet mercury(shader, mercuryModel, 70.0f, 0.01f, 8.0f, 1000.0f, 0.008f, empthyList);
         ////Venus
         //radius = 80.0f
         //angle = 0.007f
-        DrawPlanet(shader, venusModel, 80.0f, 0.01f, 8.0f, 1000.0f, 0.007f);
+        Planet venus(shader, venusModel, 80.0f, 0.01f, 8.0f, 1000.0f, 0.007f, empthyList);
         ////earth
         //radius = 90.0f
         //angle = 0.006f
-        DrawPlanet(shader, earthModel, 90.0f, 0.01f, 8.0f, 1000.0f, 0.006f);
-        
+        Planet earth(shader, earthModel, 90.0f, 0.01f, 8.0f, 1000.0f, 0.006f, earthMoon);
         ////Mars
         //radius = 100.0f
         //angle = 0.005f
-        DrawPlanet(shader, marsModel, 100.0f, 0.01f, 8.0f, 1000.0f, 0.005f);
+        Planet mars(shader, marsModel, 100.0f, 0.01f, 8.0f, 1000.0f, 0.005f, empthyList);
         //// JUPITER
         //radius = 120.0f
         //angle = 0.0045f
-        DrawPlanet(shader, jupiterModel, 120.0f, 0.01f, 8.0f, 1000.0f, 0.0045f);
+        Planet jupiter(shader, jupiterModel, 120.0f, 0.01f, 8.0f, 1000.0f, 0.0045f, empthyList);
         ////Uranus
         //radius = 190.0f
         //angle = 0.0035f
-        DrawPlanet(shader, uranusModel, 190.0f, 0.01f, 8.0f, 1000.0f, 0.0035f);
+        Planet uranus(shader, uranusModel, 190.0f, 0.01f, 8.0f, 1000.0f, 0.0035f, empthyList);
         ////SATURN
         //radius = 160.0f
         //angle = 0.0040f
-        DrawPlanet(shader, saturnModel, 160.0f, 0.01f, 8.0f, 1000.0f, 0.004f);
-        //// NEPTUNE
+        Planet saturn(shader, saturnModel, 160.0f, 0.01f, 8.0f, 1000.0f, 0.004f, empthyList);
         //radius = 220.0f
         //angle = 0.003f
-        DrawPlanet(shader, neptuneModel, 220.0f, 0.01f, 8.0f, 1000.0f, 0.003f);
+        Planet neptune(shader, neptuneModel, 220.0f, 0.01f, 8.0f, 1000.0f, 0.003f, empthyList);
+        
+        planets.push_back(mercury);
+        
+        ////Sun
+        //radius = 0.0f
+        //Angle 0.006f
+        Planet sun(shader, sunModel, 0.0f, 0.01f, 16.0f, 0.0f, 0.006f, planets);
 
         
-
+        
         
         
         //DrawPlanet(shader, neptuneModel, glm::vec3( 0.0f, -10.0f, 0.0f ), glm::vec3( 0.01f, 0.01f, 0.01f ), 8.0f);
