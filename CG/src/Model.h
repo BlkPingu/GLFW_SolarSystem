@@ -37,7 +37,6 @@ public:
         for ( GLuint i = 0; i < this->meshes.size( ); i++ )
         {
             this->meshes[i].Draw( shader );
-            cout << "drawn" << endl;
         }
     }
     
@@ -162,8 +161,6 @@ private:
             textures.insert( textures.end( ), specularMaps.begin( ), specularMaps.end( ) );
         }
         
-        
-        cout << vertices.size() << endl;
         
         // Return a mesh object created from the extracted mesh data
         return Mesh( vertices, indices, textures );

@@ -20,6 +20,13 @@
 
 // Other Libs
 #include "SOIL2/SOIL2.h"
+#include <math.h>
+
+
+//Math
+const double PI = 3.141592653589793238463;
+
+GLfloat angle, radius, x, y;
 
 // Properties
 const GLuint WIDTH = 800, HEIGHT = 600;
@@ -31,7 +38,7 @@ void MouseCallback( GLFWwindow *window, double xPos, double yPos );
 void DoMovement( );
 
 // Camera
-Camera camera( glm::vec3( 0.0f, 0.0f, 3.0f ) );
+Camera camera( glm::vec3( 0.0f, 10.0f, 0.0f ) );
 bool keys[1024];
 GLfloat lastX = 400, lastY = 300;
 bool firstMouse = true;
@@ -40,12 +47,37 @@ GLfloat deltaTime = 0.0f;
 GLfloat lastFrame = 0.0f;
 
 
-void DrawPlanet(Shader shader, Model planet, glm::vec3 vec, glm::vec3 scale, float rotationSpeed){
-    // Draw the loaded model
+
+
+void DrawPlanet(Shader shader, Model planet, GLfloat orbitDistance, GLfloat planetaryScale, GLfloat rotationSpeed, GLfloat orbitSpeed){
+    
+    //Drawing
     glm::mat4 model = glm::mat4(1.0f);
-    model = glm::translate( model, vec); // Translate it down a bit so it's at the center of the scene
+    
+    //Orbit Calculations
+    angle = 0.0035f* (GLfloat)glfwGetTime() * orbitSpeed;
+    radius = orbitDistance;
+    x = radius * sin(PI * 2 * angle / 360);
+    y = radius * cos(PI * 2 * angle / 360);
+    
+    
+    cout << "angle " << angle << "\n"
+    << "radius" << radius << "\n"
+    << "x " << x << "\n"
+    << "y " << y << "\n"
+    << "time" <<  (GLfloat)glfwGetTime() << endl;
+    
+    //Relative Position
+    model = glm::translate( model, glm::vec3( x, 0.0f, y));
+
+    
+    //model = glm::translate( model, vec);
+    
+    //Rotation
     model = glm::rotate(model, glm::radians((GLfloat)glfwGetTime() * rotationSpeed), glm::vec3(0.0f, 1.0f, 0.0f));
-    model = glm::scale( model, scale);    // It's a bit too big for our scene, so scale it down
+    
+    //Scaling
+    model = glm::scale( model, glm::vec3( planetaryScale, planetaryScale, planetaryScale ));
     glUniformMatrix4fv( glGetUniformLocation( shader.Program, "model" ), 1, GL_FALSE, glm::value_ptr( model ) );
     planet.Draw( shader );
 }
@@ -124,7 +156,6 @@ int main( )
     while( !glfwWindowShouldClose( window ) )
     {
         
-        cout << camera.GetPosition().b << endl;
         // Set frame time
         GLfloat currentFrame = glfwGetTime( );
         deltaTime = currentFrame - lastFrame;
@@ -144,8 +175,8 @@ int main( )
         glUniformMatrix4fv( glGetUniformLocation( shader.Program, "projection" ), 1, GL_FALSE, glm::value_ptr( projection ) );
         glUniformMatrix4fv( glGetUniformLocation( shader.Program, "view" ), 1, GL_FALSE, glm::value_ptr( view ) );
         
-        DrawPlanet(shader, sunModel, glm::vec3( 0.0f, 0.0f, 0.0f ), glm::vec3( 0.01f, 0.01f, 0.01f ), 16.0f);
-        DrawPlanet(shader, mercuryModel, glm::vec3( -5.0f, 0.0f , 0.0f ), glm::vec3( 0.01f, 0.01f, 0.01f ), 8.0f);
+        DrawPlanet(shader, sunModel, 0.0f, 0.01f, 16.0f, 1.0f);
+        DrawPlanet(shader, mercuryModel, 5.0f, 0.01f, 8.0f, 1000.0f);
         
         
         //DrawPlanet(shader, neptuneModel, glm::vec3( 0.0f, -10.0f, 0.0f ), glm::vec3( 0.01f, 0.01f, 0.01f ), 8.0f);
