@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Quelldateien">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Headerdateien">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Ressourcendateien">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Quelldateien\header">
+      <UniqueIdentifier>{b5918b69-3395-4b00-9e3f-a26be68e2647}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Quelldateien\Cpps">
+      <UniqueIdentifier>{48957b72-e9f9-4c1a-aee8-59aad8a1314a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Ressourcendateien\Shader">
+      <UniqueIdentifier>{2826dc4e-b0f9-405e-ace1-02d393b04a42}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="ClassDiagram.cd" />
+    <None Include="..\res\shaders\cubemap.fs">
+      <Filter>Ressourcendateien\Shader</Filter>
+    </None>
+    <None Include="..\res\shaders\cubemap.vs">
+      <Filter>Ressourcendateien\Shader</Filter>
+    </None>
+    <None Include="..\res\shaders\fragment.fs">
+      <Filter>Ressourcendateien\Shader</Filter>
+    </None>
+    <None Include="..\res\shaders\instancing.fs">
+      <Filter>Ressourcendateien\Shader</Filter>
+    </None>
+    <None Include="..\res\shaders\instancing.vs">
+      <Filter>Ressourcendateien\Shader</Filter>
+    </None>
+    <None Include="..\res\shaders\textFragment.fs">
+      <Filter>Ressourcendateien\Shader</Filter>
+    </None>
+    <None Include="..\res\shaders\textVertex.vs">
+      <Filter>Ressourcendateien\Shader</Filter>
+    </None>
+    <None Include="..\res\shaders\vertex.vs">
+      <Filter>Ressourcendateien\Shader</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Camera.h">
+      <Filter>Quelldateien\header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Mesh.h">
+      <Filter>Quelldateien\header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Model.h">
+      <Filter>Quelldateien\header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shader.h">
+      <Filter>Quelldateien\header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Planet.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Mesh.cpp">
+      <Filter>Quelldateien\Cpps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Camera.cpp">
+      <Filter>Quelldateien\Cpps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\main.cpp">
+      <Filter>Quelldateien\Cpps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Model.cpp">
+      <Filter>Quelldateien\Cpps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shader.cpp">
+      <Filter>Quelldateien\Cpps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Planet.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

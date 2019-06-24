@@ -1,0 +1,14 @@
+﻿  main.cpp
+C:\Users\Ick3\source\repos\GroberUnfug\main.cpp(361,30): warning C4244:  "Initialisierung": Konvertierung von "double" in "GLfloat", möglicher Datenverlust
+C:\Users\Ick3\source\repos\GroberUnfug\main.cpp(572,17): warning C4244:  "=": Konvertierung von "double" in "GLfloat", möglicher Datenverlust
+C:\Users\Ick3\source\repos\GroberUnfug\main.cpp(573,17): warning C4244:  "=": Konvertierung von "double" in "GLfloat", möglicher Datenverlust
+C:\Users\Ick3\source\repos\GroberUnfug\main.cpp(577,21): warning C4244:  "Initialisierung": Konvertierung von "double" in "GLfloat", möglicher Datenverlust
+C:\Users\Ick3\source\repos\GroberUnfug\main.cpp(578,21): warning C4244:  "Initialisierung": Konvertierung von "double" in "GLfloat", möglicher Datenverlust
+C:\Users\Ick3\source\repos\GroberUnfug\main.cpp(580,13): warning C4244:  "=": Konvertierung von "double" in "GLfloat", möglicher Datenverlust
+C:\Users\Ick3\source\repos\GroberUnfug\main.cpp(581,13): warning C4244:  "=": Konvertierung von "double" in "GLfloat", möglicher Datenverlust
+C:\Users\Ick3\source\repos\GroberUnfug\main.cpp(588,31): warning C4244:  "Argument": Konvertierung von "double" in "GLfloat", möglicher Datenverlust
+soil.lib(image_DXT.obj) : warning LNK4099: PDB "" wurde nicht mit "soil.lib(image_DXT.obj)" oder an "" gefunden; Objekt wird verkn³pft, als ob keine Debuginformationen vorhanden wõren.
+soil.lib(image_helper.obj) : warning LNK4099: PDB "" wurde nicht mit "soil.lib(image_helper.obj)" oder an "" gefunden; Objekt wird verkn³pft, als ob keine Debuginformationen vorhanden wõren.
+soil.lib(SOIL.obj) : warning LNK4099: PDB "" wurde nicht mit "soil.lib(SOIL.obj)" oder an "" gefunden; Objekt wird verkn³pft, als ob keine Debuginformationen vorhanden wõren.
+soil.lib(stb_image_aug.obj) : warning LNK4099: PDB "" wurde nicht mit "soil.lib(stb_image_aug.obj)" oder an "" gefunden; Objekt wird verkn³pft, als ob keine Debuginformationen vorhanden wõren.
+  GroberUnfug.vcxproj -> C:\Users\Ick3\source\repos\GroberUnfug\Debug\GroberUnfug.exe
