@@ -1,6 +1,7 @@
 #pragma once
+
 #include <stdio.h>
-#include "planet.h"
+#include "Planet.h"
 #include "Model.h"
 float xk = 0;
 float yk = 0;
@@ -32,16 +33,35 @@ Planet::~Planet() {
 }
 
 
-void Planet::drawMoon(glm::vec2 positions) {
+void Planet::drawMoon(glm::vec2 positions, GLfloat UniverseSpeed) {
+
+	const double PI = 3.141592653589793238463;
+	GLfloat angle, radius, x, y;
+
+	//Orbit Calculations
+	angle = orbitAngle * (GLfloat)glfwGetTime() * orbitSpeed * UniverseSpeed;
+	radius = orbitDistance;
+	x = radius * sin(PI * 2 * angle / 360);
+	y = radius * cos(PI * 2 * angle / 360);
+	x = x + positions.x;
+	y = y + positions.y;
+	
+	//std::cout << "angle " << angle << "\n"
+	//<< "radius" << radius << "\n"
+	//<< "x " << x << "\n"
+	//<< "y " << y << "\n"
+	//<< "time" << (GLfloat)glfwGetTime() << std::endl;
+	
+
 	shader.Use();
 	//Drawing
 	glm::mat4 model = glm::mat4(1.0f);
 
 	//Relative Position
-	model = glm::translate(model, glm::vec3(positions.x, 0.0f, positions.y));
+	model = glm::translate(model, glm::vec3(x, 0.0f, y));
 
 	//Rotation
-	model = glm::rotate(model, glm::radians((GLfloat)glfwGetTime() * rotationSpeed), glm::vec3(0.0f, 1.0f, 0.0f));
+	model = glm::rotate(model, glm::radians((GLfloat)glfwGetTime() * rotationSpeed*UniverseSpeed), glm::vec3(0.0f, 1.0f, 0.0f));
 
 	//Scaling
 	model = glm::scale(model, glm::vec3(planetaryScale, planetaryScale, planetaryScale));
@@ -52,35 +72,38 @@ void Planet::drawMoon(glm::vec2 positions) {
 
 }
 
-glm::vec2 Planet::calculatePos() {
+
+
+
+glm::vec2 Planet::calculatePos(GLfloat UniverseSpeed) {
 	const double PI = 3.141592653589793238463;
 	GLfloat angle, radius, x, y;
 
 	//Orbit Calculations
-	angle = orbitAngle * (GLfloat)glfwGetTime() * orbitSpeed;
+	angle = orbitAngle * (GLfloat)glfwGetTime() * orbitSpeed * UniverseSpeed;
 	radius = orbitDistance;
 	x = radius * sin(PI * 2 * angle / 360);
 	y = radius * cos(PI * 2 * angle / 360);
 
-	std::cout << "angle " << angle << "\n"
-		<< "radius" << radius << "\n"
-		<< "x " << x << "\n"
-		<< "y " << y << "\n"
-		<< "time" << (GLfloat)glfwGetTime() << std::endl;
-
+	//std::cout << "angle " << angle << "\n"
+	//	<< "radius" << radius << "\n"
+	//	<< "x " << x << "\n"
+	//	<< "y " << y << "\n"
+	//	<< "time" << (GLfloat)glfwGetTime() << std::endl;
+	//
 	return glm::vec2(x, y);
 }
 
-void Planet::drawPlanet() {
+void Planet::drawPlanet(GLfloat UniverseSpeed) {
 	shader.Use();
 	//Drawing
 	glm::mat4 model = glm::mat4(1.0f);
-	glm::vec2 xy = calculatePos();
+	glm::vec2 xy = calculatePos(UniverseSpeed);
 	//Relative Position
 	model = glm::translate(model, glm::vec3(xy.x, 0.0f,xy.y));
 
 	//Rotation
-	model = glm::rotate(model, glm::radians((GLfloat)glfwGetTime() * rotationSpeed), glm::vec3(0.0f, 1.0f, 0.0f));
+	model = glm::rotate(model, glm::radians((GLfloat)glfwGetTime() * rotationSpeed * UniverseSpeed), glm::vec3(0.0f, 1.0f, 0.0f));
 
 	//Scaling
 	model = glm::scale(model, glm::vec3(planetaryScale, planetaryScale, planetaryScale));
@@ -89,6 +112,6 @@ void Planet::drawPlanet() {
 	planetModel.Draw(shader);
 
 	for (Planet moon : listOfPlanets) {
-		moon.drawMoon(calculatePos());
+		moon.drawMoon(xy,UniverseSpeed);
 	}
 }

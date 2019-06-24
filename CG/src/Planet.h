@@ -36,13 +36,14 @@ public:
 	GLfloat orbitDistance;
 	GLfloat planetaryScale, rotationSpeed, orbitSpeed, orbitAngle;
 	std::list<Planet> listOfPlanets;
-
+	GLfloat UniverseSpeed;
 
 
 public:
-	void drawPlanet();
-	void drawMoon(glm::vec2 position);
-	glm::vec2 calculatePos();
+	void drawPlanet(GLfloat UniverseSpeed);
+	void drawMoon(glm::vec2 position, GLfloat UniverseSpeed);
+	glm::vec2 calculatePos(GLfloat UniverseSpeed);
+
 	Planet(Shader shader, Model planetModel, GLfloat orbitDistance, GLfloat planetaryScale, GLfloat rotationSpeed, GLfloat orbitSpeed, GLfloat orbitAngle, std::list<Planet> listOfPlanets);
 
 	~Planet();
