@@ -21,7 +21,7 @@
 #include <glm/gtc/type_ptr.hpp>
 
 // Other Libs
-#include "soil.h"
+#include "SOIL2/SOIL2.h"
 #include <math.h>
 
 
@@ -37,12 +37,15 @@ public:
 	GLfloat planetaryScale, rotationSpeed, orbitSpeed, orbitAngle;
 	std::list<Planet> listOfPlanets;
 	GLfloat UniverseSpeed;
-    void renderOrbit(float distanceFromSun, glm::vec2 positions);
+    void renderOrbit(glm::vec2 currentPosition);
+
 
 
 public:
 	void drawPlanet(glm::vec2 planetPosition, GLfloat UniverseSpeed);
 	glm::vec2 calculatePos(glm::vec2 relativePlanetPosition, GLfloat UniverseSpeed);
+    void drawCircle( GLfloat x, GLfloat y, GLfloat z, GLfloat radius, GLint numberOfSides);
+
 
 	Planet(Shader shader, Model planetModel, GLfloat orbitDistance, GLfloat planetaryScale, GLfloat rotationSpeed, GLfloat orbitSpeed, GLfloat orbitAngle, std::list<Planet> listOfPlanets);
 

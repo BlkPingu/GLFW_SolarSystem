@@ -37,7 +37,7 @@ void MouseCallback(GLFWwindow* window, double xPos, double yPos);
 void DoMovement();
 
 // Camera
-Camera camera(glm::vec3(0.0f, 100.0f, 0.0f));
+Camera camera(glm::vec3(0.0f, 5.0f, 5.0f));
 bool keys[1024];
 GLfloat lastX = 400, lastY = 300;
 bool firstMouse = true;
@@ -180,16 +180,10 @@ int main()
     
     Planet sun= Planet(shader, sunModel, 0.0f, 0.01f, 16.0f* UniverseSpeed, 0.0f, 0.006f, planets);
 
-
-
-    
-
-
-
 	// Game loop
 	while (!glfwWindowShouldClose(window))
 	{
-
+        
 		// Set frame time
 		GLfloat currentFrame = glfwGetTime();
 		deltaTime = currentFrame - lastFrame;
@@ -211,7 +205,7 @@ int main()
 		glUniformMatrix4fv(glGetUniformLocation(shader.Program, "view"), 1, GL_FALSE, glm::value_ptr(view));
 
         sun.drawPlanet(glm::vec2(0.0f, 0.0f), UniverseSpeed);
-
+        
 		// Swap the buffers
 		glfwSwapBuffers(window);
 	}
@@ -288,3 +282,4 @@ void MouseCallback(GLFWwindow* window, double xPos, double yPos) {
 
 	camera.ProcessMouseMovement(xOffset, yOffset);
 }
+

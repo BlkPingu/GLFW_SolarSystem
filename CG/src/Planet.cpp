@@ -1,5 +1,3 @@
-#pragma once
-
 #include <stdio.h>
 #include "Planet.h"
 #include "Model.h"
@@ -7,7 +5,7 @@ float xk = 0;
 float yk = 0;
 Shader shader;
 Model planetModel;
-GLfloat orbitdistance;
+GLfloat orbitDistance;
 GLfloat planetaryScale;
 GLfloat rotationSpeed;
 GLfloat orbitSpeed;
@@ -30,8 +28,9 @@ Planet::Planet(Shader shader, Model planetModel, GLfloat orbitDistance, GLfloat 
 Planet::~Planet() {
 }
 
+
 // render this planets orbit circle
-void Planet::renderOrbit(float distanceFromSun, glm::vec2 positions)
+void Planet::renderOrbit(glm::vec2 currentPlanetPosition)
 {
     // draw a line strip
     glBegin(GL_LINE_STRIP);
@@ -39,17 +38,17 @@ void Planet::renderOrbit(float distanceFromSun, glm::vec2 positions)
     // loop round from 0 to 2*PI and draw around the radius of the orbit using trigonometry
     for (float angle = 0.0f; angle < 6.283185307f; angle += 0.05f)
     {
-        glVertex3f(sin(angle) * distanceFromSun, cos(angle) * distanceFromSun, 0.0f);
+        glVertex3f(sin(angle) * orbitDistance, cos(angle) * orbitDistance, 0.0f);
     }
-    glVertex3f(0.0f, distanceFromSun, 0.0f);
+    glVertex3f(0.0f, orbitDistance, 0.0f);
     
     glEnd();
     
-    // render the moons' orbit
+    //render the moons' orbit
     glPushMatrix();
     // translate to the center of this planet to draw the moon orbit around it
-    glTranslatef(positions[0], positions[1], 0.0f);
-    // draw all moon orbits
+    glTranslatef(currentPlanetPosition[0], currentPlanetPosition[1], 0.0f);
+    // draw moon orbits
     glPopMatrix();
 }
 
@@ -60,10 +59,9 @@ glm::vec2 Planet::calculatePos(glm::vec2 relativePlanetPosition, GLfloat Univers
 	//Orbit Calculations
 	angle = orbitAngle * (GLfloat)glfwGetTime() * orbitSpeed * UniverseSpeed;
 	radius = orbitDistance;
-	x = radius * sin(PI * 2 * angle / 360);
-	y = radius * cos(PI * 2 * angle / 360);
-    x = x + relativePlanetPosition.x;
-    y = y + relativePlanetPosition.y;
+	x = radius * sin(PI * 2 * angle / 360) + relativePlanetPosition.x;
+	y = radius * cos(PI * 2 * angle / 360) + relativePlanetPosition.y;
+
 
 	return glm::vec2(x, y);
 }
@@ -86,8 +84,7 @@ void Planet::drawPlanet(glm::vec2 planetPosition, GLfloat UniverseSpeed) {
 	planetModel.Draw(shader);
 
 	for (Planet moon : listOfPlanets) {
-		//moon.drawMoon(xy,UniverseSpeed);
         moon.drawPlanet(currentPlanetPosition, UniverseSpeed);
+        moon.renderOrbit(currentPlanetPosition);
 	}
-    renderOrbit(orbitDistance, currentPlanetPosition);
 }
