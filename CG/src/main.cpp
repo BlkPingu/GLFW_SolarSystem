@@ -23,19 +23,12 @@
 #include <glm/gtc/type_ptr.hpp>
 
 // Other Libs
-#include <soil.h>
+#include "SOIL2/SOIL2.h"
 #include <math.h>
 #include <list>
 
-
-
-//Math
-const double PI = 3.141592653589793238463;
-
-
-
 // Properties
-const GLuint WIDTH = 1600, HEIGHT = 1200;
+const GLuint WIDTH = 1200, HEIGHT = 900;
 int SCREEN_WIDTH, SCREEN_HEIGHT;
 
 // Function prototypes
@@ -176,6 +169,8 @@ int main()
 	//radius = 0.0f
 	//Angle 0.006f
 	Planet sun= Planet(shader, sunModel, 0.0f, 0.01f, 16.0f* UniverseSpeed, 0.0f, 0.006f, noMoons);
+    
+    
 
 
 
@@ -194,7 +189,7 @@ int main()
 		
 
 		// Clear the colorbuffer
-		glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
+		glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
 		shader.Use();

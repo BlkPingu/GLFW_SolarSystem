@@ -25,15 +25,13 @@ Planet::Planet(Shader shader, Model planetModel, GLfloat orbitDistance, GLfloat 
 	this->orbitSpeed = orbitSpeed;
 	this->orbitAngle = orbitAngle;
 	this->listOfPlanets = listOfPlanetsmoons;
-
-
 }
 
 Planet::~Planet() {
 }
 
 
-void Planet::drawMoon(glm::vec2 positions, GLfloat UniverseSpeed) {
+void Planet::drawMoon(glm::vec2 relativePlanetPosition, GLfloat UniverseSpeed) {
 
 	const double PI = 3.141592653589793238463;
 	GLfloat angle, radius, x, y;
@@ -43,15 +41,8 @@ void Planet::drawMoon(glm::vec2 positions, GLfloat UniverseSpeed) {
 	radius = orbitDistance;
 	x = radius * sin(PI * 2 * angle / 360);
 	y = radius * cos(PI * 2 * angle / 360);
-	x = x + positions.x;
-	y = y + positions.y;
-	
-	//std::cout << "angle " << angle << "\n"
-	//<< "radius" << radius << "\n"
-	//<< "x " << x << "\n"
-	//<< "y " << y << "\n"
-	//<< "time" << (GLfloat)glfwGetTime() << std::endl;
-	
+	x = x + relativePlanetPosition.x;
+	y = y + relativePlanetPosition.y;
 
 	shader.Use();
 	//Drawing
@@ -68,9 +59,38 @@ void Planet::drawMoon(glm::vec2 positions, GLfloat UniverseSpeed) {
 	glUniformMatrix4fv(glGetUniformLocation(shader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model));
 
 	planetModel.Draw(shader);
-
-
+    
+    renderOrbit(radius, relativePlanetPosition);
 }
+
+
+// render this planets orbit circle
+void Planet::renderOrbit(float distanceFromSun, glm::vec2 positions)
+{
+    // draw a line strip
+    glBegin(GL_LINE_STRIP);
+    
+    // loop round from 0 to 2*PI and draw around the radius of the orbit using trigonometry
+    for (float angle = 0.0f; angle < 6.283185307f; angle += 0.05f)
+    {
+        glVertex3f(sin(angle) * distanceFromSun, cos(angle) * distanceFromSun, 0.0f);
+    }
+    glVertex3f(0.0f, distanceFromSun, 0.0f);
+    
+    glEnd();
+    
+    // render the moons' orbit
+    glPushMatrix();
+    // translate to the center of this planet to draw the moon orbit around it
+    glTranslatef(positions[0], positions[1], 0.0f);
+    // draw all moon orbits
+
+    glPopMatrix();
+}
+
+
+
+
 
 
 
@@ -114,4 +134,7 @@ void Planet::drawPlanet(GLfloat UniverseSpeed) {
 	for (Planet moon : listOfPlanets) {
 		moon.drawMoon(xy,UniverseSpeed);
 	}
+    
+    renderOrbit(orbitDistance, xy);
+
 }

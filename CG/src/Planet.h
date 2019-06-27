@@ -37,6 +37,7 @@ public:
 	GLfloat planetaryScale, rotationSpeed, orbitSpeed, orbitAngle;
 	std::list<Planet> listOfPlanets;
 	GLfloat UniverseSpeed;
+    void renderOrbit(float distanceFromSun, glm::vec2 positions);
 
 
 public:
