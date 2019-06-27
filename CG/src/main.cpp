@@ -132,11 +132,11 @@ int main()
     //Angle 0.005f
 	Planet earthMoon = Planet(shader, moonModel, 10.0f, 0.005f, 8.0f * UniverseSpeed, 10000.0f * UniverseSpeed, 0.005f, noMoons);
     earthMoons.push_back(earthMoon);
-
+    
 	////Mercury
 	//radius = 70.0f
 	//Angle 0.008f
-	Planet mercury = Planet(shader, mercuryModel, 70.0f, 0.01f, 8.0f * UniverseSpeed, 1000.0f * UniverseSpeed, 0.008f, earthMoons);
+	Planet mercury = Planet(shader, mercuryModel, 70.0f, 0.01f, 8.0f * UniverseSpeed, 1000.0f * UniverseSpeed, 0.008f, noMoons);
 	////Venus
 	//radius = 80.0f
 	//angle = 0.007f
@@ -144,7 +144,7 @@ int main()
 	////earth
 	//radius = 90.0f
 	//angle = 0.006f
-	Planet earth =Planet(shader, earthModel, 90.0f, 0.01f, 8.0f * UniverseSpeed, 1000.0f * UniverseSpeed, 0.006f, noMoons);
+	Planet earth =Planet(shader, earthModel, 90.0f, 0.01f, 8.0f * UniverseSpeed, 1000.0f * UniverseSpeed, 0.006f, earthMoons);
 	////Mars
 	//radius = 100.0f
 	//angle = 0.005f
@@ -152,7 +152,7 @@ int main()
 	//// JUPITER
 	//radius = 120.0f
 	//angle = 0.0045f
-	Planet jupiter = Planet(shader, jupiterModel, 120.0f, 0.01f, 8.0f * UniverseSpeed, 1000.0f * UniverseSpeed, 0.0045f, noMoons);
+	Planet jupiter = Planet(shader, jupiterModel, 120.0f, 0.01f, 8.0f * UniverseSpeed, 1000.0f * UniverseSpeed, 0.0045f, earthMoons);
 	////Uranus
 	//radius = 190.0f
 	//angle = 0.0035f
@@ -168,8 +168,20 @@ int main()
 	////Sun
 	//radius = 0.0f
 	//Angle 0.006f
-	Planet sun= Planet(shader, sunModel, 0.0f, 0.01f, 16.0f* UniverseSpeed, 0.0f, 0.006f, noMoons);
     
+    planets.push_back(mercury);
+    planets.push_back(venus);
+    planets.push_back(earth);
+    planets.push_back(mars);
+    planets.push_back(jupiter);
+    planets.push_back(uranus);
+    planets.push_back(saturn);
+    planets.push_back(neptune);
+    
+    Planet sun= Planet(shader, sunModel, 0.0f, 0.01f, 16.0f* UniverseSpeed, 0.0f, 0.006f, planets);
+
+
+
     
 
 
@@ -198,32 +210,7 @@ int main()
 		glUniformMatrix4fv(glGetUniformLocation(shader.Program, "projection"), 1, GL_FALSE, glm::value_ptr(projection));
 		glUniformMatrix4fv(glGetUniformLocation(shader.Program, "view"), 1, GL_FALSE, glm::value_ptr(view));
 
-
-
-
-
-
-
-		sun.drawPlanet(UniverseSpeed);
-		mercury.drawPlanet(UniverseSpeed);
-		venus.drawPlanet(UniverseSpeed);
-		earth.drawPlanet(UniverseSpeed);
-		mars.drawPlanet(UniverseSpeed);
-		jupiter.drawPlanet(UniverseSpeed);
-		uranus.drawPlanet(UniverseSpeed);
-		saturn.drawPlanet(UniverseSpeed);
-		neptune.drawPlanet(UniverseSpeed);
-
-
-
-
-
-
-
-
-		//DrawPlanet(shader, neptuneModel, glm::vec3( 0.0f, -10.0f, 0.0f ), glm::vec3( 0.01f, 0.01f, 0.01f ), 8.0f);
-
-
+        sun.drawPlanet(glm::vec2(0.0f, 0.0f), UniverseSpeed);
 
 		// Swap the buffers
 		glfwSwapBuffers(window);
