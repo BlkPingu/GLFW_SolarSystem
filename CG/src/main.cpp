@@ -135,40 +135,40 @@ int main()
 	////Luna
     //radius = 10.0f
     //Angle 0.005f
-	Planet earthMoon = Planet(planetShader,orbitShader, moonModel,orbitModel, 10.0f, 0.005f, 8.0f * UniverseSpeed, 10000.0f * UniverseSpeed, 0.005f, noMoons, 1.0f);
+	Planet earthMoon = Planet(planetShader,orbitShader, moonModel,orbitModel, 10.0f, 0.005f, 8.0f * UniverseSpeed, 10000.0f * UniverseSpeed, 0.005f, noMoons, 1.0f, false);
     earthMoons.push_back(earthMoon);
     
 	////Mercury
 	//radius = 70.0f
 	//Angle 0.008f
-	Planet mercury = Planet(planetShader,orbitShader, mercuryModel,orbitModel, 70.0f, 0.1f, 8.0f * UniverseSpeed, 1000.0f * UniverseSpeed, 0.008f, noMoons,7.0f);
+	Planet mercury = Planet(planetShader,orbitShader, mercuryModel,orbitModel, 70.0f, 0.1f, 8.0f * UniverseSpeed, 1000.0f * UniverseSpeed, 0.008f, noMoons,7.0f, false);
 	////Venus
 	//radius = 80.0f
 	//angle = 0.007f
-	Planet venus =Planet(planetShader,orbitShader, venusModel,orbitModel, 80.0f, 0.1f, 8.0f * UniverseSpeed, 1000.0f * UniverseSpeed, 0.007f, noMoons,8.0f);
+	Planet venus =Planet(planetShader,orbitShader, venusModel,orbitModel, 80.0f, 0.1f, 8.0f * UniverseSpeed, 1000.0f * UniverseSpeed, 0.007f, noMoons,8.0f, false);
 	////earth
 	//radius = 90.0f
 	//angle = 0.006f
-	Planet earth =Planet(planetShader,orbitShader, earthModel,orbitModel, 90.0f, 0.008f, 8.0f * UniverseSpeed, 1000.0f * UniverseSpeed, 0.006f, earthMoons,9.0f);
+	Planet earth =Planet(planetShader,orbitShader, earthModel,orbitModel, 90.0f, 0.008f, 8.0f * UniverseSpeed, 1000.0f * UniverseSpeed, 0.006f, earthMoons,9.0f, true);
 	////Mars
 	//radius = 100.0f
 	//angle = 0.005f
-	Planet mars = Planet(planetShader,orbitShader, marsModel,orbitModel, 100.0f, 0.1f, 8.0f * UniverseSpeed, 1000.0f * UniverseSpeed, 0.005f, earthMoons,10.0f);
+	Planet mars = Planet(planetShader,orbitShader, marsModel,orbitModel, 100.0f, 0.1f, 8.0f * UniverseSpeed, 1000.0f * UniverseSpeed, 0.005f, earthMoons,10.0f, true);
 	//// JUPITER
 	//radius = 120.0f
 	//angle = 0.0045f
-	Planet jupiter = Planet(planetShader,orbitShader, jupiterModel,orbitModel, 120.0f, 0.1f, 8.0f * UniverseSpeed, 1000.0f * UniverseSpeed, 0.0045f, earthMoons,12.0f);
+	Planet jupiter = Planet(planetShader,orbitShader, jupiterModel,orbitModel, 120.0f, 0.1f, 8.0f * UniverseSpeed, 1000.0f * UniverseSpeed, 0.0045f, earthMoons,12.0f, true);
 	////Uranus
 	//radius = 190.0f
 	//angle = 0.0035f
-	Planet uranus = Planet(planetShader,orbitShader, uranusModel,orbitModel, 190.0f, 0.1f, 8.0f * UniverseSpeed, 1000.0f * UniverseSpeed, 0.0035f, noMoons,19.0f);
+	Planet uranus = Planet(planetShader,orbitShader, uranusModel,orbitModel, 190.0f, 0.1f, 8.0f * UniverseSpeed, 1000.0f * UniverseSpeed, 0.0035f, noMoons,19.0f, false);
 	////SATURN
 	//radius = 160.0f
 	//angle = 0.0040f
-	Planet saturn = Planet(planetShader,orbitShader, saturnModel,orbitModel, 160.0f, 0.1f, 8.0f * UniverseSpeed, 1000.0f * UniverseSpeed, 0.004f, noMoons,16.0f);
+	Planet saturn = Planet(planetShader,orbitShader, saturnModel,orbitModel, 160.0f, 0.1f, 8.0f * UniverseSpeed, 1000.0f * UniverseSpeed, 0.004f, noMoons,16.0f, false);
 	//radius = 220.0f
 	//angle = 0.003f
-	Planet neptune = Planet(planetShader,orbitShader, neptuneModel,orbitModel, 220.0f, 0.1f, 8.0f * UniverseSpeed, 1000.0f * UniverseSpeed, 0.003f, noMoons,22.0f);
+	Planet neptune = Planet(planetShader,orbitShader, neptuneModel,orbitModel, 220.0f, 0.1f, 8.0f * UniverseSpeed, 1000.0f * UniverseSpeed, 0.003f, noMoons,22.0f, false);
 
 	////Sun
 	//radius = 0.0f
@@ -183,7 +183,7 @@ int main()
     planets.push_back(saturn);
     planets.push_back(neptune);
     
-    Planet sun= Planet(planetShader,orbitShader , sunModel, orbitModel, 0.0f, 0.1f, 16.0f* UniverseSpeed, 0.0f, 0.006f, planets,1.0f);
+    Planet sun= Planet(planetShader,orbitShader , sunModel, orbitModel, 0.0f, 0.1f, 16.0f* UniverseSpeed, 0.0f, 0.006f, planets,0.0f, false);
 
 	// Game loop
 	while (!glfwWindowShouldClose(window))
@@ -214,7 +214,7 @@ int main()
         orbitShader.Use();
         glUniformMatrix4fv(glGetUniformLocation(orbitShader.Program, "projection"), 1, GL_FALSE, glm::value_ptr(projection));
         glUniformMatrix4fv(glGetUniformLocation(orbitShader.Program, "view"), 1, GL_FALSE, glm::value_ptr(view));
-        sun.drawOrbit(glm::vec2(0.0f, 0.0f), UniverseSpeed, glm::vec2(0.0f, 0.0f));
+        sun.drawOrbit(glm::vec2(0.0f, 0.0f), UniverseSpeed);
 
 		// Swap the buffers
 		glfwSwapBuffers(window);

@@ -29,7 +29,7 @@
 
 class Planet {
 
-public:
+private:
 	double length;
 	Shader planetShader;
     Shader orbitShader;
@@ -40,17 +40,17 @@ public:
 	std::list<Planet> listOfPlanets;
 	GLfloat UniverseSpeed;
     GLfloat orbitScale;
-    void renderOrbit(glm::vec2 currentPosition);
-    void drawOrbit(glm::vec2 planetPosition, GLfloat UniverseSpeed,glm::vec2 orbitCenter);
-
+    bool hasMoon;
 
 public:
 	void drawPlanet(glm::vec2 planetPosition, GLfloat UniverseSpeed);
 	glm::vec2 calculatePos(glm::vec2 relativePlanetPosition, GLfloat UniverseSpeed);
     void drawCircle( GLfloat x, GLfloat y, GLfloat z, GLfloat radius, GLint numberOfSides);
+    void drawOrbit(glm::vec2 orbitCenter, GLfloat UniverseSpeed);
+    bool getHasMoon();
 
 
-	Planet(Shader planetShader, Shader orbitShader, Model planetModel, Model orbitModel,  GLfloat orbitDistance, GLfloat planetaryScale, GLfloat rotationSpeed, GLfloat orbitSpeed, GLfloat orbitAngle, std::list<Planet> listOfPlanets, GLfloat orbitScale);
+	Planet(Shader planetShader, Shader orbitShader, Model planetModel, Model orbitModel,  GLfloat orbitDistance, GLfloat planetaryScale, GLfloat rotationSpeed, GLfloat orbitSpeed, GLfloat orbitAngle, std::list<Planet> listOfPlanets, GLfloat orbitScale, bool hasMoon);
 
 	~Planet();
 

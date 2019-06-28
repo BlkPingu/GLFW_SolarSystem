@@ -12,10 +12,11 @@ GLfloat orbitSpeed;
 GLfloat orbitAngle;
 std::list<Planet> listOfPlanetsmoons;
 glm::vec3 orbitScale;
+bool hasMoon;
 
 
 
-Planet::Planet(Shader planetShader, Shader orbitShader, Model planetModel, Model orbitModel, GLfloat orbitDistance, GLfloat planetaryScale, GLfloat rotationSpeed, GLfloat orbitSpeed, GLfloat orbitAngle, std::list<Planet> listOfPlanetsmoons, GLfloat orbitScale) {
+Planet::Planet(Shader planetShader, Shader orbitShader, Model planetModel, Model orbitModel, GLfloat orbitDistance, GLfloat planetaryScale, GLfloat rotationSpeed, GLfloat orbitSpeed, GLfloat orbitAngle, std::list<Planet> listOfPlanetsmoons, GLfloat orbitScale, bool hasMoon) {
 	this->planetShader = planetShader;
     this->orbitShader = orbitShader;
 	this->planetModel = planetModel;
@@ -27,6 +28,7 @@ Planet::Planet(Shader planetShader, Shader orbitShader, Model planetModel, Model
 	this->orbitAngle = orbitAngle;
 	this->listOfPlanets = listOfPlanetsmoons;
     this->orbitScale = orbitScale;
+    this->hasMoon = hasMoon;
 }
 
 Planet::~Planet() {
@@ -70,6 +72,10 @@ glm::vec2 Planet::calculatePos(glm::vec2 relativePlanetPosition, GLfloat Univers
 	return glm::vec2(x, y);
 }
 
+bool Planet::getHasMoon(){
+    return hasMoon;
+}
+
 
 void Planet::drawPlanet(glm::vec2 planetPosition, GLfloat UniverseSpeed) {
 	planetShader.Use();
@@ -89,22 +95,21 @@ void Planet::drawPlanet(glm::vec2 planetPosition, GLfloat UniverseSpeed) {
 
 	planetModel.Draw(planetShader);
 
-	for (Planet moon : listOfPlanets) {
-        moon.drawPlanet(currentPlanetPosition, UniverseSpeed);
-        //moon.renderOrbit(currentPlanetPosition);
+	for (Planet planet : listOfPlanets) {
+        planet.drawPlanet(currentPlanetPosition, UniverseSpeed);
 	}
 }
 
 
-void Planet::drawOrbit(glm::vec2 planetPosition, GLfloat UniverseSpeed, glm::vec2 orbitCenter) {
+void Planet::drawOrbit(glm::vec2 orbitCenter, GLfloat UniverseSpeed) {
     orbitShader.Use();
     
     //Drawing
     glm::mat4 model = glm::mat4(1.0f);
-    glm::vec2 currentPlanetPosition = calculatePos(planetPosition, UniverseSpeed);
+    glm::vec2 currentPlanetPosition = calculatePos(orbitCenter, UniverseSpeed);
     //Relative Position
     //model = glm::translate(model, glm::vec3(currentPlanetPosition.x, 0.0f,currentPlanetPosition.y));
-    model = glm::translate(model, glm::vec3(orbitCenter.x, orbitCenter.y,0.0f));
+    model = glm::translate(model, glm::vec3(orbitCenter.x, 0.0f,orbitCenter.y));
     
     //Scaling
     model = glm::scale(model, glm::vec3(orbitScale, orbitScale, orbitScale));
@@ -112,7 +117,8 @@ void Planet::drawOrbit(glm::vec2 planetPosition, GLfloat UniverseSpeed, glm::vec
     
     orbitModel.Draw(orbitShader);
     
-    for (Planet moon : listOfPlanets) {
-        moon.drawOrbit(currentPlanetPosition, UniverseSpeed, currentPlanetPosition);
+    for (Planet orbiter : listOfPlanets) {
+        if(orbiter.hasMoon == false) orbiter.drawOrbit(currentPlanetPosition, UniverseSpeed);
+        else orbiter.drawOrbit(currentPlanetPosition, UniverseSpeed);
     }
 }
