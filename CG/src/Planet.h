@@ -39,8 +39,9 @@ public:
 	GLfloat planetaryScale, rotationSpeed, orbitSpeed, orbitAngle;
 	std::list<Planet> listOfPlanets;
 	GLfloat UniverseSpeed;
+    GLfloat orbitScale;
     void renderOrbit(glm::vec2 currentPosition);
-    void drawOrbit(glm::vec2 planetPosition, GLfloat UniverseSpeed);
+    void drawOrbit(glm::vec2 planetPosition, GLfloat UniverseSpeed,glm::vec2 orbitCenter);
 
 
 public:
@@ -49,7 +50,7 @@ public:
     void drawCircle( GLfloat x, GLfloat y, GLfloat z, GLfloat radius, GLint numberOfSides);
 
 
-	Planet(Shader planetShader, Shader orbitShader, Model planetModel, Model orbitModel,  GLfloat orbitDistance, GLfloat planetaryScale, GLfloat rotationSpeed, GLfloat orbitSpeed, GLfloat orbitAngle, std::list<Planet> listOfPlanets);
+	Planet(Shader planetShader, Shader orbitShader, Model planetModel, Model orbitModel,  GLfloat orbitDistance, GLfloat planetaryScale, GLfloat rotationSpeed, GLfloat orbitSpeed, GLfloat orbitAngle, std::list<Planet> listOfPlanets, GLfloat orbitScale);
 
 	~Planet();
 
