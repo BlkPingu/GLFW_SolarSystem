@@ -14,9 +14,11 @@ std::list<Planet> listOfPlanetsmoons;
 
 
 
-Planet::Planet(Shader shader, Model planetModel, GLfloat orbitDistance, GLfloat planetaryScale, GLfloat rotationSpeed, GLfloat orbitSpeed, GLfloat orbitAngle, std::list<Planet> listOfPlanetsmoons) {
-	this->shader = shader;
+Planet::Planet(Shader planetShader, Shader orbitShader, Model planetModel, Model orbitModel, GLfloat orbitDistance, GLfloat planetaryScale, GLfloat rotationSpeed, GLfloat orbitSpeed, GLfloat orbitAngle, std::list<Planet> listOfPlanetsmoons) {
+	this->planetShader = planetShader;
+    this->orbitShader = orbitShader;
 	this->planetModel = planetModel;
+    this->orbitModel = orbitModel;
 	this->orbitDistance = orbitDistance;
 	this->planetaryScale = planetaryScale;
 	this->rotationSpeed = rotationSpeed;
@@ -29,19 +31,18 @@ Planet::~Planet() {
 }
 
 
+/*
 // render this planets orbit circle
 void Planet::renderOrbit(glm::vec2 currentPlanetPosition)
 {
     // draw a line strip
     glBegin(GL_LINE_STRIP);
-    
     // loop round from 0 to 2*PI and draw around the radius of the orbit using trigonometry
     for (float angle = 0.0f; angle < 6.283185307f; angle += 0.05f)
     {
         glVertex3f(sin(angle) * orbitDistance, cos(angle) * orbitDistance, 0.0f);
     }
     glVertex3f(0.0f, orbitDistance, 0.0f);
-    
     glEnd();
     
     //render the moons' orbit
@@ -51,6 +52,7 @@ void Planet::renderOrbit(glm::vec2 currentPlanetPosition)
     // draw moon orbits
     glPopMatrix();
 }
+*/
 
 glm::vec2 Planet::calculatePos(glm::vec2 relativePlanetPosition, GLfloat UniverseSpeed) {
 	const double PI = 3.141592653589793238463;
@@ -66,8 +68,10 @@ glm::vec2 Planet::calculatePos(glm::vec2 relativePlanetPosition, GLfloat Univers
 	return glm::vec2(x, y);
 }
 
+
 void Planet::drawPlanet(glm::vec2 planetPosition, GLfloat UniverseSpeed) {
-	shader.Use();
+	planetShader.Use();
+
 	//Drawing
 	glm::mat4 model = glm::mat4(1.0f);
 	glm::vec2 currentPlanetPosition = calculatePos(planetPosition, UniverseSpeed);
@@ -79,12 +83,35 @@ void Planet::drawPlanet(glm::vec2 planetPosition, GLfloat UniverseSpeed) {
 
 	//Scaling
 	model = glm::scale(model, glm::vec3(planetaryScale, planetaryScale, planetaryScale));
-	glUniformMatrix4fv(glGetUniformLocation(shader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model));
+	glUniformMatrix4fv(glGetUniformLocation(planetShader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model));
 
-	planetModel.Draw(shader);
+	planetModel.Draw(planetShader);
 
 	for (Planet moon : listOfPlanets) {
         moon.drawPlanet(currentPlanetPosition, UniverseSpeed);
-        moon.renderOrbit(currentPlanetPosition);
+        //moon.renderOrbit(currentPlanetPosition);
 	}
+}
+
+
+void Planet::drawOrbit(glm::vec2 planetPosition, GLfloat UniverseSpeed) {
+    orbitShader.Use();
+    
+    //Drawing
+    glm::mat4 model = glm::mat4(1.0f);
+    glm::vec2 currentPlanetPosition = calculatePos(planetPosition, UniverseSpeed);
+    //Relative Position
+    model = glm::translate(model, glm::vec3(currentPlanetPosition.x, 0.0f,currentPlanetPosition.y));
+
+    
+    //Scaling
+    model = glm::scale(model, glm::vec3(20.0f, 20.0f, 20.0f));
+    glUniformMatrix4fv(glGetUniformLocation(orbitShader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model));
+    
+    orbitModel.Draw(orbitShader);
+    
+    for (Planet moon : listOfPlanets) {
+        moon.drawOrbit(currentPlanetPosition, UniverseSpeed);
+        //moon.renderOrbit(currentPlanetPosition);
+    }
 }

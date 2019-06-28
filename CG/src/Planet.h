@@ -31,14 +31,16 @@ class Planet {
 
 public:
 	double length;
-	Shader shader;
+	Shader planetShader;
+    Shader orbitShader;
 	Model planetModel;
+    Model orbitModel;
 	GLfloat orbitDistance;
 	GLfloat planetaryScale, rotationSpeed, orbitSpeed, orbitAngle;
 	std::list<Planet> listOfPlanets;
 	GLfloat UniverseSpeed;
     void renderOrbit(glm::vec2 currentPosition);
-
+    void drawOrbit(glm::vec2 planetPosition, GLfloat UniverseSpeed);
 
 
 public:
@@ -47,7 +49,7 @@ public:
     void drawCircle( GLfloat x, GLfloat y, GLfloat z, GLfloat radius, GLint numberOfSides);
 
 
-	Planet(Shader shader, Model planetModel, GLfloat orbitDistance, GLfloat planetaryScale, GLfloat rotationSpeed, GLfloat orbitSpeed, GLfloat orbitAngle, std::list<Planet> listOfPlanets);
+	Planet(Shader planetShader, Shader orbitShader, Model planetModel, Model orbitModel,  GLfloat orbitDistance, GLfloat planetaryScale, GLfloat rotationSpeed, GLfloat orbitSpeed, GLfloat orbitAngle, std::list<Planet> listOfPlanets);
 
 	~Planet();
 
