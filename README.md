@@ -20,12 +20,12 @@
 
 #Steuerung:
 
--[+] Zum erhöhen der Geschwindigkeit
--[-] Zum verringern der Geschwindigkeit
--[W] Steuerung nach Vorne
--[A] Steuerung nach Links
--[S] Steuerung nach Hinten
--[D] Steuerung nach Rechts
+- [+] Zum erhöhen der Geschwindigkeit
+- [-] Zum verringern der Geschwindigkeit
+- [W] Steuerung nach Vorne
+- [A] Steuerung nach Links
+- [S] Steuerung nach Hinten
+- [D] Steuerung nach Rechts
 
 
 
