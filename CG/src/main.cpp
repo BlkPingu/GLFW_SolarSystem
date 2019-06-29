@@ -153,11 +153,11 @@ int main()
 	////Mars
 	//radius = 100.0f
 	//angle = 0.005f
-	Planet mars = Planet(planetShader,orbitShader, marsModel,orbitModel, 100.0f, 0.1f, 8.0f * UniverseSpeed, 1000.0f * UniverseSpeed, 0.005f, earthMoons,10.0f, true);
+	Planet mars = Planet(planetShader,orbitShader, marsModel,orbitModel, 100.0f, 0.1f, 8.0f * UniverseSpeed, 1000.0f * UniverseSpeed, 0.005f, noMoons,10.0f, true);
 	//// JUPITER
 	//radius = 120.0f
 	//angle = 0.0045f
-	Planet jupiter = Planet(planetShader,orbitShader, jupiterModel,orbitModel, 120.0f, 0.1f, 8.0f * UniverseSpeed, 1000.0f * UniverseSpeed, 0.0045f, earthMoons,12.0f, true);
+	Planet jupiter = Planet(planetShader,orbitShader, jupiterModel,orbitModel, 120.0f, 0.1f, 8.0f * UniverseSpeed, 1000.0f * UniverseSpeed, 0.0045f, noMoons,12.0f, true);
 	////Uranus
 	//radius = 190.0f
 	//angle = 0.0035f
