@@ -95,8 +95,11 @@ int main()
 	glEnable(GL_DEPTH_TEST);
 
 	// Setup and compile our shaders
-	Shader planetShader("./res/shaders/modelLoading.vs", "./res/shaders/modelLoading.frag");
     Shader orbitShader("./res/shaders/modelOrbit.vs", "./res/shaders/modelOrbit.frag");
+    Shader starShader("./res/shaders/modelStar.vs", "./res/shaders/modelStar.frag");
+    Shader planetShader("./res/shaders/modelLoading.vs", "./res/shaders/modelLoading.frag");
+
+
 
 
 	// Load models
@@ -153,11 +156,11 @@ int main()
 	////Mars
 	//radius = 100.0f
 	//angle = 0.005f
-	Planet mars = Planet(planetShader,orbitShader, marsModel,orbitModel, 100.0f, 0.1f, 8.0f * UniverseSpeed, 1000.0f * UniverseSpeed, 0.005f, earthMoons,10.0f, true);
+	Planet mars = Planet(planetShader,orbitShader, marsModel,orbitModel, 100.0f, 0.1f, 8.0f * UniverseSpeed, 1000.0f * UniverseSpeed, 0.005f, noMoons,10.0f, true);
 	//// JUPITER
 	//radius = 120.0f
 	//angle = 0.0045f
-	Planet jupiter = Planet(planetShader,orbitShader, jupiterModel,orbitModel, 120.0f, 0.1f, 8.0f * UniverseSpeed, 1000.0f * UniverseSpeed, 0.0045f, earthMoons,12.0f, true);
+	Planet jupiter = Planet(planetShader,orbitShader, jupiterModel,orbitModel, 120.0f, 0.1f, 8.0f * UniverseSpeed, 1000.0f * UniverseSpeed, 0.0045f, noMoons,12.0f, true);
 	////Uranus
 	//radius = 190.0f
 	//angle = 0.0035f
@@ -183,12 +186,13 @@ int main()
     planets.push_back(saturn);
     planets.push_back(neptune);
     
-    Planet sun= Planet(planetShader,orbitShader , sunModel, orbitModel, 0.0f, 0.1f, 16.0f* UniverseSpeed, 0.0f, 0.006f, planets,0.0f, false);
+    Planet sun= Planet(starShader,orbitShader , sunModel, orbitModel, 0.0f, 0.1f, 16.0f* UniverseSpeed, 0.0f, 0.006f, planets,0.0f, false);
 
 	// Game loop
 	while (!glfwWindowShouldClose(window))
 	{
         
+    
 		// Set frame time
 		GLfloat currentFrame = glfwGetTime();
 		deltaTime = currentFrame - lastFrame;
@@ -205,10 +209,10 @@ int main()
 
 		glm::mat4 view = camera.GetViewMatrix();
         
-        planetShader.Use();
-		glUniformMatrix4fv(glGetUniformLocation(planetShader.Program, "projection"), 1, GL_FALSE, glm::value_ptr(projection));
-		glUniformMatrix4fv(glGetUniformLocation(planetShader.Program, "view"), 1, GL_FALSE, glm::value_ptr(view));
-        sun.drawPlanet(glm::vec2(0.0f, 0.0f), UniverseSpeed);
+        starShader.Use();
+		glUniformMatrix4fv(glGetUniformLocation(starShader.Program, "projection"), 1, GL_FALSE, glm::value_ptr(projection));
+		glUniformMatrix4fv(glGetUniformLocation(starShader.Program, "view"), 1, GL_FALSE, glm::value_ptr(view));
+        sun.drawPlanet(glm::vec2(0.0f, 0.0f), UniverseSpeed, view, projection);
 
         
         orbitShader.Use();
