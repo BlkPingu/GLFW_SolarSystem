@@ -4,13 +4,13 @@
 
 #Features:
 
--Planeten mit Texturen 
--Rotierende Planeten
--Skybox mit Space Texturen
--Monde die um Planeten rotieren
--Orbitalinien mit Namen des umkreisden Planeten
--Freischwebende Kamera
--Shader für für Schattenwurf :)
+- Planeten mit Texturen 
+- Rotierende Planeten
+- Skybox mit Space Texturen
+- Monde die um Planeten rotieren
+- Orbitalinien mit Namen des umkreisden Planeten
+- Freischwebende Kamera
+- Shader für für Schattenwurf :)
 
 
 
