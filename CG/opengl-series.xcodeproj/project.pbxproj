@@ -122,10 +122,6 @@
 		F66361D122C05D3100B750DC /* mars-sample-scene.lws */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "mars-sample-scene.lws"; sourceTree = "<group>"; };
 		F66361D222C05D3100B750DC /* MarsNormal.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = MarsNormal.jpg; sourceTree = "<group>"; };
 		F66361D322C05D3100B750DC /* Mars_normal-strong.lwo */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mars_normal-strong.lwo"; sourceTree = "<group>"; };
-		F66361D522C05D3100B750DC /* lamp.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = lamp.frag; sourceTree = "<group>"; };
-		F66361D622C05D3100B750DC /* lighting.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = lighting.frag; sourceTree = "<group>"; };
-		F66361D722C05D3100B750DC /* lighting.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = lighting.vs; sourceTree = "<group>"; };
-		F66361D822C05D3100B750DC /* lamp.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = lamp.vs; sourceTree = "<group>"; };
 		F66361D922C05D3100B750DC /* modelLoading.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = modelLoading.frag; sourceTree = "<group>"; };
 		F66361DA22C05D3100B750DC /* modelLoading.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = modelLoading.vs; sourceTree = "<group>"; };
 		F66361DB22C05D3100B750DC /* Mesh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mesh.h; sourceTree = "<group>"; };
@@ -433,10 +429,6 @@
 			children = (
 				F6A5CC6B22C5A2610077D2C0 /* modelOrbit.frag */,
 				F6A5CC6A22C5A2610077D2C0 /* modelOrbit.vs */,
-				F66361D522C05D3100B750DC /* lamp.frag */,
-				F66361D622C05D3100B750DC /* lighting.frag */,
-				F66361D722C05D3100B750DC /* lighting.vs */,
-				F66361D822C05D3100B750DC /* lamp.vs */,
 				F66361D922C05D3100B750DC /* modelLoading.frag */,
 				F66361DA22C05D3100B750DC /* modelLoading.vs */,
 			);
