@@ -137,6 +137,8 @@
 		F6A5CC6B22C5A2610077D2C0 /* modelOrbit.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = modelOrbit.frag; sourceTree = "<group>"; };
 		F6A5CC6E22C684120077D2C0 /* Orbit2.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Orbit2.obj; sourceTree = "<group>"; };
 		F6A5CC6F22C684130077D2C0 /* Orbit2.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Orbit2.mtl; sourceTree = "<group>"; };
+		F6A5CC7622C810660077D2C0 /* modelStar.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = modelStar.vs; sourceTree = "<group>"; };
+		F6A5CC7722C810660077D2C0 /* modelStar.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = modelStar.frag; sourceTree = "<group>"; };
 		F6F7FBC122BA295E00E3D362 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		F6F7FBC322BA29BB00E3D362 /* libassimp.4.1.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libassimp.4.1.0.dylib; path = ../../../../../../../../usr/local/Cellar/assimp/4.1.0/lib/libassimp.4.1.0.dylib; sourceTree = "<group>"; };
 		F6F7FBC522BA29D700E3D362 /* libGLEW.2.1.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libGLEW.2.1.0.dylib; path = ../../../../../../../../usr/local/Cellar/glew/2.1.0/lib/libGLEW.2.1.0.dylib; sourceTree = "<group>"; };
@@ -377,6 +379,8 @@
 		F66361D422C05D3100B750DC /* shaders */ = {
 			isa = PBXGroup;
 			children = (
+				F6A5CC7722C810660077D2C0 /* modelStar.frag */,
+				F6A5CC7622C810660077D2C0 /* modelStar.vs */,
 				F6A5CC6B22C5A2610077D2C0 /* modelOrbit.frag */,
 				F6A5CC6A22C5A2610077D2C0 /* modelOrbit.vs */,
 				F66361D922C05D3100B750DC /* modelLoading.frag */,
