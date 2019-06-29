@@ -9,10 +9,10 @@
 -Skybox mit Space Texturen
 -Monde die um Planeten rotieren
 -Orbitalinien mit Namen des umkreisden Planeten
+-Freischwebende Kamera
+-Shader für für Schattenwurf :)
 
-#ToDo
 
--Erstellen von Beleuchtung
 
 #Zukünftige erweiterungen 
 
@@ -20,9 +20,12 @@
 
 #Steuerung:
 
--+ Zum erhöhen der Geschwindigkeit
--- Zum verringern der Geschwindigkeit
-
+[+] Zum erhöhen der Geschwindigkeit
+[-] Zum verringern der Geschwindigkeit
+[W]
+[A]
+[S]
+[D]
 
 
 
