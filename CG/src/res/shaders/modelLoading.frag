@@ -1,33 +1,32 @@
 /*
-#version 330 core
-out vec4 FragColor;
-
-in vec2 TexCoords;
-
-uniform sampler2D texture_diffuse1;
-
-void main()
-{
-    FragColor = texture(texture_diffuse1, TexCoords);
-    //FragColor = vec4( 1.0f, 0.0f, 0.0f, 1.0f);
-}
-*/
+ #version 330 core
+ out vec4 FragColor;
+ 
+ in vec2 TexCoords;
+ 
+ uniform sampler2D texture_diffuse1;
+ 
+ void main()
+ {
+ FragColor = texture(texture_diffuse1, TexCoords);
+ //FragColor = vec4( 1.0f, 0.0f, 0.0f, 1.0f);
+ }
+ */
 
 #version 330 core
 
 // Interpolated values from the vertex shaders
-in vec2 UV;
+in vec2 TexCoords;
 in vec3 Position_worldspace;
 in vec3 Normal_cameraspace;
 in vec3 EyeDirection_cameraspace;
 in vec3 LightDirection_cameraspace;
 
 // Ouput data
-out vec3 color;
+out vec3 FragColor;
 
 // Values that stay constant for the whole mesh.
-uniform sampler2D myTextureSampler;
-uniform mat4 MV;
+uniform sampler2D texture_diffuse1;
 uniform vec3 LightPosition_worldspace;
 
 void main(){
@@ -39,13 +38,13 @@ void main(){
     // vec3 LightColor = vec3(1,1,1); Uebung 15
     // vec3 LightColor = vec3(0.2,0.3,0.4); Uebung 15
     
-    float LightPower = 5.0f;
+    float LightPower = 50.0f;
     // float LightPower = 50.0f; Uebung 15
     // float LightPower = 5.0f; Uebung 15
     
     
     // Material properties
-    vec3 MaterialDiffuseColor = texture( myTextureSampler, UV ).rgb;
+    vec3 MaterialDiffuseColor = texture( texture_diffuse1, TexCoords ).rgb;
     vec3 MaterialAmbientColor = vec3(0.1,0.1,0.1) * MaterialDiffuseColor;
     vec3 MaterialSpecularColor = vec3(0.3,0.3,0.3);
     
@@ -73,7 +72,7 @@ void main(){
     //  - Looking elsewhere -> < 1
     float cosAlpha = clamp( dot( E,R ), 0,1 );
     
-    color =
+    FragColor =
     // Ambient : simulates indirect lighting
     MaterialAmbientColor +
     // Diffuse : "color" of the object
