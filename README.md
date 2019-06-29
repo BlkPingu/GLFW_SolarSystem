@@ -1,8 +1,8 @@
 # GLFW_SolarSystem
 
-#Zielsetzung: Erstellen eines Solarsystems mit Skybox,Beleuchtung, Orbitallinien und Planetennamen
+# Zielsetzung: Erstellen eines Solarsystems mit Skybox,Beleuchtung, Orbitallinien und Planetennamen
 
-#Features:
+# Features:
 
 - Planeten mit Texturen 
 - Rotierende Planeten
@@ -14,11 +14,11 @@
 
 
 
-#Zukünftige erweiterungen 
+# Zukünftige erweiterungen 
 
 -Raytracing um Planeten Realistisch zu beleuchten
 
-#Steuerung:
+# Steuerung:
 
 - [+] Zum erhöhen der Geschwindigkeit
 - [-] Zum verringern der Geschwindigkeit
