@@ -7,7 +7,7 @@
 #include "Shader.h"
 using namespace std;
 // GL Includes
-#include <GL/glew.h> // Contains all the necessery OpenGL includes
+#include <glew.h> // Contains all the necessery OpenGL includes
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
 #include <assimp/types.h>

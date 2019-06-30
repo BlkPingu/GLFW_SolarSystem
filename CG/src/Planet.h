@@ -44,7 +44,7 @@ private:
     bool hasMoon;
 	bool isMoon;
 public:
-	void drawPlanet(glm::vec2 planetPosition, GLfloat UniverseSpeed);
+	void drawPlanet(glm::vec2 planetPosition, GLfloat UniverseSpeed, glm::mat4 view, glm::mat4 projection);
 	glm::vec2 calculatePos(glm::vec2 relativePlanetPosition, GLfloat UniverseSpeed);
     void drawCircle( GLfloat x, GLfloat y, GLfloat z, GLfloat radius, GLint numberOfSides);
     void drawOrbit(glm::vec2 orbitCenter, GLfloat UniverseSpeed);

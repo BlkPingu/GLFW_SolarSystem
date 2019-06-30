@@ -33,27 +33,6 @@
 		F663616B22C05D3100B750DC /* image1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image1.jpg; sourceTree = "<group>"; };
 		F663616C22C05D3100B750DC /* image2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image2.png; sourceTree = "<group>"; };
 		F663616D22C05D3100B750DC /* image3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image3.png; sourceTree = "<group>"; };
-		F663617022C05D3100B750DC /* body_showroom_ddn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = body_showroom_ddn.png; sourceTree = "<group>"; };
-		F663617122C05D3100B750DC /* helmet_showroom_ddn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = helmet_showroom_ddn.png; sourceTree = "<group>"; };
-		F663617222C05D3100B750DC /* arm_showroom_ddn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arm_showroom_ddn.png; sourceTree = "<group>"; };
-		F663617322C05D3100B750DC /* arm_showroom_spec.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arm_showroom_spec.png; sourceTree = "<group>"; };
-		F663617422C05D3100B750DC /* leg_dif.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = leg_dif.png; sourceTree = "<group>"; };
-		F663617522C05D3100B750DC /* hand_showroom_spec.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hand_showroom_spec.png; sourceTree = "<group>"; };
-		F663617622C05D3100B750DC /* glass_ddn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glass_ddn.png; sourceTree = "<group>"; };
-		F663617722C05D3100B750DC /* nanosuit.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = nanosuit.mtl; sourceTree = "<group>"; };
-		F663617822C05D3100B750DC /* body_dif.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = body_dif.png; sourceTree = "<group>"; };
-		F663617922C05D3100B750DC /* hand_showroom_ddn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hand_showroom_ddn.png; sourceTree = "<group>"; };
-		F663617A22C05D3100B750DC /* glass_dif.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glass_dif.png; sourceTree = "<group>"; };
-		F663617B22C05D3100B750DC /* arm_dif.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arm_dif.png; sourceTree = "<group>"; };
-		F663617C22C05D3100B750DC /* nanosuit.blend */ = {isa = PBXFileReference; lastKnownFileType = file; path = nanosuit.blend; sourceTree = "<group>"; };
-		F663617D22C05D3100B750DC /* helmet_diff.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = helmet_diff.png; sourceTree = "<group>"; };
-		F663617E22C05D3100B750DC /* nanosuit.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = nanosuit.obj; sourceTree = "<group>"; };
-		F663617F22C05D3100B750DC /* leg_showroom_ddn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = leg_showroom_ddn.png; sourceTree = "<group>"; };
-		F663618022C05D3100B750DC /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
-		F663618122C05D3100B750DC /* helmet_showroom_spec.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = helmet_showroom_spec.png; sourceTree = "<group>"; };
-		F663618222C05D3100B750DC /* leg_showroom_spec.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = leg_showroom_spec.png; sourceTree = "<group>"; };
-		F663618322C05D3100B750DC /* body_showroom_spec.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = body_showroom_spec.png; sourceTree = "<group>"; };
-		F663618422C05D3100B750DC /* hand_dif.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hand_dif.png; sourceTree = "<group>"; };
 		F663618722C05D3100B750DC /* mercurymap.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mercurymap.jpg; sourceTree = "<group>"; };
 		F663618822C05D3100B750DC /* mercury.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mercury.mtl; sourceTree = "<group>"; };
 		F663618922C05D3100B750DC /* mercurybump.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mercurybump.jpg; sourceTree = "<group>"; };
@@ -122,10 +101,6 @@
 		F66361D122C05D3100B750DC /* mars-sample-scene.lws */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "mars-sample-scene.lws"; sourceTree = "<group>"; };
 		F66361D222C05D3100B750DC /* MarsNormal.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = MarsNormal.jpg; sourceTree = "<group>"; };
 		F66361D322C05D3100B750DC /* Mars_normal-strong.lwo */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mars_normal-strong.lwo"; sourceTree = "<group>"; };
-		F66361D522C05D3100B750DC /* lamp.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = lamp.frag; sourceTree = "<group>"; };
-		F66361D622C05D3100B750DC /* lighting.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = lighting.frag; sourceTree = "<group>"; };
-		F66361D722C05D3100B750DC /* lighting.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = lighting.vs; sourceTree = "<group>"; };
-		F66361D822C05D3100B750DC /* lamp.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = lamp.vs; sourceTree = "<group>"; };
 		F66361D922C05D3100B750DC /* modelLoading.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = modelLoading.frag; sourceTree = "<group>"; };
 		F66361DA22C05D3100B750DC /* modelLoading.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = modelLoading.vs; sourceTree = "<group>"; };
 		F66361DB22C05D3100B750DC /* Mesh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mesh.h; sourceTree = "<group>"; };
@@ -162,6 +137,8 @@
 		F6A5CC6B22C5A2610077D2C0 /* modelOrbit.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = modelOrbit.frag; sourceTree = "<group>"; };
 		F6A5CC6E22C684120077D2C0 /* Orbit2.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Orbit2.obj; sourceTree = "<group>"; };
 		F6A5CC6F22C684130077D2C0 /* Orbit2.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Orbit2.mtl; sourceTree = "<group>"; };
+		F6A5CC7622C810660077D2C0 /* modelStar.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = modelStar.vs; sourceTree = "<group>"; };
+		F6A5CC7722C810660077D2C0 /* modelStar.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = modelStar.frag; sourceTree = "<group>"; };
 		F6F7FBC122BA295E00E3D362 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		F6F7FBC322BA29BB00E3D362 /* libassimp.4.1.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libassimp.4.1.0.dylib; path = ../../../../../../../../usr/local/Cellar/assimp/4.1.0/lib/libassimp.4.1.0.dylib; sourceTree = "<group>"; };
 		F6F7FBC522BA29D700E3D362 /* libGLEW.2.1.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libGLEW.2.1.0.dylib; path = ../../../../../../../../usr/local/Cellar/glew/2.1.0/lib/libGLEW.2.1.0.dylib; sourceTree = "<group>"; };
@@ -237,38 +214,9 @@
 		F663616E22C05D3100B750DC /* models */ = {
 			isa = PBXGroup;
 			children = (
-				F663616F22C05D3100B750DC /* nanosuit */,
 				F663618522C05D3100B750DC /* planets */,
 			);
 			path = models;
-			sourceTree = "<group>";
-		};
-		F663616F22C05D3100B750DC /* nanosuit */ = {
-			isa = PBXGroup;
-			children = (
-				F663617022C05D3100B750DC /* body_showroom_ddn.png */,
-				F663617122C05D3100B750DC /* helmet_showroom_ddn.png */,
-				F663617222C05D3100B750DC /* arm_showroom_ddn.png */,
-				F663617322C05D3100B750DC /* arm_showroom_spec.png */,
-				F663617422C05D3100B750DC /* leg_dif.png */,
-				F663617522C05D3100B750DC /* hand_showroom_spec.png */,
-				F663617622C05D3100B750DC /* glass_ddn.png */,
-				F663617722C05D3100B750DC /* nanosuit.mtl */,
-				F663617822C05D3100B750DC /* body_dif.png */,
-				F663617922C05D3100B750DC /* hand_showroom_ddn.png */,
-				F663617A22C05D3100B750DC /* glass_dif.png */,
-				F663617B22C05D3100B750DC /* arm_dif.png */,
-				F663617C22C05D3100B750DC /* nanosuit.blend */,
-				F663617D22C05D3100B750DC /* helmet_diff.png */,
-				F663617E22C05D3100B750DC /* nanosuit.obj */,
-				F663617F22C05D3100B750DC /* leg_showroom_ddn.png */,
-				F663618022C05D3100B750DC /* LICENSE.txt */,
-				F663618122C05D3100B750DC /* helmet_showroom_spec.png */,
-				F663618222C05D3100B750DC /* leg_showroom_spec.png */,
-				F663618322C05D3100B750DC /* body_showroom_spec.png */,
-				F663618422C05D3100B750DC /* hand_dif.png */,
-			);
-			path = nanosuit;
 			sourceTree = "<group>";
 		};
 		F663618522C05D3100B750DC /* planets */ = {
@@ -431,12 +379,10 @@
 		F66361D422C05D3100B750DC /* shaders */ = {
 			isa = PBXGroup;
 			children = (
+				F6A5CC7722C810660077D2C0 /* modelStar.frag */,
+				F6A5CC7622C810660077D2C0 /* modelStar.vs */,
 				F6A5CC6B22C5A2610077D2C0 /* modelOrbit.frag */,
 				F6A5CC6A22C5A2610077D2C0 /* modelOrbit.vs */,
-				F66361D522C05D3100B750DC /* lamp.frag */,
-				F66361D622C05D3100B750DC /* lighting.frag */,
-				F66361D722C05D3100B750DC /* lighting.vs */,
-				F66361D822C05D3100B750DC /* lamp.vs */,
 				F66361D922C05D3100B750DC /* modelLoading.frag */,
 				F66361DA22C05D3100B750DC /* modelLoading.vs */,
 			);
