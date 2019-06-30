@@ -37,30 +37,6 @@ Planet::Planet(Shader planetShader, Shader orbitShader, Model planetModel, Model
 Planet::~Planet() {
 }
 
-
-/*
-// render this planets orbit circle
-void Planet::renderOrbit(glm::vec2 currentPlanetPosition)
-{
-    // draw a line strip
-    glBegin(GL_LINE_STRIP);
-    // loop round from 0 to 2*PI and draw around the radius of the orbit using trigonometry
-    for (float angle = 0.0f; angle < 6.283185307f; angle += 0.05f)
-    {
-        glVertex3f(sin(angle) * orbitDistance, cos(angle) * orbitDistance, 0.0f);
-    }
-    glVertex3f(0.0f, orbitDistance, 0.0f);
-    glEnd();
-    
-    //render the moons' orbit
-    glPushMatrix();
-    // translate to the center of this planet to draw the moon orbit around it
-    glTranslatef(currentPlanetPosition[0], currentPlanetPosition[1], 0.0f);
-    // draw moon orbits
-    glPopMatrix();
-}
-*/
-
 glm::vec2 Planet::calculatePos(glm::vec2 relativePlanetPosition, GLfloat UniverseSpeed) {
 	const double PI = 3.141592653589793238463;
 	GLfloat angle, radius, x, y;
@@ -84,11 +60,13 @@ bool Planet::getisMoon() {
 }
 
 
-void Planet::drawPlanet(glm::vec2 planetPosition, GLfloat UniverseSpeed) {
+void Planet::drawPlanet(glm::vec2 planetPosition, GLfloat UniverseSpeed, glm::mat4 view, glm::mat4 projection) {
 	planetShader.Use();
 
 	//Drawing
 	glm::mat4 model = glm::mat4(1.0f);
+    glm::vec3 lightPos = glm::vec3(0.0f,20.0f,0.0f);
+
 	glm::vec2 currentPlanetPosition = calculatePos(planetPosition, UniverseSpeed);
 	//Relative Position
 	model = glm::translate(model, glm::vec3(currentPlanetPosition.x, 0.0f,currentPlanetPosition.y));
@@ -103,9 +81,14 @@ void Planet::drawPlanet(glm::vec2 planetPosition, GLfloat UniverseSpeed) {
 	planetModel.Draw(planetShader);
 	
 	for (Planet planet : listOfPlanets) {
-		planet.drawName(currentPlanetPosition, UniverseSpeed,planet.isMoon);
-        planet.drawPlanet(currentPlanetPosition, UniverseSpeed);
-		
+
+        planetShader.Use();
+        glUniform3f(glGetUniformLocation(planetShader.Program, "LightPosition_worldspace"), lightPos.x, lightPos.y, lightPos.z);
+        glUniformMatrix4fv(glGetUniformLocation(planetShader.Program, "projection"), 1, GL_FALSE, glm::value_ptr(projection));
+        glUniformMatrix4fv(glGetUniformLocation(planetShader.Program, "view"), 1, GL_FALSE, glm::value_ptr(view));
+    		planet.drawName(currentPlanetPosition, UniverseSpeed,planet.isMoon);
+        planet.drawPlanet(currentPlanetPosition, UniverseSpeed, view, projection);
+
 	}
 }
 
