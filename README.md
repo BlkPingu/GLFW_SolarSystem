@@ -1,5 +1,11 @@
 # GLFW_SolarSystem
 
+
+
+![](https://i.imgur.com/ZnYeqc1.png)
+
+
+
 # Zielsetzung: Erstellen eines Solarsystems mit Skybox,Beleuchtung, Orbitallinien und Planetennamen
 
 # Features:
@@ -20,8 +26,8 @@
 
 # Steuerung:
 
-- [+] Zum erhöhen der Geschwindigkeit
-- [-] Zum verringern der Geschwindigkeit
+- [P] Zum erhöhen der Geschwindigkeit
+- [L] Zum verringern der Geschwindigkeit
 - [W] Steuerung nach Vorne
 - [A] Steuerung nach Links
 - [S] Steuerung nach Hinten

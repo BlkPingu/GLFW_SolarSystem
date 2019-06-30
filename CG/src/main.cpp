@@ -446,13 +446,13 @@ void KeyCallback(GLFWwindow* window, int key, int scancode, int action, int mode
 	if (GLFW_KEY_ESCAPE == key && GLFW_PRESS == action) {
 		glfwSetWindowShouldClose(window, GL_TRUE);
 	}
-	if (GLFW_KEY_KP_ADD== key ) {
+	if (GLFW_KEY_P== key ) {
 		
 		UniverseSpeed = UniverseSpeed * 1.25;
 		std::cout << UniverseSpeed << std::endl;
 		
 	}
-	else if(GLFW_KEY_KP_SUBTRACT == key){
+	else if(GLFW_KEY_L == key){
 
 		UniverseSpeed = UniverseSpeed / 1.25;
 		std::cout << UniverseSpeed << std::endl;
