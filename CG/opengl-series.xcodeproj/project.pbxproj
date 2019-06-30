@@ -7,16 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F66361FA22C05D3200B750DC /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F663616522C05D3100B750DC /* main.cpp */; };
-		F66361FB22C05D3200B750DC /* Model.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F663616622C05D3100B750DC /* Model.cpp */; };
-		F66361FC22C05D3200B750DC /* Mesh.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F66361DD22C05D3200B750DC /* Mesh.cpp */; };
-		F66361FD22C05D3200B750DC /* Planet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F66361DE22C05D3200B750DC /* Planet.cpp */; };
-		F66361FE22C05D3200B750DC /* Camera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F66361DF22C05D3200B750DC /* Camera.cpp */; };
-		F66361FF22C05D3200B750DC /* image_helper.c in Sources */ = {isa = PBXBuildFile; fileRef = F66361E122C05D3200B750DC /* image_helper.c */; };
-		F663620022C05D3200B750DC /* image_DXT.c in Sources */ = {isa = PBXBuildFile; fileRef = F66361E422C05D3200B750DC /* image_DXT.c */; };
-		F663620122C05D3200B750DC /* SOIL2.c in Sources */ = {isa = PBXBuildFile; fileRef = F66361E722C05D3200B750DC /* SOIL2.c */; };
-		F663620222C05D3200B750DC /* etc1_utils.c in Sources */ = {isa = PBXBuildFile; fileRef = F66361F122C05D3200B750DC /* etc1_utils.c */; };
-		F663620322C05D3200B750DC /* Shader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F66361F822C05D3200B750DC /* Shader.cpp */; };
+		F6A5CD1C22C839530077D2C0 /* Mesh.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6A5CCFA22C839530077D2C0 /* Mesh.cpp */; };
+		F6A5CD1D22C839530077D2C0 /* image_helper.c in Sources */ = {isa = PBXBuildFile; fileRef = F6A5CCFD22C839530077D2C0 /* image_helper.c */; };
+		F6A5CD1E22C839530077D2C0 /* image_DXT.c in Sources */ = {isa = PBXBuildFile; fileRef = F6A5CD0022C839530077D2C0 /* image_DXT.c */; };
+		F6A5CD1F22C839530077D2C0 /* SOIL2.c in Sources */ = {isa = PBXBuildFile; fileRef = F6A5CD0322C839530077D2C0 /* SOIL2.c */; };
+		F6A5CD2022C839530077D2C0 /* etc1_utils.c in Sources */ = {isa = PBXBuildFile; fileRef = F6A5CD0D22C839530077D2C0 /* etc1_utils.c */; };
+		F6A5CD2122C839530077D2C0 /* Camera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6A5CD1222C839530077D2C0 /* Camera.cpp */; };
+		F6A5CD2222C839530077D2C0 /* Shader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6A5CD1522C839530077D2C0 /* Shader.cpp */; };
+		F6A5CD2322C839530077D2C0 /* Model.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6A5CD1722C839530077D2C0 /* Model.cpp */; };
+		F6A5CD2422C839530077D2C0 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6A5CD1922C839530077D2C0 /* main.cpp */; };
+		F6A5CD2522C839530077D2C0 /* Planet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6A5CD1B22C839530077D2C0 /* Planet.cpp */; };
 		F6F7FBC222BA295E00E3D362 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6F7FBC122BA295E00E3D362 /* OpenGL.framework */; };
 		F6F7FBC422BA29BB00E3D362 /* libassimp.4.1.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F6F7FBC322BA29BB00E3D362 /* libassimp.4.1.0.dylib */; };
 		F6F7FBC622BA29D700E3D362 /* libGLEW.2.1.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F6F7FBC522BA29D700E3D362 /* libGLEW.2.1.0.dylib */; };
@@ -26,119 +26,150 @@
 
 /* Begin PBXFileReference section */
 		E263994D190D148400B6251A /* CGTutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CGTutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		F663616522C05D3100B750DC /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		F663616622C05D3100B750DC /* Model.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Model.cpp; sourceTree = "<group>"; };
-		F663616922C05D3100B750DC /* container2_specular.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = container2_specular.png; sourceTree = "<group>"; };
-		F663616A22C05D3100B750DC /* container2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = container2.png; sourceTree = "<group>"; };
-		F663616B22C05D3100B750DC /* image1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image1.jpg; sourceTree = "<group>"; };
-		F663616C22C05D3100B750DC /* image2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image2.png; sourceTree = "<group>"; };
-		F663616D22C05D3100B750DC /* image3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image3.png; sourceTree = "<group>"; };
-		F663618722C05D3100B750DC /* mercurymap.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mercurymap.jpg; sourceTree = "<group>"; };
-		F663618822C05D3100B750DC /* mercury.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mercury.mtl; sourceTree = "<group>"; };
-		F663618922C05D3100B750DC /* mercurybump.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mercurybump.jpg; sourceTree = "<group>"; };
-		F663618A22C05D3100B750DC /* mercury.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mercury.obj; sourceTree = "<group>"; };
-		F663618B22C05D3100B750DC /* Readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Readme.txt; sourceTree = "<group>"; };
-		F663618C22C05D3100B750DC /* Mercury.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Mercury.jpg; sourceTree = "<group>"; };
-		F663618E22C05D3100B750DC /* Map__65_Falloff.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Map__65_Falloff.jpg; sourceTree = "<group>"; };
-		F663618F22C05D3100B750DC /* sun2.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sun2.obj; sourceTree = "<group>"; };
-		F663619022C05D3100B750DC /* Clouds.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Clouds.jpg; sourceTree = "<group>"; };
-		F663619122C05D3100B750DC /* Clouds-mask.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Clouds-mask.jpg"; sourceTree = "<group>"; };
-		F663619222C05D3100B750DC /* Agni-Baume-land.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Agni-Baume-land.jpg"; sourceTree = "<group>"; };
-		F663619322C05D3100B750DC /* Map__68_Falloff.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Map__68_Falloff.jpg; sourceTree = "<group>"; };
-		F663619422C05D3100B750DC /* Map__67_Falloff.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Map__67_Falloff.jpg; sourceTree = "<group>"; };
-		F663619522C05D3100B750DC /* sun2.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sun2.mtl; sourceTree = "<group>"; };
-		F663619622C05D3100B750DC /* Sun03.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Sun03.jpg; sourceTree = "<group>"; };
-		F663619722C05D3100B750DC /* Space-Background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Space-Background.jpg"; sourceTree = "<group>"; };
-		F663619822C05D3100B750DC /* Map__9_Falloff.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Map__9_Falloff.jpg; sourceTree = "<group>"; };
-		F663619922C05D3100B750DC /* Sun02.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Sun02.jpg; sourceTree = "<group>"; };
-		F663619A22C05D3100B750DC /* Sun01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Sun01.jpg; sourceTree = "<group>"; };
-		F663619C22C05D3100B750DC /* venus.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = venus.obj; sourceTree = "<group>"; };
-		F663619D22C05D3100B750DC /* venus.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = venus.mtl; sourceTree = "<group>"; };
-		F663619E22C05D3100B750DC /* venusbump.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = venusbump.jpg; sourceTree = "<group>"; };
-		F663619F22C05D3100B750DC /* venusmap.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = venusmap.jpg; sourceTree = "<group>"; };
-		F66361A122C05D3100B750DC /* Thumbs.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = Thumbs.db; sourceTree = "<group>"; };
-		F66361A222C05D3100B750DC /* moon1.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = moon1.obj; sourceTree = "<group>"; };
-		F66361A322C05D3100B750DC /* MoonMap2_2500x1250.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = MoonMap2_2500x1250.jpg; sourceTree = "<group>"; };
-		F66361A422C05D3100B750DC /* moonmap2k.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = moonmap2k.jpg; sourceTree = "<group>"; };
-		F66361A522C05D3100B750DC /* moon-normal.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "moon-normal.jpg"; sourceTree = "<group>"; };
-		F66361A622C05D3100B750DC /* moon1.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = moon1.mtl; sourceTree = "<group>"; };
-		F66361A822C05D3100B750DC /* neptune.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = neptune.mtl; sourceTree = "<group>"; };
-		F66361A922C05D3100B750DC /* neptunemap.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = neptunemap.jpg; sourceTree = "<group>"; };
-		F66361AA22C05D3100B750DC /* Neptune.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Neptune.jpg; sourceTree = "<group>"; };
-		F66361AB22C05D3100B750DC /* Readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Readme.txt; sourceTree = "<group>"; };
-		F66361AC22C05D3100B750DC /* neptune.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = neptune.obj; sourceTree = "<group>"; };
-		F66361AE22C05D3100B750DC /* saturn3.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = saturn3.mtl; sourceTree = "<group>"; };
-		F66361AF22C05D3100B750DC /* saturnmap.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = saturnmap.jpg; sourceTree = "<group>"; };
-		F66361B022C05D3100B750DC /* saturnringpattern.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = saturnringpattern.gif; sourceTree = "<group>"; };
-		F66361B122C05D3100B750DC /* saturn3.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = saturn3.obj; sourceTree = "<group>"; };
-		F66361B222C05D3100B750DC /* Saturn.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Saturn.jpg; sourceTree = "<group>"; };
-		F66361B322C05D3100B750DC /* saturnringcolor.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = saturnringcolor.jpg; sourceTree = "<group>"; };
-		F66361B522C05D3100B750DC /* Jupiter.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Jupiter.jpg; sourceTree = "<group>"; };
-		F66361B622C05D3100B750DC /* jupiter1.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = jupiter1.obj; sourceTree = "<group>"; };
-		F66361B722C05D3100B750DC /* Jupiter_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Jupiter_2.jpg; sourceTree = "<group>"; };
-		F66361B822C05D3100B750DC /* jupiter1.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = jupiter1.mtl; sourceTree = "<group>"; };
-		F66361B922C05D3100B750DC /* Readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Readme.txt; sourceTree = "<group>"; };
-		F66361BA22C05D3100B750DC /* jupitermap.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jupitermap.jpg; sourceTree = "<group>"; };
-		F66361BB22C05D3100B750DC /* descarga (13).jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "descarga (13).jpg"; sourceTree = "<group>"; };
-		F66361BD22C05D3100B750DC /* earth.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = earth.obj; sourceTree = "<group>"; };
-		F66361BE22C05D3100B750DC /* planet.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = planet.jpg; sourceTree = "<group>"; };
-		F66361BF22C05D3100B750DC /* 4096_clouds.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 4096_clouds.jpg; sourceTree = "<group>"; };
-		F66361C022C05D3100B750DC /* 4096_normal.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 4096_normal.jpg; sourceTree = "<group>"; };
-		F66361C122C05D3100B750DC /* 4096_bump.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 4096_bump.jpg; sourceTree = "<group>"; };
-		F66361C222C05D3100B750DC /* earth.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = earth.mtl; sourceTree = "<group>"; };
-		F66361C322C05D3100B750DC /* 4096_earth.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 4096_earth.jpg; sourceTree = "<group>"; };
-		F66361C422C05D3100B750DC /* 4096_night_lights.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 4096_night_lights.jpg; sourceTree = "<group>"; };
-		F66361C622C05D3100B750DC /* uranusmap.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = uranusmap.jpg; sourceTree = "<group>"; };
-		F66361C722C05D3100B750DC /* uranus.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = uranus.obj; sourceTree = "<group>"; };
-		F66361C822C05D3100B750DC /* uranusmap_bumb.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = uranusmap_bumb.jpg; sourceTree = "<group>"; };
-		F66361C922C05D3100B750DC /* uranus.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = uranus.mtl; sourceTree = "<group>"; };
-		F66361CB22C05D3100B750DC /* Mars_normal-strong.obj.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Mars_normal-strong.obj.mtl"; sourceTree = "<group>"; };
-		F66361CC22C05D3100B750DC /* mars-sample-big-1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "mars-sample-big-1.jpg"; sourceTree = "<group>"; };
-		F66361CD22C05D3100B750DC /* mars-sample-big-3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "mars-sample-big-3.jpg"; sourceTree = "<group>"; };
-		F66361CE22C05D3100B750DC /* mars-sample-big-2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "mars-sample-big-2.jpg"; sourceTree = "<group>"; };
-		F66361CF22C05D3100B750DC /* Mars8k-modified.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Mars8k-modified.jpg"; sourceTree = "<group>"; };
-		F66361D022C05D3100B750DC /* Mars_normal-strong.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Mars_normal-strong.obj"; sourceTree = "<group>"; };
-		F66361D122C05D3100B750DC /* mars-sample-scene.lws */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "mars-sample-scene.lws"; sourceTree = "<group>"; };
-		F66361D222C05D3100B750DC /* MarsNormal.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = MarsNormal.jpg; sourceTree = "<group>"; };
-		F66361D322C05D3100B750DC /* Mars_normal-strong.lwo */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mars_normal-strong.lwo"; sourceTree = "<group>"; };
-		F66361D922C05D3100B750DC /* modelLoading.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = modelLoading.frag; sourceTree = "<group>"; };
-		F66361DA22C05D3100B750DC /* modelLoading.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = modelLoading.vs; sourceTree = "<group>"; };
-		F66361DB22C05D3100B750DC /* Mesh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mesh.h; sourceTree = "<group>"; };
-		F66361DC22C05D3100B750DC /* Shader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shader.h; sourceTree = "<group>"; };
-		F66361DD22C05D3200B750DC /* Mesh.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Mesh.cpp; sourceTree = "<group>"; };
-		F66361DE22C05D3200B750DC /* Planet.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Planet.cpp; sourceTree = "<group>"; };
-		F66361DF22C05D3200B750DC /* Camera.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Camera.cpp; sourceTree = "<group>"; };
-		F66361E122C05D3200B750DC /* image_helper.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = image_helper.c; sourceTree = "<group>"; };
-		F66361E222C05D3200B750DC /* stbi_pkm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stbi_pkm.h; sourceTree = "<group>"; };
-		F66361E322C05D3200B750DC /* jo_jpeg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = jo_jpeg.h; sourceTree = "<group>"; };
-		F66361E422C05D3200B750DC /* image_DXT.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = image_DXT.c; sourceTree = "<group>"; };
-		F66361E522C05D3200B750DC /* etc1_utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = etc1_utils.h; sourceTree = "<group>"; };
-		F66361E622C05D3200B750DC /* stb_image_write.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stb_image_write.h; sourceTree = "<group>"; };
-		F66361E722C05D3200B750DC /* SOIL2.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = SOIL2.c; sourceTree = "<group>"; };
-		F66361E822C05D3200B750DC /* pkm_helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pkm_helper.h; sourceTree = "<group>"; };
-		F66361E922C05D3200B750DC /* stbi_DDS_c.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stbi_DDS_c.h; sourceTree = "<group>"; };
-		F66361EA22C05D3200B750DC /* stbi_pvr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stbi_pvr.h; sourceTree = "<group>"; };
-		F66361EB22C05D3200B750DC /* stbi_ext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stbi_ext.h; sourceTree = "<group>"; };
-		F66361EC22C05D3200B750DC /* stb_image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stb_image.h; sourceTree = "<group>"; };
-		F66361ED22C05D3200B750DC /* stbi_pvr_c.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stbi_pvr_c.h; sourceTree = "<group>"; };
-		F66361EE22C05D3200B750DC /* stbi_ext_c.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stbi_ext_c.h; sourceTree = "<group>"; };
-		F66361EF22C05D3200B750DC /* image_helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = image_helper.h; sourceTree = "<group>"; };
-		F66361F022C05D3200B750DC /* SOIL2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOIL2.h; sourceTree = "<group>"; };
-		F66361F122C05D3200B750DC /* etc1_utils.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = etc1_utils.c; sourceTree = "<group>"; };
-		F66361F222C05D3200B750DC /* image_DXT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = image_DXT.h; sourceTree = "<group>"; };
-		F66361F322C05D3200B750DC /* stbi_pkm_c.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stbi_pkm_c.h; sourceTree = "<group>"; };
-		F66361F422C05D3200B750DC /* stbi_DDS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stbi_DDS.h; sourceTree = "<group>"; };
-		F66361F522C05D3200B750DC /* pvr_helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pvr_helper.h; sourceTree = "<group>"; };
-		F66361F622C05D3200B750DC /* Planet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Planet.h; sourceTree = "<group>"; };
-		F66361F722C05D3200B750DC /* Camera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Camera.h; sourceTree = "<group>"; };
-		F66361F822C05D3200B750DC /* Shader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Shader.cpp; sourceTree = "<group>"; };
-		F66361F922C05D3200B750DC /* Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Model.h; sourceTree = "<group>"; };
-		F6A5CC6A22C5A2610077D2C0 /* modelOrbit.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = modelOrbit.vs; sourceTree = "<group>"; };
-		F6A5CC6B22C5A2610077D2C0 /* modelOrbit.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = modelOrbit.frag; sourceTree = "<group>"; };
-		F6A5CC6E22C684120077D2C0 /* Orbit2.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Orbit2.obj; sourceTree = "<group>"; };
-		F6A5CC6F22C684130077D2C0 /* Orbit2.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Orbit2.mtl; sourceTree = "<group>"; };
-		F6A5CC7622C810660077D2C0 /* modelStar.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = modelStar.vs; sourceTree = "<group>"; };
-		F6A5CC7722C810660077D2C0 /* modelStar.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = modelStar.frag; sourceTree = "<group>"; };
+		F6A5CC7C22C839530077D2C0 /* bottom.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bottom.jpg; sourceTree = "<group>"; };
+		F6A5CC7D22C839530077D2C0 /* left.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = left.jpg; sourceTree = "<group>"; };
+		F6A5CC7E22C839530077D2C0 /* top.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = top.jpg; sourceTree = "<group>"; };
+		F6A5CC7F22C839530077D2C0 /* back.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = back.jpg; sourceTree = "<group>"; };
+		F6A5CC8022C839530077D2C0 /* right.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = right.jpg; sourceTree = "<group>"; };
+		F6A5CC8122C839530077D2C0 /* front.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = front.jpg; sourceTree = "<group>"; };
+		F6A5CC8322C839530077D2C0 /* container2_specular.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = container2_specular.png; sourceTree = "<group>"; };
+		F6A5CC8422C839530077D2C0 /* container2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = container2.png; sourceTree = "<group>"; };
+		F6A5CC8522C839530077D2C0 /* image1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image1.jpg; sourceTree = "<group>"; };
+		F6A5CC8622C839530077D2C0 /* image2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image2.png; sourceTree = "<group>"; };
+		F6A5CC8722C839530077D2C0 /* image3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image3.png; sourceTree = "<group>"; };
+		F6A5CC8B22C839530077D2C0 /* mercurymap.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mercurymap.jpg; sourceTree = "<group>"; };
+		F6A5CC8C22C839530077D2C0 /* mercury.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mercury.mtl; sourceTree = "<group>"; };
+		F6A5CC8D22C839530077D2C0 /* mercurybump.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mercurybump.jpg; sourceTree = "<group>"; };
+		F6A5CC8E22C839530077D2C0 /* mercury.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mercury.obj; sourceTree = "<group>"; };
+		F6A5CC8F22C839530077D2C0 /* Readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Readme.txt; sourceTree = "<group>"; };
+		F6A5CC9022C839530077D2C0 /* Mercury.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Mercury.jpg; sourceTree = "<group>"; };
+		F6A5CC9222C839530077D2C0 /* Map__65_Falloff.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Map__65_Falloff.jpg; sourceTree = "<group>"; };
+		F6A5CC9322C839530077D2C0 /* sun2.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sun2.obj; sourceTree = "<group>"; };
+		F6A5CC9422C839530077D2C0 /* Clouds.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Clouds.jpg; sourceTree = "<group>"; };
+		F6A5CC9522C839530077D2C0 /* Clouds-mask.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Clouds-mask.jpg"; sourceTree = "<group>"; };
+		F6A5CC9622C839530077D2C0 /* Agni-Baume-land.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Agni-Baume-land.jpg"; sourceTree = "<group>"; };
+		F6A5CC9722C839530077D2C0 /* Map__68_Falloff.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Map__68_Falloff.jpg; sourceTree = "<group>"; };
+		F6A5CC9822C839530077D2C0 /* Map__67_Falloff.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Map__67_Falloff.jpg; sourceTree = "<group>"; };
+		F6A5CC9922C839530077D2C0 /* sun2.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sun2.mtl; sourceTree = "<group>"; };
+		F6A5CC9A22C839530077D2C0 /* Sun03.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Sun03.jpg; sourceTree = "<group>"; };
+		F6A5CC9B22C839530077D2C0 /* Space-Background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Space-Background.jpg"; sourceTree = "<group>"; };
+		F6A5CC9C22C839530077D2C0 /* Map__9_Falloff.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Map__9_Falloff.jpg; sourceTree = "<group>"; };
+		F6A5CC9D22C839530077D2C0 /* Sun02.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Sun02.jpg; sourceTree = "<group>"; };
+		F6A5CC9E22C839530077D2C0 /* Sun01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Sun01.jpg; sourceTree = "<group>"; };
+		F6A5CCA022C839530077D2C0 /* venus.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = venus.obj; sourceTree = "<group>"; };
+		F6A5CCA122C839530077D2C0 /* venus.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = venus.mtl; sourceTree = "<group>"; };
+		F6A5CCA222C839530077D2C0 /* venusbump.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = venusbump.jpg; sourceTree = "<group>"; };
+		F6A5CCA322C839530077D2C0 /* venusmap.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = venusmap.jpg; sourceTree = "<group>"; };
+		F6A5CCA522C839530077D2C0 /* Thumbs.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = Thumbs.db; sourceTree = "<group>"; };
+		F6A5CCA622C839530077D2C0 /* moon1.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = moon1.obj; sourceTree = "<group>"; };
+		F6A5CCA722C839530077D2C0 /* MoonMap2_2500x1250.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = MoonMap2_2500x1250.jpg; sourceTree = "<group>"; };
+		F6A5CCA822C839530077D2C0 /* moonmap2k.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = moonmap2k.jpg; sourceTree = "<group>"; };
+		F6A5CCA922C839530077D2C0 /* moon-normal.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "moon-normal.jpg"; sourceTree = "<group>"; };
+		F6A5CCAA22C839530077D2C0 /* moon1.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = moon1.mtl; sourceTree = "<group>"; };
+		F6A5CCAC22C839530077D2C0 /* neptune.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = neptune.mtl; sourceTree = "<group>"; };
+		F6A5CCAD22C839530077D2C0 /* neptunemap.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = neptunemap.jpg; sourceTree = "<group>"; };
+		F6A5CCAE22C839530077D2C0 /* Neptune.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Neptune.jpg; sourceTree = "<group>"; };
+		F6A5CCAF22C839530077D2C0 /* Readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Readme.txt; sourceTree = "<group>"; };
+		F6A5CCB022C839530077D2C0 /* neptune.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = neptune.obj; sourceTree = "<group>"; };
+		F6A5CCB122C839530077D2C0 /* Orbit2.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Orbit2.obj; sourceTree = "<group>"; };
+		F6A5CCB322C839530077D2C0 /* saturn3.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = saturn3.mtl; sourceTree = "<group>"; };
+		F6A5CCB422C839530077D2C0 /* saturnmap.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = saturnmap.jpg; sourceTree = "<group>"; };
+		F6A5CCB522C839530077D2C0 /* saturnringpattern.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = saturnringpattern.gif; sourceTree = "<group>"; };
+		F6A5CCB622C839530077D2C0 /* saturn3.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = saturn3.obj; sourceTree = "<group>"; };
+		F6A5CCB722C839530077D2C0 /* Saturn.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Saturn.jpg; sourceTree = "<group>"; };
+		F6A5CCB822C839530077D2C0 /* saturnringcolor.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = saturnringcolor.jpg; sourceTree = "<group>"; };
+		F6A5CCBA22C839530077D2C0 /* Jupiter.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Jupiter.jpg; sourceTree = "<group>"; };
+		F6A5CCBB22C839530077D2C0 /* jupiter1.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = jupiter1.obj; sourceTree = "<group>"; };
+		F6A5CCBC22C839530077D2C0 /* Jupiter_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Jupiter_2.jpg; sourceTree = "<group>"; };
+		F6A5CCBD22C839530077D2C0 /* jupiter1.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = jupiter1.mtl; sourceTree = "<group>"; };
+		F6A5CCBE22C839530077D2C0 /* Readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Readme.txt; sourceTree = "<group>"; };
+		F6A5CCBF22C839530077D2C0 /* jupitermap.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jupitermap.jpg; sourceTree = "<group>"; };
+		F6A5CCC022C839530077D2C0 /* descarga (13).jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "descarga (13).jpg"; sourceTree = "<group>"; };
+		F6A5CCC222C839530077D2C0 /* earth.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = earth.obj; sourceTree = "<group>"; };
+		F6A5CCC322C839530077D2C0 /* planet.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = planet.jpg; sourceTree = "<group>"; };
+		F6A5CCC422C839530077D2C0 /* 4096_clouds.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 4096_clouds.jpg; sourceTree = "<group>"; };
+		F6A5CCC522C839530077D2C0 /* 4096_normal.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 4096_normal.jpg; sourceTree = "<group>"; };
+		F6A5CCC622C839530077D2C0 /* 4096_bump.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 4096_bump.jpg; sourceTree = "<group>"; };
+		F6A5CCC722C839530077D2C0 /* earth.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = earth.mtl; sourceTree = "<group>"; };
+		F6A5CCC822C839530077D2C0 /* 4096_earth.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 4096_earth.jpg; sourceTree = "<group>"; };
+		F6A5CCC922C839530077D2C0 /* 4096_night_lights.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 4096_night_lights.jpg; sourceTree = "<group>"; };
+		F6A5CCCB22C839530077D2C0 /* uranusmap.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = uranusmap.jpg; sourceTree = "<group>"; };
+		F6A5CCCC22C839530077D2C0 /* uranus.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = uranus.obj; sourceTree = "<group>"; };
+		F6A5CCCD22C839530077D2C0 /* uranusmap_bumb.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = uranusmap_bumb.jpg; sourceTree = "<group>"; };
+		F6A5CCCE22C839530077D2C0 /* uranus.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = uranus.mtl; sourceTree = "<group>"; };
+		F6A5CCCF22C839530077D2C0 /* Orbit2.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Orbit2.mtl; sourceTree = "<group>"; };
+		F6A5CCD122C839530077D2C0 /* Mars_normal-strong.obj.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Mars_normal-strong.obj.mtl"; sourceTree = "<group>"; };
+		F6A5CCD222C839530077D2C0 /* mars-sample-big-1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "mars-sample-big-1.jpg"; sourceTree = "<group>"; };
+		F6A5CCD322C839530077D2C0 /* mars-sample-big-3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "mars-sample-big-3.jpg"; sourceTree = "<group>"; };
+		F6A5CCD422C839530077D2C0 /* mars-sample-big-2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "mars-sample-big-2.jpg"; sourceTree = "<group>"; };
+		F6A5CCD522C839530077D2C0 /* Mars8k-modified.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Mars8k-modified.jpg"; sourceTree = "<group>"; };
+		F6A5CCD622C839530077D2C0 /* Mars_normal-strong.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Mars_normal-strong.obj"; sourceTree = "<group>"; };
+		F6A5CCD722C839530077D2C0 /* mars-sample-scene.lws */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "mars-sample-scene.lws"; sourceTree = "<group>"; };
+		F6A5CCD822C839530077D2C0 /* MarsNormal.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = MarsNormal.jpg; sourceTree = "<group>"; };
+		F6A5CCD922C839530077D2C0 /* Mars_normal-strong.lwo */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mars_normal-strong.lwo"; sourceTree = "<group>"; };
+		F6A5CCDB22C839530077D2C0 /* Sonne.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Sonne.obj; sourceTree = "<group>"; };
+		F6A5CCDC22C839530077D2C0 /* earth.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = earth.obj; sourceTree = "<group>"; };
+		F6A5CCDD22C839530077D2C0 /* Luna.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Luna.mtl; sourceTree = "<group>"; };
+		F6A5CCDE22C839530077D2C0 /* Jupyter.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Jupyter.obj; sourceTree = "<group>"; };
+		F6A5CCDF22C839530077D2C0 /* Neptun.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Neptun.mtl; sourceTree = "<group>"; };
+		F6A5CCE022C839530077D2C0 /* Mars.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Mars.obj; sourceTree = "<group>"; };
+		F6A5CCE122C839530077D2C0 /* Saturn.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Saturn.mtl; sourceTree = "<group>"; };
+		F6A5CCE222C839530077D2C0 /* mercury.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mercury.mtl; sourceTree = "<group>"; };
+		F6A5CCE322C839530077D2C0 /* Venus.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Venus.obj; sourceTree = "<group>"; };
+		F6A5CCE422C839530077D2C0 /* Uranus.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Uranus.obj; sourceTree = "<group>"; };
+		F6A5CCE522C839530077D2C0 /* Saturn.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Saturn.obj; sourceTree = "<group>"; };
+		F6A5CCE622C839530077D2C0 /* Mars.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Mars.mtl; sourceTree = "<group>"; };
+		F6A5CCE722C839530077D2C0 /* Neptun.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Neptun.obj; sourceTree = "<group>"; };
+		F6A5CCE822C839530077D2C0 /* mercury.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mercury.obj; sourceTree = "<group>"; };
+		F6A5CCE922C839530077D2C0 /* Uranus.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Uranus.mtl; sourceTree = "<group>"; };
+		F6A5CCEA22C839530077D2C0 /* Venus.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Venus.mtl; sourceTree = "<group>"; };
+		F6A5CCEB22C839530077D2C0 /* earth.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = earth.mtl; sourceTree = "<group>"; };
+		F6A5CCEC22C839530077D2C0 /* Sonne.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Sonne.mtl; sourceTree = "<group>"; };
+		F6A5CCED22C839530077D2C0 /* Jupyter.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Jupyter.mtl; sourceTree = "<group>"; };
+		F6A5CCEE22C839530077D2C0 /* Luna.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Luna.obj; sourceTree = "<group>"; };
+		F6A5CCF022C839530077D2C0 /* modelStar.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = modelStar.frag; sourceTree = "<group>"; };
+		F6A5CCF122C839530077D2C0 /* cube.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = cube.frag; sourceTree = "<group>"; };
+		F6A5CCF222C839530077D2C0 /* skybox.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = skybox.vs; sourceTree = "<group>"; };
+		F6A5CCF322C839530077D2C0 /* skybox.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = skybox.frag; sourceTree = "<group>"; };
+		F6A5CCF422C839530077D2C0 /* modelLoading.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = modelLoading.frag; sourceTree = "<group>"; };
+		F6A5CCF522C839530077D2C0 /* modelStar.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = modelStar.vs; sourceTree = "<group>"; };
+		F6A5CCF622C839530077D2C0 /* modelOrbit.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = modelOrbit.vs; sourceTree = "<group>"; };
+		F6A5CCF722C839530077D2C0 /* cube.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = cube.vs; sourceTree = "<group>"; };
+		F6A5CCF822C839530077D2C0 /* modelOrbit.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = modelOrbit.frag; sourceTree = "<group>"; };
+		F6A5CCF922C839530077D2C0 /* modelLoading.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = modelLoading.vs; sourceTree = "<group>"; };
+		F6A5CCFA22C839530077D2C0 /* Mesh.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Mesh.cpp; sourceTree = "<group>"; };
+		F6A5CCFB22C839530077D2C0 /* Shader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shader.h; sourceTree = "<group>"; };
+		F6A5CCFD22C839530077D2C0 /* image_helper.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = image_helper.c; sourceTree = "<group>"; };
+		F6A5CCFE22C839530077D2C0 /* stbi_pkm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stbi_pkm.h; sourceTree = "<group>"; };
+		F6A5CCFF22C839530077D2C0 /* jo_jpeg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = jo_jpeg.h; sourceTree = "<group>"; };
+		F6A5CD0022C839530077D2C0 /* image_DXT.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = image_DXT.c; sourceTree = "<group>"; };
+		F6A5CD0122C839530077D2C0 /* etc1_utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = etc1_utils.h; sourceTree = "<group>"; };
+		F6A5CD0222C839530077D2C0 /* stb_image_write.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stb_image_write.h; sourceTree = "<group>"; };
+		F6A5CD0322C839530077D2C0 /* SOIL2.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = SOIL2.c; sourceTree = "<group>"; };
+		F6A5CD0422C839530077D2C0 /* pkm_helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pkm_helper.h; sourceTree = "<group>"; };
+		F6A5CD0522C839530077D2C0 /* stbi_DDS_c.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stbi_DDS_c.h; sourceTree = "<group>"; };
+		F6A5CD0622C839530077D2C0 /* stbi_pvr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stbi_pvr.h; sourceTree = "<group>"; };
+		F6A5CD0722C839530077D2C0 /* stbi_ext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stbi_ext.h; sourceTree = "<group>"; };
+		F6A5CD0822C839530077D2C0 /* stb_image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stb_image.h; sourceTree = "<group>"; };
+		F6A5CD0922C839530077D2C0 /* stbi_pvr_c.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stbi_pvr_c.h; sourceTree = "<group>"; };
+		F6A5CD0A22C839530077D2C0 /* stbi_ext_c.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stbi_ext_c.h; sourceTree = "<group>"; };
+		F6A5CD0B22C839530077D2C0 /* image_helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = image_helper.h; sourceTree = "<group>"; };
+		F6A5CD0C22C839530077D2C0 /* SOIL2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOIL2.h; sourceTree = "<group>"; };
+		F6A5CD0D22C839530077D2C0 /* etc1_utils.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = etc1_utils.c; sourceTree = "<group>"; };
+		F6A5CD0E22C839530077D2C0 /* image_DXT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = image_DXT.h; sourceTree = "<group>"; };
+		F6A5CD0F22C839530077D2C0 /* stbi_pkm_c.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stbi_pkm_c.h; sourceTree = "<group>"; };
+		F6A5CD1022C839530077D2C0 /* stbi_DDS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stbi_DDS.h; sourceTree = "<group>"; };
+		F6A5CD1122C839530077D2C0 /* pvr_helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pvr_helper.h; sourceTree = "<group>"; };
+		F6A5CD1222C839530077D2C0 /* Camera.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Camera.cpp; sourceTree = "<group>"; };
+		F6A5CD1322C839530077D2C0 /* Camera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Camera.h; sourceTree = "<group>"; };
+		F6A5CD1422C839530077D2C0 /* Mesh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mesh.h; sourceTree = "<group>"; };
+		F6A5CD1522C839530077D2C0 /* Shader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Shader.cpp; sourceTree = "<group>"; };
+		F6A5CD1622C839530077D2C0 /* Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Model.h; sourceTree = "<group>"; };
+		F6A5CD1722C839530077D2C0 /* Model.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Model.cpp; sourceTree = "<group>"; };
+		F6A5CD1822C839530077D2C0 /* Texture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Texture.h; sourceTree = "<group>"; };
+		F6A5CD1922C839530077D2C0 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		F6A5CD1A22C839530077D2C0 /* Planet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Planet.h; sourceTree = "<group>"; };
+		F6A5CD1B22C839530077D2C0 /* Planet.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Planet.cpp; sourceTree = "<group>"; };
 		F6F7FBC122BA295E00E3D362 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		F6F7FBC322BA29BB00E3D362 /* libassimp.4.1.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libassimp.4.1.0.dylib; path = ../../../../../../../../usr/local/Cellar/assimp/4.1.0/lib/libassimp.4.1.0.dylib; sourceTree = "<group>"; };
 		F6F7FBC522BA29D700E3D362 /* libGLEW.2.1.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libGLEW.2.1.0.dylib; path = ../../../../../../../../usr/local/Cellar/glew/2.1.0/lib/libGLEW.2.1.0.dylib; sourceTree = "<group>"; };
@@ -183,236 +214,311 @@
 		E2639AD9190D156500B6251A /* cg */ = {
 			isa = PBXGroup;
 			children = (
-				F6F7FBE322BA320C00E3D362 /* src */,
+				F6A5CC7822C839530077D2C0 /* src */,
 			);
 			name = cg;
 			path = source/CGTutorial;
 			sourceTree = "<group>";
 		};
-		F663616722C05D3100B750DC /* res */ = {
+		F6A5CC7822C839530077D2C0 /* src */ = {
 			isa = PBXGroup;
 			children = (
-				F663616822C05D3100B750DC /* images */,
-				F663616E22C05D3100B750DC /* models */,
-				F66361D422C05D3100B750DC /* shaders */,
+				F6A5CC7922C839530077D2C0 /* res */,
+				F6A5CCFA22C839530077D2C0 /* Mesh.cpp */,
+				F6A5CCFB22C839530077D2C0 /* Shader.h */,
+				F6A5CCFC22C839530077D2C0 /* SOIL2 */,
+				F6A5CD1222C839530077D2C0 /* Camera.cpp */,
+				F6A5CD1322C839530077D2C0 /* Camera.h */,
+				F6A5CD1422C839530077D2C0 /* Mesh.h */,
+				F6A5CD1522C839530077D2C0 /* Shader.cpp */,
+				F6A5CD1622C839530077D2C0 /* Model.h */,
+				F6A5CD1722C839530077D2C0 /* Model.cpp */,
+				F6A5CD1822C839530077D2C0 /* Texture.h */,
+				F6A5CD1922C839530077D2C0 /* main.cpp */,
+				F6A5CD1A22C839530077D2C0 /* Planet.h */,
+				F6A5CD1B22C839530077D2C0 /* Planet.cpp */,
+			);
+			path = src;
+			sourceTree = SOURCE_ROOT;
+		};
+		F6A5CC7922C839530077D2C0 /* res */ = {
+			isa = PBXGroup;
+			children = (
+				F6A5CC7A22C839530077D2C0 /* textures */,
+				F6A5CC8222C839530077D2C0 /* images */,
+				F6A5CC8822C839530077D2C0 /* models */,
+				F6A5CCDA22C839530077D2C0 /* Texts */,
+				F6A5CCEF22C839530077D2C0 /* shaders */,
 			);
 			path = res;
 			sourceTree = "<group>";
 		};
-		F663616822C05D3100B750DC /* images */ = {
+		F6A5CC7A22C839530077D2C0 /* textures */ = {
 			isa = PBXGroup;
 			children = (
-				F663616922C05D3100B750DC /* container2_specular.png */,
-				F663616A22C05D3100B750DC /* container2.png */,
-				F663616B22C05D3100B750DC /* image1.jpg */,
-				F663616C22C05D3100B750DC /* image2.png */,
-				F663616D22C05D3100B750DC /* image3.png */,
+				F6A5CC7B22C839530077D2C0 /* skybox */,
+			);
+			path = textures;
+			sourceTree = "<group>";
+		};
+		F6A5CC7B22C839530077D2C0 /* skybox */ = {
+			isa = PBXGroup;
+			children = (
+				F6A5CC7C22C839530077D2C0 /* bottom.jpg */,
+				F6A5CC7D22C839530077D2C0 /* left.jpg */,
+				F6A5CC7E22C839530077D2C0 /* top.jpg */,
+				F6A5CC7F22C839530077D2C0 /* back.jpg */,
+				F6A5CC8022C839530077D2C0 /* right.jpg */,
+				F6A5CC8122C839530077D2C0 /* front.jpg */,
+			);
+			path = skybox;
+			sourceTree = "<group>";
+		};
+		F6A5CC8222C839530077D2C0 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				F6A5CC8322C839530077D2C0 /* container2_specular.png */,
+				F6A5CC8422C839530077D2C0 /* container2.png */,
+				F6A5CC8522C839530077D2C0 /* image1.jpg */,
+				F6A5CC8622C839530077D2C0 /* image2.png */,
+				F6A5CC8722C839530077D2C0 /* image3.png */,
 			);
 			path = images;
 			sourceTree = "<group>";
 		};
-		F663616E22C05D3100B750DC /* models */ = {
+		F6A5CC8822C839530077D2C0 /* models */ = {
 			isa = PBXGroup;
 			children = (
-				F663618522C05D3100B750DC /* planets */,
+				F6A5CC8922C839530077D2C0 /* planets */,
 			);
 			path = models;
 			sourceTree = "<group>";
 		};
-		F663618522C05D3100B750DC /* planets */ = {
+		F6A5CC8922C839530077D2C0 /* planets */ = {
 			isa = PBXGroup;
 			children = (
-				F6A5CC6F22C684130077D2C0 /* Orbit2.mtl */,
-				F6A5CC6E22C684120077D2C0 /* Orbit2.obj */,
-				F663618622C05D3100B750DC /* mercury */,
-				F663618D22C05D3100B750DC /* Sun */,
-				F663619B22C05D3100B750DC /* Venus */,
-				F66361A022C05D3100B750DC /* moon */,
-				F66361A722C05D3100B750DC /* Neptune */,
-				F66361AD22C05D3100B750DC /* Saturn */,
-				F66361B422C05D3100B750DC /* jupiter */,
-				F66361BC22C05D3100B750DC /* earth */,
-				F66361C522C05D3100B750DC /* Uranus */,
-				F66361CA22C05D3100B750DC /* mars */,
+				F6A5CC8A22C839530077D2C0 /* mercury */,
+				F6A5CC9122C839530077D2C0 /* Sun */,
+				F6A5CC9F22C839530077D2C0 /* Venus */,
+				F6A5CCA422C839530077D2C0 /* moon */,
+				F6A5CCAB22C839530077D2C0 /* Neptune */,
+				F6A5CCB122C839530077D2C0 /* Orbit2.obj */,
+				F6A5CCB222C839530077D2C0 /* Saturn */,
+				F6A5CCB922C839530077D2C0 /* jupiter */,
+				F6A5CCC122C839530077D2C0 /* earth */,
+				F6A5CCCA22C839530077D2C0 /* Uranus */,
+				F6A5CCCF22C839530077D2C0 /* Orbit2.mtl */,
+				F6A5CCD022C839530077D2C0 /* mars */,
 			);
 			path = planets;
 			sourceTree = "<group>";
 		};
-		F663618622C05D3100B750DC /* mercury */ = {
+		F6A5CC8A22C839530077D2C0 /* mercury */ = {
 			isa = PBXGroup;
 			children = (
-				F663618722C05D3100B750DC /* mercurymap.jpg */,
-				F663618822C05D3100B750DC /* mercury.mtl */,
-				F663618922C05D3100B750DC /* mercurybump.jpg */,
-				F663618A22C05D3100B750DC /* mercury.obj */,
-				F663618B22C05D3100B750DC /* Readme.txt */,
-				F663618C22C05D3100B750DC /* Mercury.jpg */,
+				F6A5CC8B22C839530077D2C0 /* mercurymap.jpg */,
+				F6A5CC8C22C839530077D2C0 /* mercury.mtl */,
+				F6A5CC8D22C839530077D2C0 /* mercurybump.jpg */,
+				F6A5CC8E22C839530077D2C0 /* mercury.obj */,
+				F6A5CC8F22C839530077D2C0 /* Readme.txt */,
+				F6A5CC9022C839530077D2C0 /* Mercury.jpg */,
 			);
 			path = mercury;
 			sourceTree = "<group>";
 		};
-		F663618D22C05D3100B750DC /* Sun */ = {
+		F6A5CC9122C839530077D2C0 /* Sun */ = {
 			isa = PBXGroup;
 			children = (
-				F663618E22C05D3100B750DC /* Map__65_Falloff.jpg */,
-				F663618F22C05D3100B750DC /* sun2.obj */,
-				F663619022C05D3100B750DC /* Clouds.jpg */,
-				F663619122C05D3100B750DC /* Clouds-mask.jpg */,
-				F663619222C05D3100B750DC /* Agni-Baume-land.jpg */,
-				F663619322C05D3100B750DC /* Map__68_Falloff.jpg */,
-				F663619422C05D3100B750DC /* Map__67_Falloff.jpg */,
-				F663619522C05D3100B750DC /* sun2.mtl */,
-				F663619622C05D3100B750DC /* Sun03.jpg */,
-				F663619722C05D3100B750DC /* Space-Background.jpg */,
-				F663619822C05D3100B750DC /* Map__9_Falloff.jpg */,
-				F663619922C05D3100B750DC /* Sun02.jpg */,
-				F663619A22C05D3100B750DC /* Sun01.jpg */,
+				F6A5CC9222C839530077D2C0 /* Map__65_Falloff.jpg */,
+				F6A5CC9322C839530077D2C0 /* sun2.obj */,
+				F6A5CC9422C839530077D2C0 /* Clouds.jpg */,
+				F6A5CC9522C839530077D2C0 /* Clouds-mask.jpg */,
+				F6A5CC9622C839530077D2C0 /* Agni-Baume-land.jpg */,
+				F6A5CC9722C839530077D2C0 /* Map__68_Falloff.jpg */,
+				F6A5CC9822C839530077D2C0 /* Map__67_Falloff.jpg */,
+				F6A5CC9922C839530077D2C0 /* sun2.mtl */,
+				F6A5CC9A22C839530077D2C0 /* Sun03.jpg */,
+				F6A5CC9B22C839530077D2C0 /* Space-Background.jpg */,
+				F6A5CC9C22C839530077D2C0 /* Map__9_Falloff.jpg */,
+				F6A5CC9D22C839530077D2C0 /* Sun02.jpg */,
+				F6A5CC9E22C839530077D2C0 /* Sun01.jpg */,
 			);
 			path = Sun;
 			sourceTree = "<group>";
 		};
-		F663619B22C05D3100B750DC /* Venus */ = {
+		F6A5CC9F22C839530077D2C0 /* Venus */ = {
 			isa = PBXGroup;
 			children = (
-				F663619C22C05D3100B750DC /* venus.obj */,
-				F663619D22C05D3100B750DC /* venus.mtl */,
-				F663619E22C05D3100B750DC /* venusbump.jpg */,
-				F663619F22C05D3100B750DC /* venusmap.jpg */,
+				F6A5CCA022C839530077D2C0 /* venus.obj */,
+				F6A5CCA122C839530077D2C0 /* venus.mtl */,
+				F6A5CCA222C839530077D2C0 /* venusbump.jpg */,
+				F6A5CCA322C839530077D2C0 /* venusmap.jpg */,
 			);
 			path = Venus;
 			sourceTree = "<group>";
 		};
-		F66361A022C05D3100B750DC /* moon */ = {
+		F6A5CCA422C839530077D2C0 /* moon */ = {
 			isa = PBXGroup;
 			children = (
-				F66361A122C05D3100B750DC /* Thumbs.db */,
-				F66361A222C05D3100B750DC /* moon1.obj */,
-				F66361A322C05D3100B750DC /* MoonMap2_2500x1250.jpg */,
-				F66361A422C05D3100B750DC /* moonmap2k.jpg */,
-				F66361A522C05D3100B750DC /* moon-normal.jpg */,
-				F66361A622C05D3100B750DC /* moon1.mtl */,
+				F6A5CCA522C839530077D2C0 /* Thumbs.db */,
+				F6A5CCA622C839530077D2C0 /* moon1.obj */,
+				F6A5CCA722C839530077D2C0 /* MoonMap2_2500x1250.jpg */,
+				F6A5CCA822C839530077D2C0 /* moonmap2k.jpg */,
+				F6A5CCA922C839530077D2C0 /* moon-normal.jpg */,
+				F6A5CCAA22C839530077D2C0 /* moon1.mtl */,
 			);
 			path = moon;
 			sourceTree = "<group>";
 		};
-		F66361A722C05D3100B750DC /* Neptune */ = {
+		F6A5CCAB22C839530077D2C0 /* Neptune */ = {
 			isa = PBXGroup;
 			children = (
-				F66361A822C05D3100B750DC /* neptune.mtl */,
-				F66361A922C05D3100B750DC /* neptunemap.jpg */,
-				F66361AA22C05D3100B750DC /* Neptune.jpg */,
-				F66361AB22C05D3100B750DC /* Readme.txt */,
-				F66361AC22C05D3100B750DC /* neptune.obj */,
+				F6A5CCAC22C839530077D2C0 /* neptune.mtl */,
+				F6A5CCAD22C839530077D2C0 /* neptunemap.jpg */,
+				F6A5CCAE22C839530077D2C0 /* Neptune.jpg */,
+				F6A5CCAF22C839530077D2C0 /* Readme.txt */,
+				F6A5CCB022C839530077D2C0 /* neptune.obj */,
 			);
 			path = Neptune;
 			sourceTree = "<group>";
 		};
-		F66361AD22C05D3100B750DC /* Saturn */ = {
+		F6A5CCB222C839530077D2C0 /* Saturn */ = {
 			isa = PBXGroup;
 			children = (
-				F66361AE22C05D3100B750DC /* saturn3.mtl */,
-				F66361AF22C05D3100B750DC /* saturnmap.jpg */,
-				F66361B022C05D3100B750DC /* saturnringpattern.gif */,
-				F66361B122C05D3100B750DC /* saturn3.obj */,
-				F66361B222C05D3100B750DC /* Saturn.jpg */,
-				F66361B322C05D3100B750DC /* saturnringcolor.jpg */,
+				F6A5CCB322C839530077D2C0 /* saturn3.mtl */,
+				F6A5CCB422C839530077D2C0 /* saturnmap.jpg */,
+				F6A5CCB522C839530077D2C0 /* saturnringpattern.gif */,
+				F6A5CCB622C839530077D2C0 /* saturn3.obj */,
+				F6A5CCB722C839530077D2C0 /* Saturn.jpg */,
+				F6A5CCB822C839530077D2C0 /* saturnringcolor.jpg */,
 			);
 			path = Saturn;
 			sourceTree = "<group>";
 		};
-		F66361B422C05D3100B750DC /* jupiter */ = {
+		F6A5CCB922C839530077D2C0 /* jupiter */ = {
 			isa = PBXGroup;
 			children = (
-				F66361B522C05D3100B750DC /* Jupiter.jpg */,
-				F66361B622C05D3100B750DC /* jupiter1.obj */,
-				F66361B722C05D3100B750DC /* Jupiter_2.jpg */,
-				F66361B822C05D3100B750DC /* jupiter1.mtl */,
-				F66361B922C05D3100B750DC /* Readme.txt */,
-				F66361BA22C05D3100B750DC /* jupitermap.jpg */,
-				F66361BB22C05D3100B750DC /* descarga (13).jpg */,
+				F6A5CCBA22C839530077D2C0 /* Jupiter.jpg */,
+				F6A5CCBB22C839530077D2C0 /* jupiter1.obj */,
+				F6A5CCBC22C839530077D2C0 /* Jupiter_2.jpg */,
+				F6A5CCBD22C839530077D2C0 /* jupiter1.mtl */,
+				F6A5CCBE22C839530077D2C0 /* Readme.txt */,
+				F6A5CCBF22C839530077D2C0 /* jupitermap.jpg */,
+				F6A5CCC022C839530077D2C0 /* descarga (13).jpg */,
 			);
 			path = jupiter;
 			sourceTree = "<group>";
 		};
-		F66361BC22C05D3100B750DC /* earth */ = {
+		F6A5CCC122C839530077D2C0 /* earth */ = {
 			isa = PBXGroup;
 			children = (
-				F66361BD22C05D3100B750DC /* earth.obj */,
-				F66361BE22C05D3100B750DC /* planet.jpg */,
-				F66361BF22C05D3100B750DC /* 4096_clouds.jpg */,
-				F66361C022C05D3100B750DC /* 4096_normal.jpg */,
-				F66361C122C05D3100B750DC /* 4096_bump.jpg */,
-				F66361C222C05D3100B750DC /* earth.mtl */,
-				F66361C322C05D3100B750DC /* 4096_earth.jpg */,
-				F66361C422C05D3100B750DC /* 4096_night_lights.jpg */,
+				F6A5CCC222C839530077D2C0 /* earth.obj */,
+				F6A5CCC322C839530077D2C0 /* planet.jpg */,
+				F6A5CCC422C839530077D2C0 /* 4096_clouds.jpg */,
+				F6A5CCC522C839530077D2C0 /* 4096_normal.jpg */,
+				F6A5CCC622C839530077D2C0 /* 4096_bump.jpg */,
+				F6A5CCC722C839530077D2C0 /* earth.mtl */,
+				F6A5CCC822C839530077D2C0 /* 4096_earth.jpg */,
+				F6A5CCC922C839530077D2C0 /* 4096_night_lights.jpg */,
 			);
 			path = earth;
 			sourceTree = "<group>";
 		};
-		F66361C522C05D3100B750DC /* Uranus */ = {
+		F6A5CCCA22C839530077D2C0 /* Uranus */ = {
 			isa = PBXGroup;
 			children = (
-				F66361C622C05D3100B750DC /* uranusmap.jpg */,
-				F66361C722C05D3100B750DC /* uranus.obj */,
-				F66361C822C05D3100B750DC /* uranusmap_bumb.jpg */,
-				F66361C922C05D3100B750DC /* uranus.mtl */,
+				F6A5CCCB22C839530077D2C0 /* uranusmap.jpg */,
+				F6A5CCCC22C839530077D2C0 /* uranus.obj */,
+				F6A5CCCD22C839530077D2C0 /* uranusmap_bumb.jpg */,
+				F6A5CCCE22C839530077D2C0 /* uranus.mtl */,
 			);
 			path = Uranus;
 			sourceTree = "<group>";
 		};
-		F66361CA22C05D3100B750DC /* mars */ = {
+		F6A5CCD022C839530077D2C0 /* mars */ = {
 			isa = PBXGroup;
 			children = (
-				F66361CB22C05D3100B750DC /* Mars_normal-strong.obj.mtl */,
-				F66361CC22C05D3100B750DC /* mars-sample-big-1.jpg */,
-				F66361CD22C05D3100B750DC /* mars-sample-big-3.jpg */,
-				F66361CE22C05D3100B750DC /* mars-sample-big-2.jpg */,
-				F66361CF22C05D3100B750DC /* Mars8k-modified.jpg */,
-				F66361D022C05D3100B750DC /* Mars_normal-strong.obj */,
-				F66361D122C05D3100B750DC /* mars-sample-scene.lws */,
-				F66361D222C05D3100B750DC /* MarsNormal.jpg */,
-				F66361D322C05D3100B750DC /* Mars_normal-strong.lwo */,
+				F6A5CCD122C839530077D2C0 /* Mars_normal-strong.obj.mtl */,
+				F6A5CCD222C839530077D2C0 /* mars-sample-big-1.jpg */,
+				F6A5CCD322C839530077D2C0 /* mars-sample-big-3.jpg */,
+				F6A5CCD422C839530077D2C0 /* mars-sample-big-2.jpg */,
+				F6A5CCD522C839530077D2C0 /* Mars8k-modified.jpg */,
+				F6A5CCD622C839530077D2C0 /* Mars_normal-strong.obj */,
+				F6A5CCD722C839530077D2C0 /* mars-sample-scene.lws */,
+				F6A5CCD822C839530077D2C0 /* MarsNormal.jpg */,
+				F6A5CCD922C839530077D2C0 /* Mars_normal-strong.lwo */,
 			);
 			path = mars;
 			sourceTree = "<group>";
 		};
-		F66361D422C05D3100B750DC /* shaders */ = {
+		F6A5CCDA22C839530077D2C0 /* Texts */ = {
 			isa = PBXGroup;
 			children = (
-				F6A5CC7722C810660077D2C0 /* modelStar.frag */,
-				F6A5CC7622C810660077D2C0 /* modelStar.vs */,
-				F6A5CC6B22C5A2610077D2C0 /* modelOrbit.frag */,
-				F6A5CC6A22C5A2610077D2C0 /* modelOrbit.vs */,
-				F66361D922C05D3100B750DC /* modelLoading.frag */,
-				F66361DA22C05D3100B750DC /* modelLoading.vs */,
+				F6A5CCDB22C839530077D2C0 /* Sonne.obj */,
+				F6A5CCDC22C839530077D2C0 /* earth.obj */,
+				F6A5CCDD22C839530077D2C0 /* Luna.mtl */,
+				F6A5CCDE22C839530077D2C0 /* Jupyter.obj */,
+				F6A5CCDF22C839530077D2C0 /* Neptun.mtl */,
+				F6A5CCE022C839530077D2C0 /* Mars.obj */,
+				F6A5CCE122C839530077D2C0 /* Saturn.mtl */,
+				F6A5CCE222C839530077D2C0 /* mercury.mtl */,
+				F6A5CCE322C839530077D2C0 /* Venus.obj */,
+				F6A5CCE422C839530077D2C0 /* Uranus.obj */,
+				F6A5CCE522C839530077D2C0 /* Saturn.obj */,
+				F6A5CCE622C839530077D2C0 /* Mars.mtl */,
+				F6A5CCE722C839530077D2C0 /* Neptun.obj */,
+				F6A5CCE822C839530077D2C0 /* mercury.obj */,
+				F6A5CCE922C839530077D2C0 /* Uranus.mtl */,
+				F6A5CCEA22C839530077D2C0 /* Venus.mtl */,
+				F6A5CCEB22C839530077D2C0 /* earth.mtl */,
+				F6A5CCEC22C839530077D2C0 /* Sonne.mtl */,
+				F6A5CCED22C839530077D2C0 /* Jupyter.mtl */,
+				F6A5CCEE22C839530077D2C0 /* Luna.obj */,
+			);
+			path = Texts;
+			sourceTree = "<group>";
+		};
+		F6A5CCEF22C839530077D2C0 /* shaders */ = {
+			isa = PBXGroup;
+			children = (
+				F6A5CCF022C839530077D2C0 /* modelStar.frag */,
+				F6A5CCF122C839530077D2C0 /* cube.frag */,
+				F6A5CCF222C839530077D2C0 /* skybox.vs */,
+				F6A5CCF322C839530077D2C0 /* skybox.frag */,
+				F6A5CCF422C839530077D2C0 /* modelLoading.frag */,
+				F6A5CCF522C839530077D2C0 /* modelStar.vs */,
+				F6A5CCF622C839530077D2C0 /* modelOrbit.vs */,
+				F6A5CCF722C839530077D2C0 /* cube.vs */,
+				F6A5CCF822C839530077D2C0 /* modelOrbit.frag */,
+				F6A5CCF922C839530077D2C0 /* modelLoading.vs */,
 			);
 			path = shaders;
 			sourceTree = "<group>";
 		};
-		F66361E022C05D3200B750DC /* SOIL2 */ = {
+		F6A5CCFC22C839530077D2C0 /* SOIL2 */ = {
 			isa = PBXGroup;
 			children = (
-				F66361E122C05D3200B750DC /* image_helper.c */,
-				F66361E222C05D3200B750DC /* stbi_pkm.h */,
-				F66361E322C05D3200B750DC /* jo_jpeg.h */,
-				F66361E422C05D3200B750DC /* image_DXT.c */,
-				F66361E522C05D3200B750DC /* etc1_utils.h */,
-				F66361E622C05D3200B750DC /* stb_image_write.h */,
-				F66361E722C05D3200B750DC /* SOIL2.c */,
-				F66361E822C05D3200B750DC /* pkm_helper.h */,
-				F66361E922C05D3200B750DC /* stbi_DDS_c.h */,
-				F66361EA22C05D3200B750DC /* stbi_pvr.h */,
-				F66361EB22C05D3200B750DC /* stbi_ext.h */,
-				F66361EC22C05D3200B750DC /* stb_image.h */,
-				F66361ED22C05D3200B750DC /* stbi_pvr_c.h */,
-				F66361EE22C05D3200B750DC /* stbi_ext_c.h */,
-				F66361EF22C05D3200B750DC /* image_helper.h */,
-				F66361F022C05D3200B750DC /* SOIL2.h */,
-				F66361F122C05D3200B750DC /* etc1_utils.c */,
-				F66361F222C05D3200B750DC /* image_DXT.h */,
-				F66361F322C05D3200B750DC /* stbi_pkm_c.h */,
-				F66361F422C05D3200B750DC /* stbi_DDS.h */,
-				F66361F522C05D3200B750DC /* pvr_helper.h */,
+				F6A5CCFD22C839530077D2C0 /* image_helper.c */,
+				F6A5CCFE22C839530077D2C0 /* stbi_pkm.h */,
+				F6A5CCFF22C839530077D2C0 /* jo_jpeg.h */,
+				F6A5CD0022C839530077D2C0 /* image_DXT.c */,
+				F6A5CD0122C839530077D2C0 /* etc1_utils.h */,
+				F6A5CD0222C839530077D2C0 /* stb_image_write.h */,
+				F6A5CD0322C839530077D2C0 /* SOIL2.c */,
+				F6A5CD0422C839530077D2C0 /* pkm_helper.h */,
+				F6A5CD0522C839530077D2C0 /* stbi_DDS_c.h */,
+				F6A5CD0622C839530077D2C0 /* stbi_pvr.h */,
+				F6A5CD0722C839530077D2C0 /* stbi_ext.h */,
+				F6A5CD0822C839530077D2C0 /* stb_image.h */,
+				F6A5CD0922C839530077D2C0 /* stbi_pvr_c.h */,
+				F6A5CD0A22C839530077D2C0 /* stbi_ext_c.h */,
+				F6A5CD0B22C839530077D2C0 /* image_helper.h */,
+				F6A5CD0C22C839530077D2C0 /* SOIL2.h */,
+				F6A5CD0D22C839530077D2C0 /* etc1_utils.c */,
+				F6A5CD0E22C839530077D2C0 /* image_DXT.h */,
+				F6A5CD0F22C839530077D2C0 /* stbi_pkm_c.h */,
+				F6A5CD1022C839530077D2C0 /* stbi_DDS.h */,
+				F6A5CD1122C839530077D2C0 /* pvr_helper.h */,
 			);
 			path = SOIL2;
 			sourceTree = "<group>";
@@ -429,26 +535,6 @@
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
-		};
-		F6F7FBE322BA320C00E3D362 /* src */ = {
-			isa = PBXGroup;
-			children = (
-				F66361DF22C05D3200B750DC /* Camera.cpp */,
-				F66361F722C05D3200B750DC /* Camera.h */,
-				F663616522C05D3100B750DC /* main.cpp */,
-				F66361DD22C05D3200B750DC /* Mesh.cpp */,
-				F66361DB22C05D3100B750DC /* Mesh.h */,
-				F663616622C05D3100B750DC /* Model.cpp */,
-				F66361F922C05D3200B750DC /* Model.h */,
-				F66361DE22C05D3200B750DC /* Planet.cpp */,
-				F66361F622C05D3200B750DC /* Planet.h */,
-				F663616722C05D3100B750DC /* res */,
-				F66361F822C05D3200B750DC /* Shader.cpp */,
-				F66361DC22C05D3100B750DC /* Shader.h */,
-				F66361E022C05D3200B750DC /* SOIL2 */,
-			);
-			path = src;
-			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -500,16 +586,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F66361FC22C05D3200B750DC /* Mesh.cpp in Sources */,
-				F663620122C05D3200B750DC /* SOIL2.c in Sources */,
-				F66361FA22C05D3200B750DC /* main.cpp in Sources */,
-				F66361FE22C05D3200B750DC /* Camera.cpp in Sources */,
-				F663620322C05D3200B750DC /* Shader.cpp in Sources */,
-				F663620222C05D3200B750DC /* etc1_utils.c in Sources */,
-				F66361FF22C05D3200B750DC /* image_helper.c in Sources */,
-				F663620022C05D3200B750DC /* image_DXT.c in Sources */,
-				F66361FB22C05D3200B750DC /* Model.cpp in Sources */,
-				F66361FD22C05D3200B750DC /* Planet.cpp in Sources */,
+				F6A5CD2022C839530077D2C0 /* etc1_utils.c in Sources */,
+				F6A5CD1C22C839530077D2C0 /* Mesh.cpp in Sources */,
+				F6A5CD2422C839530077D2C0 /* main.cpp in Sources */,
+				F6A5CD1F22C839530077D2C0 /* SOIL2.c in Sources */,
+				F6A5CD2322C839530077D2C0 /* Model.cpp in Sources */,
+				F6A5CD1D22C839530077D2C0 /* image_helper.c in Sources */,
+				F6A5CD2222C839530077D2C0 /* Shader.cpp in Sources */,
+				F6A5CD2122C839530077D2C0 /* Camera.cpp in Sources */,
+				F6A5CD1E22C839530077D2C0 /* image_DXT.c in Sources */,
+				F6A5CD2522C839530077D2C0 /* Planet.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -5,15 +5,12 @@
 #include <iostream>
 #include <stdio.h>
 #include <stdlib.h>
-#include <Windows.h>
-#include <MMSystem.h>
 // GLEW
 
 #include <GL/glew.h>
 
 // GLFW
 #include <GLFW/glfw3.h>
-#include <gl/freeglut.h>
 // GL includes
 #include "Shader.h"
 #include "Camera.h"
@@ -27,7 +24,7 @@
 #include <glm/gtc/type_ptr.hpp>
 
 // Other Libs
-#include <soil.h>
+#include "SOIL2/SOIL2.h"
 #include <math.h>
 #include <list>
 #include "Texture.h"
@@ -111,7 +108,7 @@ int main()
 
 
 	// Load models
-	//Model ourModel( "../res/models/nanosuit/nanosuit.obj");
+	//Model ourModel( "./res/models/nanosuit/nanosuit.obj");
 	GLfloat cubeVertices[] =
 	{
 		// Positions          // Texture Coords
@@ -229,46 +226,46 @@ int main()
 
 
 	// Load textures
-	GLuint cubeTexture = TextureLoading::LoadTexture("../res/textures/skybox/right.jpg");
+	GLuint cubeTexture = TextureLoading::LoadTexture("./res/textures/skybox/right.jpg");
 
 	// Cubemap (Skybox)
 	vector<const GLchar*> faces;
-	faces.push_back("../res/textures/skybox/right.jpg");
-	faces.push_back("../res/textures/skybox/left.jpg");
-	faces.push_back("../res/textures/skybox/top.jpg");
-	faces.push_back("../res/textures/skybox/bottom.jpg");
-	faces.push_back("../res/textures/skybox/back.jpg");
-	faces.push_back("../res/textures/skybox/front.jpg");
+	faces.push_back("./res/textures/skybox/right.jpg");
+	faces.push_back("./res/textures/skybox/left.jpg");
+	faces.push_back("./res/textures/skybox/top.jpg");
+	faces.push_back("./res/textures/skybox/bottom.jpg");
+	faces.push_back("./res/textures/skybox/back.jpg");
+	faces.push_back("./res/textures/skybox/front.jpg");
 	GLuint cubemapTexture = TextureLoading::LoadCubemap(faces);
 
-    Model orbitModel("../res/models/planets/orbit2.obj");
+    Model orbitModel("./res/models/planets/orbit2.obj");
 
-	Model sunText(		"../res/Texts/Sonne.obj");
-	Model mercuryText(	"../res/Texts/mercury.obj");
-	Model venusText(	"../res/Texts/Venus.obj");
-	Model earthText(	"../res/Texts/earth.obj");
-	Model MarsText(		"../res/Texts/Mars.obj");
-	Model jupityerText(	"../res/Texts/Jupyter.obj");
-	Model neptunText(	"../res/Texts/Neptun.obj");
-	Model uranusText(	"../res/Texts/Uranus.obj");
-	Model saturnText(	"../res/Texts/Saturn.obj");
-	Model lunaText(		"../res/Texts/Luna.obj");
+	Model sunText(		"./res/Texts/Sonne.obj");
+	Model mercuryText(	"./res/Texts/mercury.obj");
+	Model venusText(	"./res/Texts/Venus.obj");
+	Model earthText(	"./res/Texts/earth.obj");
+	Model MarsText(		"./res/Texts/Mars.obj");
+	Model jupityerText(	"./res/Texts/Jupyter.obj");
+	Model neptunText(	"./res/Texts/Neptun.obj");
+	Model uranusText(	"./res/Texts/Uranus.obj");
+	Model saturnText(	"./res/Texts/Saturn.obj");
+	Model lunaText(		"./res/Texts/Luna.obj");
     
     //planets
-	Model earthModel("../res/models/planets/earth/earth.obj");
-	Model jupiterModel("../res/models/planets/jupiter/jupiter1.obj");
-	Model marsModel("../res/models/planets/mars/Mars_normal-strong.obj");
-	Model mercuryModel("../res/models/planets/mercury/mercury.obj");
-	Model neptuneModel("../res/models/planets/neptune/neptune.obj");
-	Model saturnModel("../res/models/planets/saturn/saturn3.obj");
-	Model uranusModel("../res/models/planets/uranus/uranus.obj");
-	Model venusModel("../res/models/planets/venus/venus.obj");
+	Model earthModel("./res/models/planets/earth/earth.obj");
+	Model jupiterModel("./res/models/planets/jupiter/jupiter1.obj");
+	Model marsModel("./res/models/planets/mars/Mars_normal-strong.obj");
+	Model mercuryModel("./res/models/planets/mercury/mercury.obj");
+	Model neptuneModel("./res/models/planets/neptune/neptune.obj");
+	Model saturnModel("./res/models/planets/saturn/saturn3.obj");
+	Model uranusModel("./res/models/planets/uranus/uranus.obj");
+	Model venusModel("./res/models/planets/venus/venus.obj");
     
     //sun
-    Model sunModel("../res/models/planets/Sun/sun2.obj");
+    Model sunModel("./res/models/planets/Sun/sun2.obj");
     
     //moons
-    Model moonModel("../res/models/planets/moon/moon1.obj");
+    Model moonModel("./res/models/planets/moon/moon1.obj");
 
 
 	

@@ -36,9 +36,9 @@ void main(){
     
     //vec3 LightColor = vec3(1,1,1);
     // vec3 LightColor = vec3(1,1,1);
-    vec3 LightColor = vec3(0.2,0.3,0.4);
+    vec3 LightColor = vec3(1,1,1);
     
-    float LightPower = 300.0f;
+    float LightPower = 10000.0f;
     // float LightPower = 50.0f; Uebung 15
     // float LightPower = 5.0f; Uebung 15
     
@@ -76,7 +76,9 @@ void main(){
     // Ambient : simulates indirect lighting
     MaterialAmbientColor +
     // Diffuse : "color" of the object
-    MaterialDiffuseColor * LightColor * LightPower * cosTheta / (distance*distance) +
+    //MaterialDiffuseColor * LightColor * LightPower * cosTheta / (distance*distance) +
+    MaterialDiffuseColor * LightColor * LightPower / (distance*distance) +
+
     // Specular : reflective highlight, like a mirror
     MaterialSpecularColor * LightColor * LightPower * pow(cosAlpha,5) / (distance*distance);
     
