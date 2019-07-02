@@ -65,12 +65,12 @@ void Planet::drawPlanet(glm::vec2 planetPosition, GLfloat UniverseSpeed, glm::ma
 
 	//Drawing
 	glm::mat4 model = glm::mat4(1.0f);
-    glm::vec3 lightPos = glm::vec3(0.0f,20.0f,0.0f);
+    glm::vec3 lightPos = glm::vec3(0.0f,0.0f,0.0f);
 
 	glm::vec2 currentPlanetPosition = calculatePos(planetPosition, UniverseSpeed);
 	//Relative Position
 	model = glm::translate(model, glm::vec3(currentPlanetPosition.x, 0.0f,currentPlanetPosition.y));
-	float angle = 90.0f;
+	//float angle = 90.0f;
 	//Rotation
 	model = glm::rotate(model, glm::radians((GLfloat)glfwGetTime() * rotationSpeed * UniverseSpeed), glm::vec3(0.0f, 1.0f, 0.0f));
 
@@ -86,7 +86,7 @@ void Planet::drawPlanet(glm::vec2 planetPosition, GLfloat UniverseSpeed, glm::ma
         glUniform3f(glGetUniformLocation(planetShader.Program, "LightPosition_worldspace"), lightPos.x, lightPos.y, lightPos.z);
         glUniformMatrix4fv(glGetUniformLocation(planetShader.Program, "projection"), 1, GL_FALSE, glm::value_ptr(projection));
         glUniformMatrix4fv(glGetUniformLocation(planetShader.Program, "view"), 1, GL_FALSE, glm::value_ptr(view));
-    		planet.drawName(currentPlanetPosition, UniverseSpeed,planet.isMoon);
+        planet.drawName(currentPlanetPosition, UniverseSpeed,planet.isMoon);
         planet.drawPlanet(currentPlanetPosition, UniverseSpeed, view, projection);
 
 	}

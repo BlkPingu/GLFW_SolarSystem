@@ -102,9 +102,9 @@ int main()
 	Shader Textshader("./res/shaders/modelOrbit.vs", "./res/shaders/modelOrbit.frag");
 	Shader shader("./res/shaders/cube.vs", "./res/shaders/cube.frag");
 	Shader skyboxShader("./res/shaders/skybox.vs", "./res/shaders/skybox.frag");
-  Shader orbitShader("./res/shaders/modelOrbit.vs", "./res/shaders/modelOrbit.frag");
-  Shader starShader("./res/shaders/modelStar.vs", "./res/shaders/modelStar.frag");
-  Shader planetShader("./res/shaders/modelLoading.vs", "./res/shaders/modelLoading.frag");
+    Shader orbitShader("./res/shaders/modelOrbit.vs", "./res/shaders/modelOrbit.frag");
+    Shader starShader("./res/shaders/modelStar.vs", "./res/shaders/modelStar.frag");
+    Shader planetShader("./res/shaders/modelLoading.vs", "./res/shaders/modelLoading.frag");
 
 
 	// Load models
@@ -284,25 +284,25 @@ int main()
 	////Luna
     //radius = 10.0f
     //Angle 0.005f
-	Planet earthMoon = Planet(planetShader,orbitShader, moonModel,orbitModel,lunaText, 10.0f, 0.005f, 8.0f * UniverseSpeed, 10000.0f * UniverseSpeed, 0.005f, noMoons, 1.0f, false,true);
+	Planet earthMoon = Planet(planetShader,orbitShader, moonModel,orbitModel,lunaText, 10.0f, 0.008f, 8.0f * UniverseSpeed, 10000.0f * UniverseSpeed, 0.005f, noMoons, 1.0f, false,true);
     earthMoons.push_back(earthMoon);
     
 	////Mercury
 	//radius = 70.0f
 	//Angle 0.008f
-	Planet mercury = Planet(planetShader,orbitShader, mercuryModel,orbitModel,mercuryText, 70.0f, 0.1f, 8.0f * UniverseSpeed, 1000.0f * UniverseSpeed, 0.008f, noMoons,7.0f, false,false);
+	Planet mercury = Planet(planetShader,orbitShader, mercuryModel,orbitModel,mercuryText, 70.0f, 0.025f, 8.0f * UniverseSpeed, 1000.0f * UniverseSpeed, 0.008f, noMoons,7.0f, false,false);
 	////Venus
 	//radius = 80.0f
 	//angle = 0.007f
-	Planet venus =Planet(planetShader,orbitShader, venusModel,orbitModel,venusText, 80.0f, 0.1f, 8.0f * UniverseSpeed, 1000.0f * UniverseSpeed, 0.007f, noMoons,8.0f, false, false);
+	Planet venus =Planet(planetShader,orbitShader, venusModel,orbitModel,venusText, 80.0f, 0.04f, 8.0f * UniverseSpeed, 1000.0f * UniverseSpeed, 0.007f, noMoons,8.0f, false, false);
 	////earth
 	//radius = 90.0f
 	//angle = 0.006f
-	Planet earth =Planet(planetShader,orbitShader, earthModel,orbitModel,earthText, 90.0f, 0.008f, 8.0f * UniverseSpeed, 1000.0f * UniverseSpeed, 0.006f, earthMoons,9.0f, true, false);
+	Planet earth =Planet(planetShader,orbitShader, earthModel,orbitModel,earthText, 90.0f, 0.005f, 8.0f * UniverseSpeed, 1000.0f * UniverseSpeed, 0.006f, earthMoons,9.0f, true, false);
 	////Mars
 	//radius = 100.0f
 	//angle = 0.005f
-	Planet mars = Planet(planetShader,orbitShader, marsModel,orbitModel,MarsText, 100.0f, 0.1f, 8.0f * UniverseSpeed, 1000.0f * UniverseSpeed, 0.005f, noMoons,10.0f, true, false);
+	Planet mars = Planet(planetShader,orbitShader, marsModel,orbitModel,MarsText, 100.0f, 0.15f, 8.0f * UniverseSpeed, 1000.0f * UniverseSpeed, 0.005f, noMoons,10.0f, true, false);
 	//// JUPITER
 	//radius = 120.0f
 	//angle = 0.0045f
@@ -310,14 +310,14 @@ int main()
 	////Uranus
 	//radius = 190.0f
 	//angle = 0.0035f
-	Planet uranus = Planet(planetShader,orbitShader, uranusModel,orbitModel,uranusText, 190.0f, 0.1f, 8.0f * UniverseSpeed, 1000.0f * UniverseSpeed, 0.0035f, noMoons,19.0f, false, false);
+	Planet uranus = Planet(planetShader,orbitShader, uranusModel,orbitModel,uranusText, 190.0f, 0.025f, 8.0f * UniverseSpeed, 1000.0f * UniverseSpeed, 0.0035f, noMoons,19.0f, false, false);
 	////SATURN
 	//radius = 160.0f
 	//angle = 0.0040f
-	Planet saturn = Planet(planetShader,orbitShader, saturnModel,orbitModel,saturnText, 160.0f, 0.1f, 8.0f * UniverseSpeed, 1000.0f * UniverseSpeed, 0.004f, noMoons,16.0f, false, false);
+	Planet saturn = Planet(planetShader,orbitShader, saturnModel,orbitModel,saturnText, 160.0f, 0.07f, 8.0f * UniverseSpeed, 1000.0f * UniverseSpeed, 0.004f, noMoons,16.0f, false, false);
 	//radius = 220.0f
 	//angle = 0.003f
-	Planet neptune = Planet(planetShader,orbitShader, neptuneModel,orbitModel,neptunText, 220.0f, 0.1f, 8.0f * UniverseSpeed, 1000.0f * UniverseSpeed, 0.003f, noMoons,22.0f, false, false);
+	Planet neptune = Planet(planetShader,orbitShader, neptuneModel,orbitModel,neptunText, 220.0f, 0.025f, 8.0f * UniverseSpeed, 1000.0f * UniverseSpeed, 0.003f, noMoons,22.0f, false, false);
 
 	////Sun
 	//radius = 0.0f
@@ -333,7 +333,7 @@ int main()
     planets.push_back(neptune);
     
   
-  Planet sun= Planet(planetShader,orbitShader , sunModel, orbitModel, sunText, 0.0f, 0.1f, 16.0f* UniverseSpeed, 0.0f, 0.006f, planets,0.0f, false, false);
+  Planet sun= Planet(planetShader,orbitShader , sunModel, orbitModel, sunText, 0.0f, 0.05f, 16.0f* UniverseSpeed, 0.0f, 0.006f, planets,0.0f, false, false);
 
 
 	// Game loop

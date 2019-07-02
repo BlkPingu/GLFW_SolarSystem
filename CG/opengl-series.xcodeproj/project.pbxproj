@@ -26,6 +26,14 @@
 
 /* Begin PBXFileReference section */
 		E263994D190D148400B6251A /* CGTutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CGTutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F68F456122CB697C00486372 /* earth.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = earth.obj; sourceTree = "<group>"; };
+		F68F456222CB697C00486372 /* planet.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = planet.jpg; sourceTree = "<group>"; };
+		F68F456322CB697C00486372 /* 4096_clouds.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 4096_clouds.jpg; sourceTree = "<group>"; };
+		F68F456422CB697C00486372 /* 4096_normal.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 4096_normal.jpg; sourceTree = "<group>"; };
+		F68F456522CB697C00486372 /* 4096_bump.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 4096_bump.jpg; sourceTree = "<group>"; };
+		F68F456622CB697C00486372 /* earth.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = earth.mtl; sourceTree = "<group>"; };
+		F68F456722CB697C00486372 /* 4096_earth.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 4096_earth.jpg; sourceTree = "<group>"; };
+		F68F456822CB697C00486372 /* 4096_night_lights.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 4096_night_lights.jpg; sourceTree = "<group>"; };
 		F6A5CC7C22C839530077D2C0 /* bottom.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bottom.jpg; sourceTree = "<group>"; };
 		F6A5CC7D22C839530077D2C0 /* left.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = left.jpg; sourceTree = "<group>"; };
 		F6A5CC7E22C839530077D2C0 /* top.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = top.jpg; sourceTree = "<group>"; };
@@ -85,14 +93,6 @@
 		F6A5CCBE22C839530077D2C0 /* Readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Readme.txt; sourceTree = "<group>"; };
 		F6A5CCBF22C839530077D2C0 /* jupitermap.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jupitermap.jpg; sourceTree = "<group>"; };
 		F6A5CCC022C839530077D2C0 /* descarga (13).jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "descarga (13).jpg"; sourceTree = "<group>"; };
-		F6A5CCC222C839530077D2C0 /* earth.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = earth.obj; sourceTree = "<group>"; };
-		F6A5CCC322C839530077D2C0 /* planet.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = planet.jpg; sourceTree = "<group>"; };
-		F6A5CCC422C839530077D2C0 /* 4096_clouds.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 4096_clouds.jpg; sourceTree = "<group>"; };
-		F6A5CCC522C839530077D2C0 /* 4096_normal.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 4096_normal.jpg; sourceTree = "<group>"; };
-		F6A5CCC622C839530077D2C0 /* 4096_bump.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 4096_bump.jpg; sourceTree = "<group>"; };
-		F6A5CCC722C839530077D2C0 /* earth.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = earth.mtl; sourceTree = "<group>"; };
-		F6A5CCC822C839530077D2C0 /* 4096_earth.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 4096_earth.jpg; sourceTree = "<group>"; };
-		F6A5CCC922C839530077D2C0 /* 4096_night_lights.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 4096_night_lights.jpg; sourceTree = "<group>"; };
 		F6A5CCCB22C839530077D2C0 /* uranusmap.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = uranusmap.jpg; sourceTree = "<group>"; };
 		F6A5CCCC22C839530077D2C0 /* uranus.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = uranus.obj; sourceTree = "<group>"; };
 		F6A5CCCD22C839530077D2C0 /* uranusmap_bumb.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = uranusmap_bumb.jpg; sourceTree = "<group>"; };
@@ -220,6 +220,21 @@
 			path = source/CGTutorial;
 			sourceTree = "<group>";
 		};
+		F68F456022CB697C00486372 /* earth */ = {
+			isa = PBXGroup;
+			children = (
+				F68F456122CB697C00486372 /* earth.obj */,
+				F68F456222CB697C00486372 /* planet.jpg */,
+				F68F456322CB697C00486372 /* 4096_clouds.jpg */,
+				F68F456422CB697C00486372 /* 4096_normal.jpg */,
+				F68F456522CB697C00486372 /* 4096_bump.jpg */,
+				F68F456622CB697C00486372 /* earth.mtl */,
+				F68F456722CB697C00486372 /* 4096_earth.jpg */,
+				F68F456822CB697C00486372 /* 4096_night_lights.jpg */,
+			);
+			path = earth;
+			sourceTree = "<group>";
+		};
 		F6A5CC7822C839530077D2C0 /* src */ = {
 			isa = PBXGroup;
 			children = (
@@ -297,6 +312,7 @@
 		F6A5CC8922C839530077D2C0 /* planets */ = {
 			isa = PBXGroup;
 			children = (
+				F68F456022CB697C00486372 /* earth */,
 				F6A5CC8A22C839530077D2C0 /* mercury */,
 				F6A5CC9122C839530077D2C0 /* Sun */,
 				F6A5CC9F22C839530077D2C0 /* Venus */,
@@ -305,7 +321,6 @@
 				F6A5CCB122C839530077D2C0 /* Orbit2.obj */,
 				F6A5CCB222C839530077D2C0 /* Saturn */,
 				F6A5CCB922C839530077D2C0 /* jupiter */,
-				F6A5CCC122C839530077D2C0 /* earth */,
 				F6A5CCCA22C839530077D2C0 /* Uranus */,
 				F6A5CCCF22C839530077D2C0 /* Orbit2.mtl */,
 				F6A5CCD022C839530077D2C0 /* mars */,
@@ -407,21 +422,6 @@
 				F6A5CCC022C839530077D2C0 /* descarga (13).jpg */,
 			);
 			path = jupiter;
-			sourceTree = "<group>";
-		};
-		F6A5CCC122C839530077D2C0 /* earth */ = {
-			isa = PBXGroup;
-			children = (
-				F6A5CCC222C839530077D2C0 /* earth.obj */,
-				F6A5CCC322C839530077D2C0 /* planet.jpg */,
-				F6A5CCC422C839530077D2C0 /* 4096_clouds.jpg */,
-				F6A5CCC522C839530077D2C0 /* 4096_normal.jpg */,
-				F6A5CCC622C839530077D2C0 /* 4096_bump.jpg */,
-				F6A5CCC722C839530077D2C0 /* earth.mtl */,
-				F6A5CCC822C839530077D2C0 /* 4096_earth.jpg */,
-				F6A5CCC922C839530077D2C0 /* 4096_night_lights.jpg */,
-			);
-			path = earth;
 			sourceTree = "<group>";
 		};
 		F6A5CCCA22C839530077D2C0 /* Uranus */ = {
